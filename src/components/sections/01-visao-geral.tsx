@@ -116,12 +116,15 @@ export function VisaoGeralSection() {
           previous={kpisGeral.totalLeads.mesAnterior}
           comparisonLabel={comparisonLabel}
           icon={Users}
+          unavailable={isUnavailable("totalLeads")}
+          unavailableMessage="Não disponível por serviço"
         />
         <KpiCard
           label="Ocupação de Agenda"
           value={formatNumber(kpisGeral.ocupacaoAgenda.atual)}
           current={kpisGeral.ocupacaoAgenda.atual}
           previous={kpisGeral.ocupacaoAgenda.mesAnterior}
+          comparisonLabel={comparisonLabel}
           icon={TrendingUp}
           unavailable={isUnavailable("ocupacaoAgenda")}
           unavailableMessage="Não disponível por canal/serviço"
