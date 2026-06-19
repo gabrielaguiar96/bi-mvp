@@ -8,15 +8,18 @@ import { BarChartCard } from "@/components/charts/bar-chart";
 import { KpiCard } from "@/components/charts/kpi-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { dadosPorCanal, metaLeadsCanal } from "@/data/report";
-import { useFilteredData } from "@/lib/use-filtered-data";
+import { useFilteredData, isKpiUnavailable } from "@/lib/use-filtered-data";
 import { useFilters } from "@/lib/filters";
 import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
 import { formatBRL, formatNumber, formatPct } from "@/lib/format";
 
 export function GeralFunilSection() {
-  const { kpisGeral, conversaoPorCanal } = useFilteredData();
+  const { kpisGeral, conversaoPorCanal, filterMeta } = useFilteredData();
   const { filters } = useFilters();
   const hasCanal = filters.canal !== "Todos";
+
+  // Helper: check if a KPI is unavailable for the current filter
+  const isUnavailable = (key: string) => isKpiUnavailable(filterMeta, key as never);
 
   // Funil comercial consolidado — usa kpisGeral (já filtrado pelo hook)
   const totalLeads = kpisGeral.totalLeads.atual;
@@ -66,17 +69,23 @@ export function GeralFunilSection() {
           label="Leads Totais"
           value={formatNumber(totalLeads)}
           icon={Filter}
+          unavailable={isUnavailable("totalLeads")}
+          unavailableMessage="Não disponível por canal/serviço"
         />
         <KpiCard
           label="Marcados Totais"
           value={formatNumber(totalMarcados)}
           icon={Filter}
+          unavailable={isUnavailable("taxaConversaoTotal")}
+          unavailableMessage="Não disponível por serviço"
         />
         <KpiCard
           label="Taxa de Conversão Geral"
           value={formatPct(taxaConversao)}
           icon={Target}
           hint={`${formatNumber(totalMarcados)} de ${formatNumber(totalLeads)} leads`}
+          unavailable={isUnavailable("taxaConversaoTotal")}
+          unavailableMessage="Não disponível por serviço"
         />
       </div>
 

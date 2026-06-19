@@ -18,7 +18,7 @@ import {
   ticketMedioServico,
   dadosPorServico,
 } from "@/data/report";
-import { useFilteredData } from "@/lib/use-filtered-data";
+import { useFilteredData, isKpiUnavailable } from "@/lib/use-filtered-data";
 import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
 import { formatBRL, formatNumber, formatPct } from "@/lib/format";
 
@@ -26,10 +26,7 @@ export function GeralSection() {
   const { kpisGeral, faturamentoPorCanal, faturamentoPorServico, filterMeta } = useFilteredData();
 
   // Helper: check if a KPI is unavailable for the current filter
-  const isUnavailable = (key: string) =>
-    filterMeta.activeFilters.hasCanal || filterMeta.activeFilters.hasServico
-      ? !filterMeta.availableKpis.has(key as never)
-      : false;
+  const isUnavailable = (key: string) => isKpiUnavailable(filterMeta, key as never);
   const donutCanal = useMemo(
     () => faturamentoPorCanal
       .filter((c) => c.faturamento > 0)

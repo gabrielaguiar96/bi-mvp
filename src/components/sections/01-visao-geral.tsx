@@ -23,7 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useFilteredData } from "@/lib/use-filtered-data";
+import { useFilteredData, isKpiUnavailable } from "@/lib/use-filtered-data";
 import { useFilters } from "@/lib/filters";
 import { conversaoEtapas, dadosPorServico, conversaoPorCanalProfissional } from "@/data/report";
 import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
@@ -40,10 +40,7 @@ export function VisaoGeralSection() {
   const hasMes = filters.mes !== "Todos";
 
   // Helper: check if a KPI is unavailable for the current filter
-  const isUnavailable = (key: string) =>
-    filterMeta.activeFilters.hasCanal || filterMeta.activeFilters.hasServico
-      ? !filterMeta.availableKpis.has(key as never)
-      : false;
+  const isUnavailable = (key: string) => isKpiUnavailable(filterMeta, key as never);
 
   // Simulator — enhanced with Marcados slider and service selector
   const [leads, setLeads] = useState(100);

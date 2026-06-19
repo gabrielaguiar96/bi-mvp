@@ -58,6 +58,17 @@ export type FilterMeta = {
   availableKpis: Set<KpiKey>;
 };
 
+/**
+ * Helper: check if a KPI is unavailable for the current filter combination.
+ * Returns true when canal or servico filter is active and the KPI has no
+ * real data for that filter (i.e., not in filterMeta.availableKpis).
+ */
+export function isKpiUnavailable(filterMeta: FilterMeta, key: KpiKey): boolean {
+  return filterMeta.activeFilters.hasCanal || filterMeta.activeFilters.hasServico
+    ? !filterMeta.availableKpis.has(key)
+    : false;
+}
+
 export function useFilteredData() {
   const { filters } = useFilters();
 
@@ -311,13 +322,13 @@ export function useFilteredData() {
       // Mês has data for all KPIs
       availableKpis = new Set(allKpiKeys);
     } else if (hasAno && anoData) {
-      // Ano has most KPIs but not qtdUpsell or taxaConversaoTotal
+      // Ano has most KPIs but not qtdUpsell, taxaConversaoTotal, or ticketMedioConsultas
+      // (ticketMedioConsultas is not recalculated in the ano branch)
       availableKpis = new Set<KpiKey>([
         "faturamento",
         "totalLeads",
         "ocupacaoAgenda",
         "comparecidos",
-        "ticketMedioConsultas",
       ]);
     } else if (hasCanal) {
       // Canal: only KPIs present in dadosPorCanal
