@@ -35,7 +35,7 @@ import {
 } from "@/lib/format";
 
 export function VisaoGeralSection() {
-  const { kpisGeral, conversaoPorCanal, faturamentoPorServico, filterMeta } = useFilteredData();
+  const { kpisGeral, conversaoPorCanal, faturamentoPorServico, filterMeta, comparisonLabel } = useFilteredData();
   const { filters } = useFilters();
   const hasMes = filters.mes !== "Todos";
 
@@ -105,14 +105,16 @@ export function VisaoGeralSection() {
           value={formatBRL(kpisGeral.faturamento.atual)}
           current={kpisGeral.faturamento.atual}
           previous={kpisGeral.faturamento.mesAnterior}
+          comparisonLabel={comparisonLabel}
           icon={DollarSign}
-          hint={`Meta: ${formatPct(kpisGeral.faturamento.pctMeta)}`}
+          hint={`Meta: ${formatPct(kpisGeral.faturamento.pctMeta ?? 0)}`}
         />
         <KpiCard
           label="Total de Leads"
           value={formatNumber(kpisGeral.totalLeads.atual)}
           current={kpisGeral.totalLeads.atual}
           previous={kpisGeral.totalLeads.mesAnterior}
+          comparisonLabel={comparisonLabel}
           icon={Users}
         />
         <KpiCard
@@ -140,7 +142,7 @@ export function VisaoGeralSection() {
           <MetaProgress
             label={hasMes ? "Faturamento Mensal vs Meta" : "Faturamento Acumulado vs Meta"}
             realizado={kpisGeral.faturamento.atual}
-            meta={kpisGeral.faturamento.metaMes}
+            meta={kpisGeral.faturamento.metaMes ?? 0}
             format={formatBRL}
           />
         </CardContent>

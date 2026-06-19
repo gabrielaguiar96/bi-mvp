@@ -40,6 +40,7 @@ export function KpiCard({
   unavailableMessage,
 }: KpiCardProps) {
   const hasComparison =
+    comparisonLabel !== undefined &&
     !unavailable &&
     previous !== undefined && current !== undefined && previous !== 0;
   const d = hasComparison ? delta(current!, previous!) : null;

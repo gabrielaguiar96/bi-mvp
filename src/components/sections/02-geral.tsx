@@ -23,7 +23,7 @@ import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
 import { formatBRL, formatNumber, formatPct } from "@/lib/format";
 
 export function GeralSection() {
-  const { kpisGeral, faturamentoPorCanal, faturamentoPorServico, filterMeta } = useFilteredData();
+  const { kpisGeral, faturamentoPorCanal, faturamentoPorServico, filterMeta, comparisonLabel } = useFilteredData();
 
   // Helper: check if a KPI is unavailable for the current filter
   const isUnavailable = (key: string) => isKpiUnavailable(filterMeta, key as never);
@@ -58,6 +58,7 @@ export function GeralSection() {
           value={formatBRL(kpisGeral.faturamento.atual)}
           current={kpisGeral.faturamento.atual}
           previous={kpisGeral.faturamento.mesAnterior}
+          comparisonLabel={comparisonLabel}
           icon={DollarSign}
         />
         <KpiCard
@@ -65,7 +66,7 @@ export function GeralSection() {
           value={formatBRL(kpisGeral.ticketMedioConsultas.atual)}
           current={kpisGeral.ticketMedioConsultas.atual}
           previous={kpisGeral.ticketMedioConsultas.mesAnterior}
-          comparisonLabel="vs mês anterior"
+          comparisonLabel={comparisonLabel}
           icon={Receipt}
         />
         <KpiCard

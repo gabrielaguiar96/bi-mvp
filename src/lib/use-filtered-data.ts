@@ -60,13 +60,13 @@ export type FilterMeta = {
 
 /**
  * Helper: check if a KPI is unavailable for the current filter combination.
- * Returns true when canal or servico filter is active and the KPI has no
- * real data for that filter (i.e., not in filterMeta.availableKpis).
+ * Returns true when any filter is active and the KPI has no real data for
+ * that filter (i.e., not in filterMeta.availableKpis).
  */
 export function isKpiUnavailable(filterMeta: FilterMeta, key: KpiKey): boolean {
-  return filterMeta.activeFilters.hasCanal || filterMeta.activeFilters.hasServico
-    ? !filterMeta.availableKpis.has(key)
-    : false;
+  const { hasCanal, hasServico, hasMes, hasAno } = filterMeta.activeFilters;
+  const hasAnyFilter = hasCanal || hasServico || hasMes || hasAno;
+  return hasAnyFilter ? !filterMeta.availableKpis.has(key) : false;
 }
 
 export function useFilteredData() {
@@ -99,8 +99,6 @@ export function useFilteredData() {
     })();
 
     // ---------- Meta real do mês (evita back-calculation com perda de precisão) ----------
-    // Quando nenhum mês está selecionado, usa a meta acumulada do ano corrente (2026).
-    const fatMensal2026 = faturamentoMensal.filter((m) => m.mes.includes("2026"));
     const metaMesReal = (() => {
       if (hasMes) {
         const mesLabel = mes.charAt(0).toUpperCase() + mes.slice(1, 3);
@@ -110,7 +108,17 @@ export function useFilteredData() {
         );
         return entry?.meta ?? 0;
       }
-      return fatMensal2026.reduce((s, m) => s + m.meta, 0);
+      if (hasAno) {
+        // Sum metas for the selected year
+        const yearEntries = faturamentoMensal.filter((m) => m.mes.includes(ano));
+        return yearEntries.reduce((s, m) => s + m.meta, 0);
+      }
+      if (hasCanal || hasServico) {
+        // No meaningful meta for per-filter views
+        return 0;
+      }
+      // Default (no filter): accumulated 2026 meta
+      return faturamentoMensal.filter((m) => m.mes.includes("2026")).reduce((s, m) => s + m.meta, 0);
     })();
 
     // ---------- Faturamento mensal filtrado ----------
@@ -191,7 +199,20 @@ export function useFilteredData() {
       : profissionais;
 
     // ---------- KPIs recalculados ----------
-    let kpis = kpisGeral;
+    // Use a type with optional fields so we can set undefined for
+    // Canal/Servico branches where comparison data doesn't exist.
+    type KpiFields = { atual: number; mesAnterior?: number; metaMes?: number; pctMeta?: number; anoAnterior?: number };
+    type KpisFiltered = {
+      faturamento: KpiFields;
+      totalLeads: KpiFields;
+      ocupacaoAgenda: KpiFields;
+      comparecidos: KpiFields;
+      qtdUpsell: KpiFields;
+      conversaoUpsell: KpiFields;
+      ticketMedioConsultas: KpiFields;
+      taxaConversaoTotal: KpiFields;
+    };
+    let kpis = kpisGeral as unknown as KpisFiltered;
 
     if (hasMes && mesData) {
       // Prioridade: mês selecionado — comparativos dinâmicos com mês anterior real
@@ -228,30 +249,36 @@ export function useFilteredData() {
         },
       };
     } else if (hasAno && anoData) {
-      // Ano selecionado — nota: dados anuais não incluem todos os sub-indicadores
+      // Ano selecionado — comparação com ano anterior (vs ano anterior)
+      const prevYear = String(Number(ano) - 1);
+      const prevAnoData = anual[prevYear as keyof typeof anual];
       kpis = {
         ...kpisGeral,
         faturamento: {
           atual: anoData.faturamento,
-          mesAnterior: kpisGeral.faturamento.mesAnterior,
+          mesAnterior: prevAnoData?.faturamento as number | undefined,
           metaMes: metaMesReal,
           pctMeta: Math.round(anoData.pctMeta * 100) / 100,
         },
         totalLeads: {
           atual: anoData.leads,
-          mesAnterior: kpisGeral.totalLeads.mesAnterior,
+          mesAnterior: prevAnoData?.leads as number | undefined,
         },
         ocupacaoAgenda: {
           atual: anoData.ocupacaoAgenda,
-          mesAnterior: kpisGeral.ocupacaoAgenda.mesAnterior,
-          anoAnterior: kpisGeral.ocupacaoAgenda.anoAnterior,
+          mesAnterior: prevAnoData?.ocupacaoAgenda as number | undefined,
+          anoAnterior: prevAnoData?.ocupacaoAgenda as number | undefined,
         },
         comparecidos: {
           atual: anoData.comparecidos,
-          mesAnterior: undefined,
-          anoAnterior: kpisGeral.comparecidos.anoAnterior,
+          mesAnterior: prevAnoData?.comparecidos as number | undefined,
+          anoAnterior: prevAnoData?.comparecidos as number | undefined,
         },
-        // qtdUpsell e taxaConversaoTotal não disponíveis no dado anual — mantém defaults
+        ticketMedioConsultas: {
+          atual: kpisGeral.ticketMedioConsultas.atual,
+          mesAnterior: undefined as number | undefined,
+          anoAnterior: undefined as number | undefined,
+        },
       };
     } else if (hasCanal) {
       const dc = canal in dadosPorCanal ? dadosPorCanal[canal as keyof typeof dadosPorCanal] : undefined;
@@ -260,24 +287,26 @@ export function useFilteredData() {
           ...kpisGeral,
           faturamento: {
             atual: dc.faturamento,
-            mesAnterior: kpisGeral.faturamento.mesAnterior,
+            mesAnterior: undefined as number | undefined,
             metaMes: 0,
             pctMeta: 0,
           },
           totalLeads: {
             atual: dc.leads,
-            mesAnterior: kpisGeral.totalLeads.mesAnterior,
+            mesAnterior: undefined as number | undefined,
           },
           ticketMedioConsultas: {
             atual: dc.ticketMedio,
-            mesAnterior: kpisGeral.ticketMedioConsultas.mesAnterior,
-            anoAnterior: kpisGeral.ticketMedioConsultas.anoAnterior,
+            mesAnterior: undefined as number | undefined,
+            anoAnterior: undefined as number | undefined,
           },
           taxaConversaoTotal: {
             atual: dc.conversao,
           },
         };
       }
+      // Google/Meta: dc exists but faturamento is null → kpis stays as kpisGeral,
+      // but filterMeta will mark KPIs as unavailable (see availableKpis below)
     } else if (hasServico) {
       const ds = servico in dadosPorServico ? dadosPorServico[servico as keyof typeof dadosPorServico] : undefined;
       if (ds) {
@@ -288,18 +317,18 @@ export function useFilteredData() {
           ...kpisGeral,
           faturamento: {
             atual: ds.faturamento,
-            mesAnterior: kpisGeral.faturamento.mesAnterior,
+            mesAnterior: undefined as number | undefined,
             metaMes: 0,
             pctMeta: 0,
           },
           totalLeads: {
             atual: ds.leads ?? 0,
-            mesAnterior: kpisGeral.totalLeads.mesAnterior,
+            mesAnterior: undefined as number | undefined,
           },
           ticketMedioConsultas: {
             atual: ticketMedio,
-            mesAnterior: kpisGeral.ticketMedioConsultas.mesAnterior,
-            anoAnterior: kpisGeral.ticketMedioConsultas.anoAnterior,
+            mesAnterior: undefined as number | undefined,
+            anoAnterior: undefined as number | undefined,
           },
         };
       }
@@ -331,20 +360,26 @@ export function useFilteredData() {
         "comparecidos",
       ]);
     } else if (hasCanal) {
-      // Canal: only KPIs present in dadosPorCanal
-      availableKpis = new Set<KpiKey>([
-        "faturamento",
-        "totalLeads",
-        "ticketMedioConsultas",
-        "taxaConversaoTotal",
-      ]);
+      const dc = canal in dadosPorCanal ? dadosPorCanal[canal as keyof typeof dadosPorCanal] : undefined;
+      if (dc && dc.faturamento != null) {
+        availableKpis = new Set<KpiKey>([
+          "faturamento",
+          "totalLeads",
+          "ticketMedioConsultas",
+          "taxaConversaoTotal",
+        ]);
+      } else {
+        // Google/Meta: all null values → no KPIs available
+        availableKpis = new Set<KpiKey>();
+      }
     } else if (hasServico) {
-      // Servico: only KPIs present in dadosPorServico
-      availableKpis = new Set<KpiKey>([
-        "faturamento",
-        "totalLeads",
-        "ticketMedioConsultas",
-      ]);
+      // Servico: only KPIs present in dadosPorServico, check actual data availability
+      const ds = servico in dadosPorServico ? dadosPorServico[servico as keyof typeof dadosPorServico] : undefined;
+      const servicoKpis: KpiKey[] = ["faturamento"];
+      if (ds?.leads != null) servicoKpis.push("totalLeads");
+      const tm = ds ? (ds.ticketMedioServico > 0 ? ds.ticketMedioServico : ds.ticketMedioConsultas ?? 0) : 0;
+      if (tm > 0) servicoKpis.push("ticketMedioConsultas");
+      availableKpis = new Set<KpiKey>(servicoKpis);
     } else {
       // No filter — all KPIs available (global defaults)
       availableKpis = new Set(allKpiKeys);
@@ -354,6 +389,16 @@ export function useFilteredData() {
       activeFilters: { hasCanal, hasServico, hasMes, hasAno },
       availableKpis,
     };
+
+    // ---------- comparisonLabel: dynamic label for KPI comparisons ----------
+    const comparisonLabel: string | undefined = (() => {
+      if (hasMes) return "vs mês anterior";
+      if (hasAno) return "vs ano anterior";
+      // Canal/Servico without Mes/Ano → suppress comparison
+      if (hasCanal || hasServico) return undefined;
+      // No filter → default
+      return "vs mês anterior";
+    })();
 
     return {
       kpisGeral: kpis,
@@ -366,6 +411,7 @@ export function useFilteredData() {
       profissionais: profissionaisFiltrados,
       hasActiveFilter: hasCanal || hasServico || hasMes || hasAno,
       filterMeta,
+      comparisonLabel,
     };
   }, [filters]);
 }

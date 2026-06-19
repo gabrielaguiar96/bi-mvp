@@ -808,7 +808,7 @@ export const dadosPorServico = {
     faturamento: 1_020_706,
     ticketMedioServico: 10_230.04,
     ticketMedioConsultas: null,
-    leads: null,
+    leads: 413, // from profissionais["Dr Fernando"].totalLeads
   },
   "Pediatria": {
     faturamento: 213_862.50,

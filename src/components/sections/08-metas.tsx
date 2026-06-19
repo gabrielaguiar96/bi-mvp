@@ -82,9 +82,9 @@ export function MetasSection() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <KpiCard
           label={hasMes ? "% Meta do Mês" : "% Meta Acumulada"}
-          value={formatPct(kpisGeral.faturamento.pctMeta)}
+          value={formatPct(kpisGeral.faturamento.pctMeta ?? 0)}
           icon={Target}
-          hint={`${hasMes ? "Meta mensal" : "Meta acumulada"}: ${formatBRL(kpisGeral.faturamento.metaMes)}`}
+          hint={`${hasMes ? "Meta mensal" : "Meta acumulada"}: ${formatBRL(kpisGeral.faturamento.metaMes ?? 0)}`}
         />
         <KpiCard
           label="Meses no alvo"
