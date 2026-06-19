@@ -73,8 +73,8 @@ export function GeralSection() {
           label="Ocupação de Agenda"
           value={formatNumber(kpisGeral.ocupacaoAgenda.atual)}
           current={kpisGeral.ocupacaoAgenda.atual}
-          previous={kpisGeral.ocupacaoAgenda.anoAnterior}
-          comparisonLabel="vs ano anterior"
+          previous={kpisGeral.ocupacaoAgenda.mesAnterior}
+          comparisonLabel={comparisonLabel}
           icon={CalendarCheck}
           unavailable={isUnavailable("ocupacaoAgenda")}
           unavailableMessage="Não disponível por canal/serviço"
@@ -83,8 +83,8 @@ export function GeralSection() {
           label="Comparecidos"
           value={formatNumber(kpisGeral.comparecidos.atual)}
           current={kpisGeral.comparecidos.atual}
-          previous={kpisGeral.comparecidos.anoAnterior}
-          comparisonLabel="vs ano anterior"
+          previous={kpisGeral.comparecidos.mesAnterior}
+          comparisonLabel={comparisonLabel}
           icon={CalendarCheck}
           unavailable={isUnavailable("comparecidos")}
           unavailableMessage="Não disponível por canal/serviço"
