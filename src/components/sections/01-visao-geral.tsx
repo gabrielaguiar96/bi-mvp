@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/select";
 import { useFilteredData, isKpiUnavailable } from "@/lib/use-filtered-data";
 import { useFilters } from "@/lib/filters";
-import { conversaoEtapas, dadosPorServico, conversaoPorCanalProfissional } from "@/data/report";
+import { conversaoEtapasPorServico, dadosPorServico, conversaoPorCanalProfissional } from "@/data/report";
 import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
 import {
   formatBRL,
@@ -66,11 +66,16 @@ export function VisaoGeralSection() {
     const canais = conversaoPorCanalProfissional[profKey as keyof typeof conversaoPorCanalProfissional] || [];
     const totalLeads = canais.reduce((s, c) => s + c.leads, 0);
     const totalMarcados = canais.reduce((s, c) => s + c.marcados, 0);
-    // Se não há dados de leads por canal (ex: Dermatologia), usa taxa global como fallback
+    // Use canal data if available; otherwise use funnel-derived rate (e.g. Dermatologia ~61%)
     const isFallback = totalLeads === 0;
-    const taxa = totalLeads > 0 ? totalMarcados / totalLeads : kpisGeral.taxaConversaoTotal.atual;
+    const funnelRate = conversaoEtapasPorServico[servicoSim]?.etapas[0]?.taxa ?? kpisGeral.taxaConversaoTotal.atual;
+    const taxa = totalLeads > 0 ? totalMarcados / totalLeads : funnelRate;
     return { taxa, ticket, isFallback };
   }, [servicoSim, kpisGeral]);
+
+  // Dynamic conversion steps based on selected service
+  const convSteps = conversaoEtapasPorServico[servicoSim]?.etapas
+    ?? conversaoEtapasPorServico["Todos"].etapas;
 
   const ticketMedio = servicoMetrics.ticket;
 
@@ -240,21 +245,15 @@ export function VisaoGeralSection() {
               </div>
             </div>
 
-            {/* Conversion steps from Power BI */}
+            {/* Conversion steps from Power BI — dynamic per service */}
             <div className="mt-6 rounded-lg border border-border/40 bg-muted/20 p-4">
               <h4 className="text-xs font-medium text-muted-foreground mb-3">
-                Taxas de Conversão Reais (Power BI)
+                Taxas de Conversão — {servicoSim === "Todos" ? "Todos os Serviços" : servicoSim}
               </h4>
-              {servicoMetrics.isFallback && (
-                <p className="mb-2 text-[10px] text-muted-foreground/70">
-                  * Taxa de conversão global (sem dados de leads por canal para {servicoSim})
-                </p>
-              )}
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                <ConvStep label="Leads → Agenda" taxa={conversaoEtapas.etapa1} />
-                <ConvStep label="Agenda → Comp." taxa={conversaoEtapas.etapa2} />
-                <ConvStep label="Comp. → Upsell" taxa={conversaoEtapas.etapa3} />
-                <ConvStep label="Upsell → Fat." taxa={conversaoEtapas.etapa4} />
+              <div className={`grid grid-cols-2 gap-3 ${convSteps.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+                {convSteps.map((step) => (
+                  <ConvStep key={step.label} label={step.label} taxa={step.taxa} />
+                ))}
               </div>
             </div>
           </CardContent>
