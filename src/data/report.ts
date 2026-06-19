@@ -276,7 +276,7 @@ export const metasPorIndicador = {
       "pctMeta": 0
     },
     {
-      "indicador": "Faturamento do dia",
+      "indicador": "Faturamento Mensal",
       "meta": 800000,
       "realizado": 632478,
       "pctMeta": 0.79
@@ -374,7 +374,7 @@ export const metasPorIndicador = {
       "pctMeta": 0
     },
     {
-      "indicador": "Faturamento do dia",
+      "indicador": "Faturamento Mensal",
       "meta": 240000,
       "realizado": 213862.5,
       "pctMeta": 0.89
@@ -514,7 +514,7 @@ export const metasPorIndicador = {
       "pctMeta": 0.48
     },
     {
-      "indicador": "Faturamento do dia",
+      "indicador": "Faturamento Mensal",
       "meta": 105000,
       "realizado": 94710,
       "pctMeta": 0.9
@@ -649,7 +649,7 @@ export const profissionais = {
     faturamentoDia: 94710,
     faturamentoDiaLM: 119165,
     ticketMedioConsulta: 266.67,
-    ticketMedioConsultaLM: 353.65,
+    ticketMedioConsultaLM: 410.93,
     quantidadeConsultas: 36,
     quantidadeConsultasLM: 35,
     marcacoes: 24,

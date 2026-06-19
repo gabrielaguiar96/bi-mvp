@@ -14,7 +14,6 @@ type Row = {
 
 /** Indicadores que devem ser formatados como moeda (BRL) */
 const CURRENCY_PREFIXES = [
-  "Faturamento do dia",
   "Faturamento Mensal",
   "Fat.",
   "Ticket Médio",

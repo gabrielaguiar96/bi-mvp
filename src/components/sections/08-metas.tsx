@@ -30,7 +30,6 @@ const PROFS: { key: ProfKey; label: string }[] = [
 
 /** Indicadores de faturamento que devem ser formatados como moeda */
 const CURRENCY_INDICATORS = [
-  "Faturamento do dia",
   "Faturamento Mensal",
   "Fat.",
   "Ticket Médio",
