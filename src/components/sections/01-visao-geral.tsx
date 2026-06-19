@@ -35,9 +35,15 @@ import {
 } from "@/lib/format";
 
 export function VisaoGeralSection() {
-  const { kpisGeral, conversaoPorCanal, faturamentoPorServico } = useFilteredData();
+  const { kpisGeral, conversaoPorCanal, faturamentoPorServico, filterMeta } = useFilteredData();
   const { filters } = useFilters();
   const hasMes = filters.mes !== "Todos";
+
+  // Helper: check if a KPI is unavailable for the current filter
+  const isUnavailable = (key: string) =>
+    filterMeta.activeFilters.hasCanal || filterMeta.activeFilters.hasServico
+      ? !filterMeta.availableKpis.has(key as never)
+      : false;
 
   // Simulator — enhanced with Marcados slider and service selector
   const [leads, setLeads] = useState(100);
@@ -113,12 +119,16 @@ export function VisaoGeralSection() {
           current={kpisGeral.ocupacaoAgenda.atual}
           previous={kpisGeral.ocupacaoAgenda.mesAnterior}
           icon={TrendingUp}
+          unavailable={isUnavailable("ocupacaoAgenda")}
+          unavailableMessage="Não disponível por canal/serviço"
         />
         <KpiCard
           label="Taxa de Conversão Total"
           value={formatPct(kpisGeral.taxaConversaoTotal.atual)}
           icon={Target}
           hint="Leads → marcados"
+          unavailable={isUnavailable("taxaConversaoTotal")}
+          unavailableMessage="Não disponível por serviço"
         />
       </div>
 

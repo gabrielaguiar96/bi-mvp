@@ -29,6 +29,35 @@ import {
  * - Quando múltiplos filtros estão ativos, mês tem prioridade sobre ano/canal/serviço.
  */
 
+/**
+ * KPI keys that appear in sections using useFilteredData.
+ * Used by filterMeta.availableKpis to indicate which KPIs have real data
+ * for the active filter(s).
+ */
+export type KpiKey =
+  | "faturamento"
+  | "totalLeads"
+  | "ocupacaoAgenda"
+  | "comparecidos"
+  | "qtdUpsell"
+  | "ticketMedioConsultas"
+  | "taxaConversaoTotal";
+
+/**
+ * Metadata describing which filters are active and which KPIs were
+ * actually recalculated (vs. kept at global defaults).
+ */
+export type FilterMeta = {
+  activeFilters: {
+    hasCanal: boolean;
+    hasServico: boolean;
+    hasMes: boolean;
+    hasAno: boolean;
+  };
+  /** KPIs that have real data for the current filter combination. */
+  availableKpis: Set<KpiKey>;
+};
+
 export function useFilteredData() {
   const { filters } = useFilters();
 
@@ -265,6 +294,56 @@ export function useFilteredData() {
       }
     }
 
+    // ---------- filterMeta: which KPIs have real data ----------
+    const allKpiKeys: KpiKey[] = [
+      "faturamento",
+      "totalLeads",
+      "ocupacaoAgenda",
+      "comparecidos",
+      "qtdUpsell",
+      "ticketMedioConsultas",
+      "taxaConversaoTotal",
+    ];
+
+    let availableKpis: Set<KpiKey>;
+
+    if (hasMes && mesData) {
+      // Mês has data for all KPIs
+      availableKpis = new Set(allKpiKeys);
+    } else if (hasAno && anoData) {
+      // Ano has most KPIs but not qtdUpsell or taxaConversaoTotal
+      availableKpis = new Set<KpiKey>([
+        "faturamento",
+        "totalLeads",
+        "ocupacaoAgenda",
+        "comparecidos",
+        "ticketMedioConsultas",
+      ]);
+    } else if (hasCanal) {
+      // Canal: only KPIs present in dadosPorCanal
+      availableKpis = new Set<KpiKey>([
+        "faturamento",
+        "totalLeads",
+        "ticketMedioConsultas",
+        "taxaConversaoTotal",
+      ]);
+    } else if (hasServico) {
+      // Servico: only KPIs present in dadosPorServico
+      availableKpis = new Set<KpiKey>([
+        "faturamento",
+        "totalLeads",
+        "ticketMedioConsultas",
+      ]);
+    } else {
+      // No filter — all KPIs available (global defaults)
+      availableKpis = new Set(allKpiKeys);
+    }
+
+    const filterMeta: FilterMeta = {
+      activeFilters: { hasCanal, hasServico, hasMes, hasAno },
+      availableKpis,
+    };
+
     return {
       kpisGeral: kpis,
       indicacaoPacientes,
@@ -275,6 +354,7 @@ export function useFilteredData() {
       funis: funisFiltrados,
       profissionais: profissionaisFiltrados,
       hasActiveFilter: hasCanal || hasServico || hasMes || hasAno,
+      filterMeta,
     };
   }, [filters]);
 }

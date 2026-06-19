@@ -23,7 +23,13 @@ import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
 import { formatBRL, formatNumber, formatPct } from "@/lib/format";
 
 export function GeralSection() {
-  const { kpisGeral, faturamentoPorCanal, faturamentoPorServico } = useFilteredData();
+  const { kpisGeral, faturamentoPorCanal, faturamentoPorServico, filterMeta } = useFilteredData();
+
+  // Helper: check if a KPI is unavailable for the current filter
+  const isUnavailable = (key: string) =>
+    filterMeta.activeFilters.hasCanal || filterMeta.activeFilters.hasServico
+      ? !filterMeta.availableKpis.has(key as never)
+      : false;
   const donutCanal = useMemo(
     () => faturamentoPorCanal
       .filter((c) => c.faturamento > 0)
@@ -72,6 +78,8 @@ export function GeralSection() {
           previous={kpisGeral.ocupacaoAgenda.anoAnterior}
           comparisonLabel="vs ano anterior"
           icon={CalendarCheck}
+          unavailable={isUnavailable("ocupacaoAgenda")}
+          unavailableMessage="Não disponível por canal/serviço"
         />
         <KpiCard
           label="Comparecidos"
@@ -80,16 +88,22 @@ export function GeralSection() {
           previous={kpisGeral.comparecidos.anoAnterior}
           comparisonLabel="vs ano anterior"
           icon={CalendarCheck}
+          unavailable={isUnavailable("comparecidos")}
+          unavailableMessage="Não disponível por canal/serviço"
         />
         <KpiCard
           label="Qtd Upsell"
           value={formatNumber(kpisGeral.qtdUpsell.atual)}
           icon={Repeat}
+          unavailable={isUnavailable("qtdUpsell")}
+          unavailableMessage="Não disponível por canal/serviço"
         />
         <KpiCard
           label="Taxa de Conversão Total"
           value={formatPct(kpisGeral.taxaConversaoTotal.atual)}
           icon={Percent}
+          unavailable={isUnavailable("taxaConversaoTotal")}
+          unavailableMessage="Não disponível por serviço"
         />
       </div>
 
