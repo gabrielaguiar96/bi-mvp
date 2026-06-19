@@ -1,0 +1,207 @@
+Mostrar os atalhos de teclado
+Mostrar dicas do leitor de tela
+Pular para o conteúdo principal
+Relatório do Power BI
+Faturamento dia
+R$ 94,71 Mil
+Mês anterior: R$ 119,17 Mil(-20,52%)
+Faturamento Procedimentos
+Ticket Médio Upsell
+Ticket Médio Consulta
+266,67
+Mês anterior: R$ 410,93(-35,11%)
+Quantidade Consultas
+36
+Mês anterior: 35,00(+2,86%)
+Marcações
+24,00
+Mês anterior: 11,00(+118,18%)
+
+Dermatologia
+
+Faturamento
+Consulta
+Geral
+Procedimentos
+Funil
+100%
+51,4%
+Horários disponív…
+Ocupação Agenda
+Comparecidos
+70
+43
+36
+Filtrar Indicador
+Seleções múltiplas
+Faturamento por Período
+abril
+R$ 9.600,00
+Rolar para cima
+Rolar para baixo
+Role para a esquerda
+Rolar para a direita
+Seleção de Linha
+Indicador
+ 
+Meta
+Total
+Projeção
+% Meta
+Selecionar Linha
+Conversão Upsell - Acompanhamento
+0,00
+8,00
+8
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Conversão Upsell - Crossell
+0,00
+4,00
+4
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Conversão Upsell - Indicação
+0,00
+2,00
+2
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Conversão Upsell - Orgânico
+0,00
+2,00
+2
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Conversão Upsell Geral
+36,00
+16,00
+16
+Formatação Condicional Adicional
+44,44%
+Selecionar Linha
+Fat. Consulta
+10.000,00
+9.600,00
+9.600
+Formatação Condicional Adicional
+96,00%
+Selecionar Linha
+Fat. Protocolo Acompahamento
+54.000,00
+32.000,00
+32.000
+Formatação Condicional Adicional
+59,26%
+Selecionar Linha
+Fat. Protocolo Crossell
+40.000,00
+26.460,00
+26.460
+Formatação Condicional Adicional
+66,15%
+Selecionar Linha
+Fat. Protocolo Indicação
+33.600,00
+11.300,00
+11.300
+Formatação Condicional Adicional
+33,63%
+Selecionar Linha
+Fat. Protocolo Orgânico
+32.000,00
+15.350,00
+15.350
+Formatação Condicional Adicional
+47,97%
+Selecionar Linha
+Faturamento do dia
+105.000,00
+94.710,00
+94.710
+Formatação Condicional Adicional
+90,20%
+Selecionar Linha
+Leads - Crossell
+14,00
+5,00
+5
+Formatação Condicional Adicional
+35,71%
+Selecionar Linha
+Leads - Indicação
+14,00
+4,00
+4
+Formatação Condicional Adicional
+28,57%
+Selecionar Linha
+Leads - Orgânicos
+150,00
+42,00
+42
+Formatação Condicional Adicional
+28,00%
+Selecionar Linha
+Leads - Pagos
+50,00
+4,00
+4
+Formatação Condicional Adicional
+8,00%
+Selecionar Linha
+Marcação - Ativo
+16,00
+18,00
+18
+Formatação Condicional Adicional
+112,50%
+Selecionar Linha
+Marcação - Crossell
+11,00
+2,00
+2
+Formatação Condicional Adicional
+18,18%
+Selecionar Linha
+Marcação - Indicação
+9,00
+4,00
+4
+Formatação Condicional Adicional
+44,44%
+Selecionar Linha
+Marcação - Orgânico
+7,00
+2,00
+2
+Formatação Condicional Adicional
+28,57%
+Selecionar Linha
+Marcação - Pago
+1,00
+0,00
+0
+Formatação Condicional Adicional
+0,00%
+Canal
+Todos
+Ano, Mês
+2026 (Ano) + abril (Mês)
+Ticket Médio
+Consulta
+Upsell
+Ticket Médio por Período
+abril
+R$ 266,67
+-
++
+110%
+Microsoft Power BI
+7de8
+Relatório Ampliado Para 110%
+Página 7 de 8 Próxima Página Botão Pressionado Enter ou Espaço

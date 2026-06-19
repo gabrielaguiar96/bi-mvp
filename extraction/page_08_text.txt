@@ -1,0 +1,53 @@
+Mostrar os atalhos de teclado
+Mostrar dicas do leitor de tela
+Pular para o conteúdo principal
+Relatório do Power BI
+Serviço
+Todos
+Ano
+2026
+Mês
+Todos
+Indicadores que bateram meta em
+Conversão Upsell - Acompanhamento
+Conversão Upsell - Ativo
+Conversão Upsell - Crossell
+Conversão Upsell - Orgânico
+Conversão Upsell - Retenção
+Fat. Planos de Acompanhamento - Orgânico
+Fat. Protocolo Crossell
+Fat. Protocolo Retenção
+Qde de Upsell - Geral
+Ticket Médio Ativo
+Ticket Médio Indicação
+Ticket Médio Organico
+Indicadores que não bateram meta em
+Faturamento do dia
+Faturamento do dia vs meta por Mês
+2026-01
+2026-02
+2026-03
+2026-04
+2026-05
+2026-06
+1.233.927,99
+953.173,00
+1.243.831,16
+952.838,39
+1.392.068,50
+540.154,95
+1.210.000,00
+960.000,00
+1.490.000,00
+950.000,00
+1.065.000,00
+1.065.000,00
+Total
+Meta
+-
++
+133%
+Microsoft Power BI
+8de8
+Relatório Ampliado Para 133%
+Página 8 de 8 Próxima Página Botão Pressionado Enter ou Espaço

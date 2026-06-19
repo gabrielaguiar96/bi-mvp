@@ -1,0 +1,65 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_008.txt",
+  "timestamp": "2026-06-19T02:10:31.957Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasGeral.Faturamento canal",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasFernando.Ticket Médio Canal",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Tabela_Parametros.Canal Leads",
+      "entity": "Tabela_Parametros",
+      "property": "Canal Leads",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "Retenção",
+          "M0": 557344,
+          "M1": 17417
+        },
+        {
+          "G0": "Orgânico",
+          "M0": 236878,
+          "M1": 23687.8
+        },
+        {
+          "G0": "Ativo",
+          "M0": 153120,
+          "M1": 15312
+        },
+        {
+          "G0": "Indicação",
+          "M0": 109164,
+          "M1": 18194
+        },
+        {
+          "G0": "Crossell",
+          "M0": 50700,
+          "M1": 0
+        },
+        {
+          "G0": "Pago",
+          "M0": 0,
+          "M1": 0
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 6
+}

@@ -1,0 +1,51 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_037.txt",
+  "timestamp": "2026-06-19T02:10:48.873Z",
+  "fromCache": false,
+  "measures": [],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Acrescentar1.Doutor (a)",
+      "entity": "Acrescentar1",
+      "property": "Serviço",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": ""
+        },
+        {
+          "G0": "By Evuli"
+        },
+        {
+          "G0": "Cirurgia Plástica"
+        },
+        {
+          "G0": "Dermatologia"
+        },
+        {
+          "G0": "Evuli Dietas"
+        },
+        {
+          "G0": "Nutrologia"
+        },
+        {
+          "G0": "Nutrologia 2"
+        },
+        {
+          "G0": "Pediatria"
+        },
+        {
+          "G0": "Suplementação"
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 9
+}

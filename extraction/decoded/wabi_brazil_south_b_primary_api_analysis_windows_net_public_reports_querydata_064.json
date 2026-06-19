@@ -1,0 +1,89 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_064.txt",
+  "timestamp": "2026-06-19T02:11:01.201Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasFernando.Marcados Selecionados Dr Fernando",
+      "format": "0",
+      "subtotalIds": [
+        "A0"
+      ]
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasFernando.Taxa de Conversão Dr Fernando",
+      "format": "0.00%;-0.00%;0.00%",
+      "subtotalIds": [
+        "A1"
+      ]
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasFernando.Leads_Selecionados Dr Fernando",
+      "format": "0",
+      "subtotalIds": [
+        "A2"
+      ]
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Tabela_Parametros.Canal Leads",
+      "entity": "Tabela_Parametros",
+      "property": "Canal Leads",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "A0": 38,
+          "A1": "0.092009685230024216",
+          "A2": 413
+        }
+      ]
+    },
+    {
+      "memberId": "DM1",
+      "subtotalOf": "DM0",
+      "rows": [
+        {
+          "G0": "Retenção",
+          "M0": 25,
+          "M1": "0.36764705882352944",
+          "M2": 68
+        },
+        {
+          "G0": "Orgânico",
+          "M0": 11,
+          "M1": "0.092436974789915971",
+          "M2": 119
+        },
+        {
+          "G0": "Ativo",
+          "M0": 7,
+          "M1": 0.035,
+          "M2": 200
+        },
+        {
+          "G0": "Indicação",
+          "M0": 7,
+          "M1": "0.26923076923076922",
+          "M2": 26
+        },
+        {
+          "G0": "Pago",
+          "M0": 2,
+          "M1": 0
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 6
+}

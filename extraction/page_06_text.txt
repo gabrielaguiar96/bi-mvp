@@ -1,0 +1,237 @@
+Mostrar os atalhos de teclado
+Mostrar dicas do leitor de tela
+Pular para o conteúdo principal
+Relatório do Power BI
+Faturamento dia
+213,86 Mil
+Mês anterior: 225,65 Mil(-5,22%)
+Faturamento Vacina
+10,38 Mil
+Mês anterior: 10,57 Mil(-1,8%)
+Ticket Médio Upsell
+R$ 0,00
+Mês anterior: R$ 0,00
+Ticket Médio Geral
+307,56
+Mês anterior: R$ 353,65(-13,03%)
+Total de Leads
+214,00
+Mês anterior: 170,00(+25,88%)
+Marcações
+21
+Mês anterior: 23,00(-8,7%)
+
+Pediatria
+
+Faturamento
+Consulta
+Geral
+Vacina
+Funil
+100%
+7,9%
+Horários disponíveis
+Ocupação Agenda
+Comparecidos
+Qtd Upsell
+114
+98
+98
+9
+Filtrar Indicador
+Seleções múltiplas
+Ano, Mês
+2026 (Ano) + maio (Mês)
+Faturamento por Período
+maio
+R$ 213.862,50
+Rolar para cima
+Rolar para baixo
+Role para a esquerda
+Rolar para a direita
+Seleção de Linha
+Indicador
+ 
+Meta
+Total
+Projeção
+% Meta
+Selecionar Linha
+Ticket Médio Upsell
+ 
+4.127,18
+3.349
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Qde de Upsell - Vacinas
+0,00
+9,00
+9
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Qde de Upsell - Plano de Acomp Geral
+0,00
+39,00
+39
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Qde de Upsell - Pago
+0,00
+0,00
+0
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Qde de Upsell - Orgânico
+0,00
+19,00
+19
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Qde de Upsell - Indicação
+0,00
+0,00
+0
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Qde de Upsell - Acompanhamento
+0,00
+20,00
+20
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Marcação - Retenção
+50,00
+27,00
+27
+Formatação Condicional Adicional
+54,00%
+Selecionar Linha
+Marcação - Pago
+5,00
+0,00
+0
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Marcação - Orgânico
+25,00
+21,00
+21
+Formatação Condicional Adicional
+84,00%
+Selecionar Linha
+Marcação - Indicação
+5,00
+0,00
+0
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Marcação - Ativo
+10,00
+7,00
+7
+Formatação Condicional Adicional
+70,00%
+Selecionar Linha
+Leads Pagos - Google
+80,00
+15,00
+15
+Formatação Condicional Adicional
+18,75%
+Selecionar Linha
+Leads - Orgânicos
+100,00
+199,00
+199
+Formatação Condicional Adicional
+199,00%
+Selecionar Linha
+Leads - Indicação
+15,00
+0,00
+0
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Faturamento do dia
+240.000,00
+213.862,50
+213.863
+Formatação Condicional Adicional
+89,11%
+Selecionar Linha
+Fat. Vacina
+40.000,00
+10.380,00
+10.380
+Formatação Condicional Adicional
+25,95%
+Selecionar Linha
+Fat. Planos de Acompanhamento - Pago
+3.600,00
+0,00
+0
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Fat. Planos de Acompanhamento - Orgânico
+50.000,00
+90.110,00
+90.110
+Formatação Condicional Adicional
+180,22%
+Selecionar Linha
+Fat. Planos de Acompanhamento - Indicação
+3.600,00
+0,00
+0
+Formatação Condicional Adicional
+0,00%
+Canal
+Todos
+Rolar para cima
+Rolar para baixo
+Role para a esquerda
+Rolar para a direita
+Canal
+Leads
+Marcados
+Taxa de Conversão
+Indicação
+0,00
+0
+0,00%
+Orgânico
+199,00
+21
+10,55%
+Pago
+15,00
+0
+0,00%
+Total
+214,00
+21
+9,81%
+Ticket Médio
+Consulta
+Upsell
+Ticket Médio por Período
+maio
+R$ 307,56
+-
++
+110%
+Microsoft Power BI
+6de8
+Relatório Ampliado Para 110%
+Página 6 de 8 Próxima Página Botão Pressionado Enter ou Espaço

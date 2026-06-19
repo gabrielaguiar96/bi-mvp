@@ -1,0 +1,25 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_050.txt",
+  "timestamp": "2026-06-19T02:10:55.147Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasGeral.Meta Leads Indicação",
+      "format": "0"
+    }
+  ],
+  "dimensions": [],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "M0": 80
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

@@ -1,0 +1,81 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_099.txt",
+  "timestamp": "2026-06-19T02:11:19.71Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "Sum(Append metas.TOTAL DO MÊS)",
+      "format": "#,0.00"
+    },
+    {
+      "id": "M1",
+      "name": "Sum(Append metas.META DO MÊS)",
+      "format": "#,0.00"
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasGeral.% Meta Indicador"
+    },
+    {
+      "id": "M3",
+      "name": "_MedidasGeral.Titulo Indicador vs Meta"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Append metas.Mês",
+      "entity": "Append metas",
+      "property": "Mês",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "2026-01-01",
+          "M0": 1233927.99,
+          "M1": 1210000,
+          "M2": "1.0197751983471075"
+        },
+        {
+          "G0": "2026-02-01",
+          "M0": 953173,
+          "M1": 950000,
+          "M2": 1.00334
+        },
+        {
+          "G0": "2026-03-01",
+          "M0": "1243831.1600000001",
+          "M1": 1065000,
+          "M2": "1.1679165821596245"
+        },
+        {
+          "G0": "2026-04-01",
+          "M0": 952838.39,
+          "M1": 1065000,
+          "M2": "0.89468393427230053"
+        },
+        {
+          "G0": "2026-05-01",
+          "M0": 1392068.5,
+          "M1": 1490000,
+          "M2": "0.93427416107382555"
+        },
+        {
+          "G0": "2026-06-01",
+          "M0": 540154.95,
+          "M1": 960000,
+          "M2": "0.56266140624999994"
+        }
+      ]
+    }
+  ],
+  "directProperties": {
+    "M3": "Faturamento do dia vs meta por Mês"
+  },
+  "totalRows": 6
+}

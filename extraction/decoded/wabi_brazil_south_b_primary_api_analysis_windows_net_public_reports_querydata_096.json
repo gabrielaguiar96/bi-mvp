@@ -1,0 +1,254 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_096.txt",
+  "timestamp": "2026-06-19T02:11:13.781Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "Sum(Metas Dra Thais.META DO MÊS)"
+    },
+    {
+      "id": "M1",
+      "name": "Sum(Metas Dra Thais.TOTAL DO MÊS)"
+    },
+    {
+      "id": "M2",
+      "name": "Metas Dra Thais.% Meta Dra Thais",
+      "format": "0.00%;-0.00%;0.00%"
+    },
+    {
+      "id": "M3",
+      "name": "Sum(Metas Dra Thais.PROJEÇÃO)",
+      "format": "#,0"
+    },
+    {
+      "id": "M4",
+      "name": "Metas Dra Thais.Cor Meta projetado Dra Thais"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Metas Dra Thais.Valor",
+      "entity": "Metas Dra Thais",
+      "property": "Indicador",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "Conversão Upsell - Acompanhamento",
+          "M0": 0,
+          "M1": 8,
+          "M2": 0,
+          "M3": 8,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Conversão Upsell - Crossell",
+          "M0": 0,
+          "M1": 4,
+          "M2": 0,
+          "M3": 4,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Conversão Upsell - Indicação",
+          "M0": 0,
+          "M1": 2,
+          "M2": 0,
+          "M3": 2,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Conversão Upsell - Orgânico",
+          "M0": 0,
+          "M1": 2,
+          "M2": 0,
+          "M3": 2,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Conversão Upsell Geral",
+          "M0": 36,
+          "M1": 16,
+          "M2": "0.44444444444444442",
+          "M3": 16,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Consulta",
+          "M0": 10000,
+          "M1": 9600,
+          "M2": 0.96,
+          "M3": 9600,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Protocolo Acompahamento",
+          "M0": 54000,
+          "M1": 32000,
+          "M2": "0.59259259259259256",
+          "M3": 32000,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Protocolo Crossell",
+          "M0": 40000,
+          "M1": 26460,
+          "M2": 0.6615,
+          "M3": 26460,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Protocolo Indicação",
+          "M0": 33600,
+          "M1": 11300,
+          "M2": "0.33630952380952384",
+          "M3": 11300,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Protocolo Orgânico",
+          "M0": 32000,
+          "M1": 15350,
+          "M2": 0.4796875,
+          "M3": 15350,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Faturamento do dia",
+          "M0": 105000,
+          "M1": 94710,
+          "M2": 0.902,
+          "M3": 94710,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Leads - Crossell",
+          "M0": 14,
+          "M1": 5,
+          "M2": "0.35714285714285715",
+          "M3": 5,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Leads - Indicação",
+          "M0": 14,
+          "M1": 4,
+          "M2": "0.2857142857142857",
+          "M3": 4,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Leads - Orgânicos",
+          "M0": 150,
+          "M1": 42,
+          "M2": 0.28,
+          "M3": 42,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Leads - Pagos",
+          "M0": 50,
+          "M1": 4,
+          "M2": 0.08,
+          "M3": 4,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Ativo",
+          "M0": 16,
+          "M1": 18,
+          "M2": 1.125,
+          "M3": 18,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Marcação - Crossell",
+          "M0": 11,
+          "M1": 2,
+          "M2": "0.18181818181818182",
+          "M3": 2,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Indicação",
+          "M0": 9,
+          "M1": 4,
+          "M2": "0.44444444444444442",
+          "M3": 4,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Orgânico",
+          "M0": 7,
+          "M1": 2,
+          "M2": "0.2857142857142857",
+          "M3": 2,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Pago",
+          "M0": 1,
+          "M1": 0,
+          "M2": 0,
+          "M3": 0,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Qde de Upsell - Acompanhamento",
+          "M0": 0,
+          "M1": 18,
+          "M2": 0,
+          "M3": 18,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Qde de Upsell - Crossell",
+          "M0": 0,
+          "M1": 5,
+          "M2": 0,
+          "M3": 5,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Qde de Upsell - Geral",
+          "M0": 40,
+          "M1": 30,
+          "M2": 0.75,
+          "M3": 30,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Qde de Upsell - Indicação",
+          "M0": 0,
+          "M1": 4,
+          "M2": 0,
+          "M3": 4,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Qde de Upsell - Orgânico",
+          "M0": 0,
+          "M1": 3,
+          "M2": 0,
+          "M3": 3,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Ticket Médio Upsell",
+          "M0": 5919.375,
+          "M1": 5919.375,
+          "M2": 0,
+          "M4": "#B4F6BE"
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 26
+}

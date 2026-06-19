@@ -1,0 +1,25 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_017.txt",
+  "timestamp": "2026-06-19T02:10:42.63Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "Leads SImulado.Valor Leads Sim.",
+      "format": "0"
+    }
+  ],
+  "dimensions": [],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "M0": 10
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

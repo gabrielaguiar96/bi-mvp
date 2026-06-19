@@ -1,0 +1,54 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_063.txt",
+  "timestamp": "2026-06-19T02:11:01.186Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasFernando.Leads_Selecionados Dr Fernando",
+      "format": "0"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasFernando.Leads Selecionados LM",
+      "format": "#,0"
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasGeral.MesAnterior"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Ano",
+      "entity": "dCalendario",
+      "property": "Ano",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 0,
+          "M0": 0
+        },
+        {
+          "G0": 2025,
+          "M0": 0
+        },
+        {
+          "G0": 2026,
+          "M0": 413,
+          "M1": 340
+        }
+      ]
+    }
+  ],
+  "directProperties": {
+    "M2": "Mar/2026: "
+  },
+  "totalRows": 3
+}

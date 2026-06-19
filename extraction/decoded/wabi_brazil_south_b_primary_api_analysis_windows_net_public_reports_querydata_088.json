@@ -1,0 +1,30 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_088.txt",
+  "timestamp": "2026-06-19T02:11:13.592Z",
+  "fromCache": false,
+  "measures": [],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Tabela_Parametros_TicketMedio.Ticket Médio",
+      "entity": "Tabela_Parametros_TicketMedio",
+      "property": "Ticket Médio",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "Consulta"
+        },
+        {
+          "G0": "Upsell"
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 2
+}

@@ -1,0 +1,42 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_016.txt",
+  "timestamp": "2026-06-19T02:10:42.599Z",
+  "fromCache": false,
+  "measures": [],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+      "property": "Ano",
+      "depth": 0
+    },
+    {
+      "id": "G1",
+      "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+      "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+      "property": "Mês",
+      "depth": 1
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": []
+    },
+    {
+      "memberId": "DM1",
+      "subtotalOf": "DM0",
+      "rows": [
+        {
+          "G0": 2026
+        },
+        {
+          "G0": 2025
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 2
+}

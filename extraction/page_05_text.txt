@@ -1,0 +1,169 @@
+Mostrar os atalhos de teclado
+Mostrar dicas do leitor de tela
+Pular para o conteúdo principal
+Relatório do Power BI
+Faturamento dia
+632,48 Mil
+Mês anterior: R$ 1,24 Mi(-49,15%)
+Faturamento Protocolo
+632,48 Mil
+Mês anterior: (Em branco)(+Infinito%)
+Ticket Médio Upsell
+R$ 12,65 Mil
+Mês anterior: R$ 17,52 Mil(-27,79%)
+Ticket Médio Agenda
+10,90 Mil
+Mês anterior: 11,51 Mil(-606,60)
+Total de Leads
+413
+Mês anterior: 340(+21,47%)
+Marcações
+38
+Mês anterior: 52,00(-26,92%)
+
+Nutrologia
+
+Faturamento
+Consulta
+Geral
+Protocolo
+Filtrar indicador
+Seleções múltiplas
+Funil
+100%
+44,6%
+Horários disponíveis
+Ocupação Agenda
+Qtd Upsell
+Conversão Upsell
+112
+58
+58
+50
+Rolar para cima
+Rolar para baixo
+Role para a esquerda
+Rolar para a direita
+Seleção de Linha
+Indicador
+ 
+Meta
+Total
+Projeção
+% Meta
+Selecionar Linha
+Marcação - Retenção
+50,00
+25,00
+25
+Formatação Condicional Adicional
+50,00%
+Selecionar Linha
+Marcação - Pago
+3,00
+2,00
+2
+Formatação Condicional Adicional
+66,67%
+Selecionar Linha
+Marcação - Orgânico
+22,00
+11,00
+11
+Formatação Condicional Adicional
+50,00%
+Selecionar Linha
+Marcação - Indicação
+20,00
+4,00
+4
+Formatação Condicional Adicional
+20,00%
+Selecionar Linha
+Marcação - Ativo
+20,00
+7,00
+7
+Formatação Condicional Adicional
+35,00%
+Selecionar Linha
+Leads - Orgânicos
+150,00
+119,00
+119
+Formatação Condicional Adicional
+79,33%
+Selecionar Linha
+Leads - Indicação Sucesso - Upsell
+80,00
+26,00
+26
+Formatação Condicional Adicional
+32,50%
+Selecionar Linha
+Leads - Indicação Dr. Fernando
+0,00
+0,00
+0
+Formatação Condicional Adicional
+0,00%
+Selecionar Linha
+Faturamento do dia
+800.000,00
+632.478,00
+632.478
+Formatação Condicional Adicional
+79,06%
+Faturamento por Período
+2026
+R$ 21.750,00
+Canal
+Todos
+Ano, Mês
+2026 (Ano) + abril (Mês)
+Rolar para cima
+Rolar para baixo
+Role para a esquerda
+Rolar para a direita
+Canal
+Leads
+Marcados
+ 
+% Conversão
+Retenção
+68
+25
+36,76%
+Orgânico
+119
+11
+9,24%
+Ativo
+200
+7
+3,50%
+Indicação
+26
+7
+26,92%
+Pago
+ 
+2
+0,00%
+Total
+413
+38
+9,20%
+Ticket Médio
+Geral
+Upsell
+Ticket Médio por Período
+2026
+R$ 12.649,56
+-
++
+110%
+Microsoft Power BI
+5de8
+Relatório Ampliado Para 110%
+Página 5 de 8 Próxima Página Botão Pressionado Enter ou Espaço

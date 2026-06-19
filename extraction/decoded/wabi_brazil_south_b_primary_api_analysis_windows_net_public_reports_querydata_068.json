@@ -1,0 +1,120 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_068.txt",
+  "timestamp": "2026-06-19T02:11:01.405Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "Sum(Metas Dr Fernando.META DO MÊS)"
+    },
+    {
+      "id": "M1",
+      "name": "Sum(Metas Dr Fernando.TOTAL DO MÊS)",
+      "format": "#,0.00"
+    },
+    {
+      "id": "M2",
+      "name": "Metas Dr Fernando.% Meta",
+      "format": "0.00%;-0.00%;0.00%"
+    },
+    {
+      "id": "M3",
+      "name": "Sum(Metas Dr Fernando.PROJEÇÃO)",
+      "format": "#,0"
+    },
+    {
+      "id": "M4",
+      "name": "Metas Dr Fernando.Cor Meta projetado Dr Fernando"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Metas Dr Fernando.Indicador",
+      "entity": "Metas Dr Fernando",
+      "property": "Indicador",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "Marcação - Retenção",
+          "M0": 50,
+          "M1": 25,
+          "M2": 0.5,
+          "M3": 25,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Pago",
+          "M0": 3,
+          "M1": 2,
+          "M2": "0.66666666666666663",
+          "M3": 2,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Orgânico",
+          "M0": 22,
+          "M1": 11,
+          "M2": 0.5,
+          "M3": 11,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Indicação",
+          "M0": 20,
+          "M1": 4,
+          "M2": 0.2,
+          "M3": 4,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Ativo",
+          "M0": 20,
+          "M1": 7,
+          "M2": 0.35,
+          "M3": 7,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Leads - Orgânicos",
+          "M0": 150,
+          "M1": 119,
+          "M2": "0.79333333333333333",
+          "M3": 119,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Leads - Indicação Sucesso - Upsell",
+          "M0": 80,
+          "M1": 26,
+          "M2": 0.325,
+          "M3": 26,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Leads - Indicação Dr. Fernando",
+          "M0": 0,
+          "M1": 0,
+          "M2": 0,
+          "M3": 0,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Faturamento do dia",
+          "M0": 800000,
+          "M1": 632478,
+          "M2": 0.7905975,
+          "M3": 632478,
+          "M4": "#F5B4BA"
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 9
+}

@@ -1,0 +1,25 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_029.txt",
+  "timestamp": "2026-06-19T02:10:48.717Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasFernando.Leads_Selecionados",
+      "format": "0"
+    }
+  ],
+  "dimensions": [],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "M0": 285
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

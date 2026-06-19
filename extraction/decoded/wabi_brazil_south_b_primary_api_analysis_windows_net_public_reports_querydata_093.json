@@ -1,0 +1,44 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_093.txt",
+  "timestamp": "2026-06-19T02:11:13.749Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasThais.Marcados Selecionados Dra Thaís"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasThais.Marcados Selecionados Dra Thaís LM"
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasGeral.MesAnterior"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Ano",
+      "entity": "dCalendario",
+      "property": "Ano",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 2026,
+          "M0": 24,
+          "M1": 11
+        }
+      ]
+    }
+  ],
+  "directProperties": {
+    "M2": "Mar/2026: "
+  },
+  "totalRows": 1
+}

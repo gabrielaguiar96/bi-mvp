@@ -1,0 +1,40 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_095.txt",
+  "timestamp": "2026-06-19T02:11:13.78Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasThais.Faturamento Geral Dra Thaís",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasThais.Faturamento Geral Dra Thaís LM",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Ano",
+      "entity": "dCalendario",
+      "property": "Ano",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 2026,
+          "M0": 94710,
+          "M1": 119165
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

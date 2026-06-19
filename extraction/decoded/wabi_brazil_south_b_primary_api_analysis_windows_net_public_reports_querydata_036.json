@@ -1,0 +1,25 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_036.txt",
+  "timestamp": "2026-06-19T01:55:51.516Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasFernando.Taxa de Conversão Total Geral",
+      "format": "0.00%;-0.00%;0.00%"
+    }
+  ],
+  "dimensions": [],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "M0": "0.21754385964912282"
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

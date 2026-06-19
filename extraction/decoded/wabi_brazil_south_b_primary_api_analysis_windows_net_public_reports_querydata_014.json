@@ -1,0 +1,96 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_014.txt",
+  "timestamp": "2026-06-19T02:10:32.114Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasFernando.Taxa de Conversão",
+      "format": "0.00%;-0.00%;0.00%",
+      "subtotalIds": [
+        "A0"
+      ]
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasFernando.Leads_Selecionados",
+      "format": "0",
+      "subtotalIds": [
+        "A1"
+      ]
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasGeral.Marcados Selecionados",
+      "format": "0",
+      "subtotalIds": [
+        "A2"
+      ]
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Tabela_Parametros.Canal Leads",
+      "entity": "Tabela_Parametros",
+      "property": "Canal Leads",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "A0": "0.20245398773006135",
+          "A1": 489,
+          "A2": 99
+        }
+      ]
+    },
+    {
+      "memberId": "DM1",
+      "subtotalOf": "DM0",
+      "rows": [
+        {
+          "G0": "Retenção",
+          "M0": "0.91935483870967738",
+          "M1": 62,
+          "M2": 57
+        },
+        {
+          "G0": "Ativo",
+          "M0": 0.21,
+          "M1": 200,
+          "M2": 42
+        },
+        {
+          "G0": "Crossell",
+          "M0": "0.14285714285714285",
+          "M1": 49,
+          "M2": 7
+        },
+        {
+          "G0": "Orgânico",
+          "M0": "0.11202185792349727",
+          "M1": 366,
+          "M2": 41
+        },
+        {
+          "G0": "Indicação",
+          "M0": "0.084112149532710276",
+          "M1": 107,
+          "M2": 9
+        },
+        {
+          "G0": "Pago",
+          "M0": 0,
+          "M1": 16,
+          "M2": 0
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 7
+}

@@ -1,0 +1,5362 @@
+{
+  "reportId": 8726404,
+  "packageName": "Evuli.pbix",
+  "lastRefresh": "/Date(1780629726453)/",
+  "pageCount": 10,
+  "pages": [
+    {
+      "name": "Geral",
+      "index": 0,
+      "visualCount": 16,
+      "slicerCount": 4,
+      "visuals": [
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 0,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano"
+          ],
+          "filters": [
+            {
+              "name": "39e1f3f88889a7c87733",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "dCalendario"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Data"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Ano"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "l",
+                    "Entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "l"
+                                    }
+                                  },
+                                  "Property": "Ano"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "cachedDisplayNames": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9"
+                              }
+                            },
+                            "Property": "Ano"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "null"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "(Em branco)"
+                }
+              ],
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 1,
+          "visualType": "cardVisual",
+          "measures": [
+            "_MedidasGeral.Comparecidos_Consultas"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Comparecidos_Consultas"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 2,
+          "visualType": "cardVisual",
+          "measures": [
+            "_MedidasGeral.Ocupação Agenda"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Ocupação Agenda"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 3,
+          "visualType": "cardVisual",
+          "measures": [
+            "_MedidasGeral.Ticket Medio Consultas"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Ticket Medio Consultas"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 4,
+          "visualType": "columnChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Trimestre",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "Acrescentar1.Ticket Médio Consultas"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "b8ed49f3136ddd62a7a3",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Comparecidos_Consultas"
+                }
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            },
+            {
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Ticket Medio Consultas"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Ticket Medio Consultas"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1,
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Trimestre",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "Acrescentar1.Ticket Médio Consultas"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 5,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Tabela_Parametros.Canal Leads"
+          ],
+          "filters": [
+            {
+              "name": "232f07302e0c44de0e9c",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Leads_Selecionados"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "_"
+                                  }
+                                },
+                                "Property": "Leads_Selecionados"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "null"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 6,
+          "visualType": "pivotTable",
+          "measures": [
+            "Tabela_Parametros.Canal Leads",
+            "Acrescentar1.Doutor (a)",
+            "_MedidasFernando.Leads_Selecionados",
+            "_MedidasGeral.Marcados Selecionados",
+            "_MedidasFernando.Taxa de Conversão"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "a40cb130a6c1b71b57d4",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros"
+                    }
+                  },
+                  "Property": "Canal Leads"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Canal Leads"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Google'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Meta'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads",
+            "Acrescentar1.Doutor (a)",
+            "_MedidasFernando.Leads_Selecionados",
+            "_MedidasGeral.Marcados Selecionados",
+            "_MedidasFernando.Taxa de Conversão"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 7,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dServiços.Serviço"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dServiços.Serviço"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 8,
+          "visualType": "clusteredBarChart",
+          "measures": [
+            "_MedidasFernando.Faturamento",
+            "dServiços.Serviço"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Faturamento",
+            "dServiços.Serviço"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 9,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 10,
+          "visualType": "cardVisual",
+          "measures": [
+            "_MedidasGeral.Faturamento",
+            "_MedidasGeral.Faturamento LM",
+            "_MedidasGeral.% Meta Total"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Faturamento",
+            "_MedidasGeral.Faturamento LM",
+            "_MedidasGeral.% Meta Total"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 11,
+          "visualType": "cardVisual",
+          "measures": [
+            "_MedidasGeral.Conversão Upsell canal"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Conversão Upsell canal"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 12,
+          "visualType": "columnChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Trimestre",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasGeral.Faturamento canal"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Faturamento"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Faturamento"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1,
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Trimestre",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasGeral.Faturamento canal"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 13,
+          "visualType": "pivotTable",
+          "measures": [
+            "Tabela_Parametros.Canal Leads",
+            "Acrescentar1.Doutor (a)",
+            "_MedidasGeral.Faturamento canal",
+            "_MedidasFernando.Ticket Médio Canal"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "a40cb130a6c1b71b57d4",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros"
+                    }
+                  },
+                  "Property": "Canal Leads"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Canal Leads"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Google'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Meta'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads",
+            "Acrescentar1.Doutor (a)",
+            "_MedidasGeral.Faturamento canal",
+            "_MedidasFernando.Ticket Médio Canal"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 14,
+          "visualType": "clusteredBarChart",
+          "measures": [
+            "Tabela_Parametros.Canal Leads",
+            "_MedidasGeral.Conversão Upsell canal"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "705b4f8484150e50ee1d",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros"
+                    }
+                  },
+                  "Property": "Canal Leads"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Canal Leads"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Meta'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Google'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads",
+            "_MedidasGeral.Conversão Upsell canal"
+          ]
+        },
+        {
+          "pageName": "Geral",
+          "pageIndex": 0,
+          "visualIndex": 15,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ],
+          "filters": [
+            {
+              "name": "39e1f3f88889a7c87733",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "dCalendario"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Data"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Ano"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "l",
+                    "Entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "l"
+                                    }
+                                  },
+                                  "Property": "Ano"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "cachedDisplayNames": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9"
+                              }
+                            },
+                            "Property": "Ano"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "null"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "(Em branco)"
+                }
+              ],
+              "howCreated": 1,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ]
+        }
+      ],
+      "slicers": [
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "visualIndex": 0
+        },
+        {
+          "label": "Tabela_Parametros.Canal Leads",
+          "queryRef": "Tabela_Parametros.Canal Leads",
+          "visualIndex": 5
+        },
+        {
+          "label": "dServiços.Serviço",
+          "queryRef": "dServiços.Serviço",
+          "visualIndex": 7
+        },
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "visualIndex": 15
+        }
+      ]
+    },
+    {
+      "name": "Simulado",
+      "index": 1,
+      "visualCount": 16,
+      "slicerCount": 3,
+      "visuals": [
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 0,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ],
+          "filters": [
+            {
+              "name": "39e1f3f88889a7c87733",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "dCalendario"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Data"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Ano"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "l",
+                    "Entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "l"
+                                    }
+                                  },
+                                  "Property": "Ano"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "cachedDisplayNames": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9"
+                              }
+                            },
+                            "Property": "Ano"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "null"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "(Em branco)"
+                }
+              ],
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ]
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 1,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dServiços.Serviço"
+          ],
+          "filters": [
+            {
+              "name": "9335b0d66a7446852f1b",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dServiços"
+                    }
+                  },
+                  "Property": "Serviço"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "d",
+                    "Entity": "dServiços",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  },
+                                  "Property": "Serviço"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            },
+            {
+              "name": "4ed558f8c33a5afa2abc",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Leads_Selecionados"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "_"
+                                  }
+                                },
+                                "Property": "Leads_Selecionados"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "null"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            }
+          ],
+          "queryRefs": [
+            "dServiços.Serviço"
+          ]
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 2,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 3,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Parâmetro.Parâmetro"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "Parâmetro.Parâmetro"
+          ]
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 4,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Taxa de Conversão"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Taxa de Conversão"
+          ]
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 5,
+          "visualType": "advancedSlicerVisual",
+          "measures": [
+            "Tabela_Parametros.Canal Leads"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "81953f03b84c504e0377",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros_Faturamento"
+                    }
+                  },
+                  "Property": "Faturamento"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros_Faturamento",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Faturamento"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Procedimentos'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Protocolo'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 1,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads"
+          ]
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 6,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 7,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 8,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Marcados Simulado"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Marcados Simulado"
+          ]
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 9,
+          "visualType": "card",
+          "measures": [
+            "Leads SImulado.Valor Leads Sim."
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "Leads SImulado.Valor Leads Sim."
+          ]
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 10,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Marcados Selecionados"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Marcados Selecionados"
+          ]
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 11,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Leads_Selecionados"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Leads_Selecionados"
+          ]
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 12,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 13,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 14,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Simulado",
+          "pageIndex": 1,
+          "visualIndex": 15,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Faturamento Simulado"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Faturamento Simulado"
+          ]
+        }
+      ],
+      "slicers": [
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "visualIndex": 0
+        },
+        {
+          "label": "dServiços.Serviço",
+          "queryRef": "dServiços.Serviço",
+          "visualIndex": 1
+        },
+        {
+          "label": "Parâmetro.Parâmetro",
+          "queryRef": "Parâmetro.Parâmetro",
+          "visualIndex": 3
+        }
+      ]
+    },
+    {
+      "name": "Funil",
+      "index": 2,
+      "visualCount": 20,
+      "slicerCount": 2,
+      "visuals": [
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 0,
+          "visualType": "unknown",
+          "measures": [],
+          "dimensions": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 1,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 2,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Leads_Selecionados"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Leads_Selecionados"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 3,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Ocupação Agenda"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Ocupação Agenda"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 4,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Comparecidos"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Comparecidos"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 5,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Qtd Upsell"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Qtd Upsell"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 6,
+          "visualType": "card",
+          "measures": [
+            "Sum(Acrescentar1.Conversão Upsell)"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "Sum(Acrescentar1.Conversão Upsell)"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 7,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 8,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 9,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 10,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 11,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 12,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 13,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Acrescentar1.Doutor (a)"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "Acrescentar1.Doutor (a)"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 14,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Conversao1 Geral"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Conversao1 Geral"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 15,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Conversao2 Geral"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Conversao2 Geral"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 16,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Conversao3 Geral"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Conversao3 Geral"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 17,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Conversao4 Geral"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Conversao4 Geral"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 18,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Taxa de Conversão Total Geral"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Taxa de Conversão Total Geral"
+          ]
+        },
+        {
+          "pageName": "Funil",
+          "pageIndex": 2,
+          "visualIndex": 19,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        }
+      ],
+      "slicers": [
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "visualIndex": 12
+        },
+        {
+          "label": "Acrescentar1.Doutor (a)",
+          "queryRef": "Acrescentar1.Doutor (a)",
+          "visualIndex": 13
+        }
+      ]
+    },
+    {
+      "name": "Funil Indicação",
+      "index": 3,
+      "visualCount": 32,
+      "slicerCount": 2,
+      "visuals": [
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 0,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 1,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 2,
+          "visualType": "unknown",
+          "measures": [],
+          "dimensions": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 3,
+          "visualType": "unknown",
+          "measures": [],
+          "dimensions": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 4,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Pacientes ativos"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Pacientes ativos"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 5,
+          "visualType": "kpi",
+          "measures": [
+            "_MedidasGeral.Pacientes que indicaram",
+            "dCalendario.Ano",
+            "_MedidasGeral.Projeção Pacientes que passaram indicação"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Pacientes que indicaram",
+            "dCalendario.Ano",
+            "_MedidasGeral.Projeção Pacientes que passaram indicação"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 6,
+          "visualType": "kpi",
+          "measures": [
+            "_MedidasGeral.Pacientes aptos",
+            "dCalendario.Ano",
+            "_MedidasGeral.Projeção Pacientes Aptos"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Pacientes aptos",
+            "dCalendario.Ano",
+            "_MedidasGeral.Projeção Pacientes Aptos"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 7,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 8,
+          "visualType": "unknown",
+          "measures": [],
+          "dimensions": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 9,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Pacientes ativos"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Pacientes ativos"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 10,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Meta Pacientes Aptos"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Meta Pacientes Aptos"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 11,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Meta Pacientes que passaram indicação"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Meta Pacientes que passaram indicação"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 12,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 13,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 14,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Meta Marcados Indicaçao"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Meta Marcados Indicaçao"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 15,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Meta Leads Indicação"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasGeral.Meta Leads Indicação"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 16,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 17,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 18,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 19,
+          "visualType": "card",
+          "measures": [
+            "_MedidasGeral.Meta Upsell Indicaçao"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "6053c6980034a083bd54",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros"
+                    }
+                  },
+                  "Property": "Canal Leads"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "t"
+                                }
+                              },
+                              "Property": "Canal Leads"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Indicação'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 1,
+              "objects": {}
+            }
+          ],
+          "queryRefs": [
+            "_MedidasGeral.Meta Upsell Indicaçao"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 20,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Taxa de Conversão Aptos a indicar"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Taxa de Conversão Aptos a indicar"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 21,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Taxa de Conversão Pcts indicaram"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Taxa de Conversão Pcts indicaram"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 22,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Taxa de Conversão Marcados"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Taxa de Conversão Marcados"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 23,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Taxa de Conversão Upsell"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Taxa de Conversão Upsell"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 24,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Meta Taxa de Conversão Aptos a indicar"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Meta Taxa de Conversão Aptos a indicar"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 25,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Meta Taxa de Conversão Pcts indicaram"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Meta Taxa de Conversão Pcts indicaram"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 26,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Meta Taxa de Conversão Marcados"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Meta Taxa de Conversão Marcados"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 27,
+          "visualType": "card",
+          "measures": [
+            "_MedidasFernando.Meta Taxa de Conversão Upsell"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Meta Taxa de Conversão Upsell"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 28,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 29,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasGeral.Leads Indicação Nutrologia",
+            "_MedidasGeral.Projeção Leads Indicação"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasGeral.Leads Indicação Nutrologia",
+            "_MedidasGeral.Projeção Leads Indicação"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 30,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Marcados Indicação Nutrologia",
+            "_MedidasGeral.Projeção Marcados Indicaçao"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Marcados Indicação Nutrologia",
+            "_MedidasGeral.Projeção Marcados Indicaçao"
+          ]
+        },
+        {
+          "pageName": "Funil Indicação",
+          "pageIndex": 3,
+          "visualIndex": 31,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasGeral.Projeção Upsell Indicaçao",
+            "_MedidasGeral.Conversão Upsell Indicação Nutrologia"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasGeral.Projeção Upsell Indicaçao",
+            "_MedidasGeral.Conversão Upsell Indicação Nutrologia"
+          ]
+        }
+      ],
+      "slicers": [
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "visualIndex": 0
+        },
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "visualIndex": 28
+        }
+      ]
+    },
+    {
+      "name": "Nutrologia",
+      "index": 4,
+      "visualCount": 18,
+      "slicerCount": 3,
+      "visuals": [
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 0,
+          "visualType": "kpi",
+          "measures": [
+            "_MedidasFernando.Faturamento Fernando LM",
+            "dCalendario.Ano",
+            "_MedidasFernando.Faturamento dia"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasFernando.Faturamento Fernando LM",
+            "dCalendario.Ano",
+            "_MedidasFernando.Faturamento dia"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 1,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 2,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Faturamento Protocolo LM",
+            "_MedidasFernando.Faturamento canal Dr Fernando"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Faturamento Protocolo LM",
+            "_MedidasFernando.Faturamento canal Dr Fernando"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 3,
+          "visualType": "lineChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasFernando.Faturamento Dr Fernando Selecionado"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasFernando.Faturamento Dr Fernando Selecionado"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 4,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Ticket Medio Upsell Dr Fernando",
+            "_MedidasFernando.Ticket Medio Geral Dr Fernando LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Ticket Medio Upsell Dr Fernando",
+            "_MedidasFernando.Ticket Medio Geral Dr Fernando LM"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 5,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasGeral.Ticket Médio Agenda",
+            "_MedidasFernando.Ticket Médio Agenda LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasGeral.Ticket Médio Agenda",
+            "_MedidasFernando.Ticket Médio Agenda LM"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 6,
+          "visualType": "lineChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasFernando.Ticket Médio Dr Fernando Selecionado"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "b8ed49f3136ddd62a7a3",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Comparecidos_Consultas"
+                }
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasFernando.Ticket Médio Dr Fernando Selecionado"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 7,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Tabela_Parametros.Canal Leads"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 8,
+          "visualType": "pivotTable",
+          "measures": [
+            "Tabela_Parametros.Canal Leads",
+            "dCalendario.Semana",
+            "_MedidasFernando.Leads_Selecionados Dr Fernando",
+            "_MedidasFernando.Marcados Selecionados Dr Fernando",
+            "_MedidasFernando.Taxa de Conversão Dr Fernando"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "5031119fe480102e220c",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros"
+                    }
+                  },
+                  "Property": "Canal Leads"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Canal Leads"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Crossell'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Google'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Meta'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads",
+            "dCalendario.Semana",
+            "_MedidasFernando.Leads_Selecionados Dr Fernando",
+            "_MedidasFernando.Marcados Selecionados Dr Fernando",
+            "_MedidasFernando.Taxa de Conversão Dr Fernando"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 9,
+          "visualType": "funnel",
+          "measures": [
+            "Tabela_Parametros FunilHorario.Etapa",
+            "_MedidasFernando.Valor Etapa Funil Dr Fernando"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "158b25c8f86badee787d",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros_FunilHorario"
+                    }
+                  },
+                  "Property": "Etapa"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros_FunilHorario",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Etapa"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Comparecidos'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Pacientes atendidos'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros FunilHorario.Etapa",
+            "_MedidasFernando.Valor Etapa Funil Dr Fernando"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 10,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Leads_Selecionados Dr Fernando",
+            "_MedidasFernando.Leads Selecionados LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Leads_Selecionados Dr Fernando",
+            "_MedidasFernando.Leads Selecionados LM"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 11,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Marcados Selecionados Dr Fernando",
+            "_MedidasFernando.Marcações Selecionados Fernando LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasFernando.Marcados Selecionados Dr Fernando",
+            "_MedidasFernando.Marcações Selecionados Fernando LM"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 12,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 13,
+          "visualType": "advancedSlicerVisual",
+          "measures": [
+            "Tabela_Parametros_Faturamento.Faturamento"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "81953f03b84c504e0377",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros_Faturamento"
+                    }
+                  },
+                  "Property": "Faturamento"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros_Faturamento",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Faturamento"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Procedimentos'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Vacina'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros_Faturamento.Faturamento"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 14,
+          "visualType": "advancedSlicerVisual",
+          "measures": [
+            "Tabela_Parametros_TicketMedio.Ticket Médio"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "82398605924640401b73",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros_TicketMedio"
+                    }
+                  },
+                  "Property": "Ticket Médio"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros_TicketMedio",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Ticket Médio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Consulta'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros_TicketMedio.Ticket Médio"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 15,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 16,
+          "visualType": "tableEx",
+          "measures": [
+            "Metas Dr Fernando.Indicador",
+            "Sum(Metas Dr Fernando.META DO MÊS)",
+            "Sum(Metas Dr Fernando.TOTAL DO MÊS)",
+            "Sum(Metas Dr Fernando.PROJEÇÃO)",
+            "Metas Dr Fernando.% Meta"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "7996385f9fb0afec06a0",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metas Dr Fernando"
+                    }
+                  },
+                  "Property": "Indicador"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "m",
+                    "Entity": "Metas Dr Fernando",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "m"
+                                    }
+                                  },
+                                  "Property": "Indicador"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Leads Pagos - Meta'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Metas Dr Fernando.Indicador",
+            "Sum(Metas Dr Fernando.META DO MÊS)",
+            "Sum(Metas Dr Fernando.TOTAL DO MÊS)",
+            "Sum(Metas Dr Fernando.PROJEÇÃO)",
+            "Metas Dr Fernando.% Meta"
+          ]
+        },
+        {
+          "pageName": "Nutrologia",
+          "pageIndex": 4,
+          "visualIndex": 17,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Metas Dr Fernando.Indicador"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "Metas Dr Fernando.Indicador"
+          ]
+        }
+      ],
+      "slicers": [
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "visualIndex": 1
+        },
+        {
+          "label": "Tabela_Parametros.Canal Leads",
+          "queryRef": "Tabela_Parametros.Canal Leads",
+          "visualIndex": 7
+        },
+        {
+          "label": "Metas Dr Fernando.Indicador",
+          "queryRef": "Metas Dr Fernando.Indicador",
+          "visualIndex": 17
+        }
+      ]
+    },
+    {
+      "name": "Pediatria",
+      "index": 5,
+      "visualCount": 18,
+      "slicerCount": 3,
+      "visuals": [
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 0,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Faturamento Geral Dra Isa",
+            "_MedidasIsa.Faturamento Geral Dra Isa LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Faturamento Geral Dra Isa",
+            "_MedidasIsa.Faturamento Geral Dra Isa LM"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 1,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 2,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Faturamento Vacina",
+            "_MedidasIsa.Faturamento Vacina LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Faturamento Vacina",
+            "_MedidasIsa.Faturamento Vacina LM"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 3,
+          "visualType": "lineChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasIsa.Faturamento Dra Isa Selecionado"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasIsa.Faturamento Dra Isa Selecionado"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 4,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Ticket Medio Upsell Dra Isa",
+            "_MedidasIsa.Ticket Medio Upsell Dra Isa LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Ticket Medio Upsell Dra Isa",
+            "_MedidasIsa.Ticket Medio Upsell Dra Isa LM"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 5,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Ticket Medio Consulta Dra Isa",
+            "_MedidasIsa.Ticket Medio Consulta Dra Isa LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Ticket Medio Consulta Dra Isa",
+            "_MedidasIsa.Ticket Medio Consulta Dra Isa LM"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 6,
+          "visualType": "lineChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasIsa.Ticket Médio Dra Isa Selecionado"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "b8ed49f3136ddd62a7a3",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Comparecidos_Consultas"
+                }
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasIsa.Ticket Médio Dra Isa Selecionado"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 7,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Tabela_Parametros.Canal Leads"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 8,
+          "visualType": "pivotTable",
+          "measures": [
+            "Tabela_Parametros.Canal Leads",
+            "dCalendario.Semana",
+            "_MedidasIsa.Leads_Selecionados Dra Isa",
+            "_MedidasIsa.Marcados Selecionados Dra Isa",
+            "_MedidasIsa.Taxa de Conversão Dra Isa"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "505e7fc0dd24006990c2",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros"
+                    }
+                  },
+                  "Property": "Canal Leads"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "t"
+                                }
+                              },
+                              "Property": "Canal Leads"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Orgânico'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Pago'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Indicação'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {},
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads",
+            "dCalendario.Semana",
+            "_MedidasIsa.Leads_Selecionados Dra Isa",
+            "_MedidasIsa.Marcados Selecionados Dra Isa",
+            "_MedidasIsa.Taxa de Conversão Dra Isa"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 9,
+          "visualType": "funnel",
+          "measures": [
+            "_MedidasIsa.Valor Etapa Funil Dra Isa",
+            "Tabela_Parametros FunilHorario.Etapa"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasIsa"
+                    }
+                  },
+                  "Property": "Leads_Selecionados Dra Isa"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasIsa",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Leads_Selecionados Dra Isa"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1,
+              "isHiddenInViewMode": false
+            },
+            {
+              "name": "b2516568077a07d040b3",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros"
+                    }
+                  },
+                  "Property": "Canal Leads"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "t"
+                                }
+                              },
+                              "Property": "Canal Leads"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Orgânico'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Pago'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 1,
+              "objects": {},
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "_MedidasIsa.Valor Etapa Funil Dra Isa",
+            "Tabela_Parametros FunilHorario.Etapa"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 10,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Leads_Selecionados Dra Isa",
+            "_MedidasIsa.Leads_Selecionados Dra Isa LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Leads_Selecionados Dra Isa",
+            "_MedidasIsa.Leads_Selecionados Dra Isa LM"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 11,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Marcados Selecionados Dra Isa",
+            "_MedidasIsa.Marcados Selecionados Dra Isa LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Marcados Selecionados Dra Isa",
+            "_MedidasIsa.Marcados Selecionados Dra Isa LM"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 12,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 13,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 14,
+          "visualType": "advancedSlicerVisual",
+          "measures": [
+            "Tabela_Parametros_TicketMedio.Ticket Médio"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "82398605924640401b73",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros_TicketMedio"
+                    }
+                  },
+                  "Property": "Ticket Médio"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros_TicketMedio",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Ticket Médio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Geral'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros_TicketMedio.Ticket Médio"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 15,
+          "visualType": "advancedSlicerVisual",
+          "measures": [
+            "Tabela_Parametros_Faturamento.Faturamento"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "81953f03b84c504e0377",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros_Faturamento"
+                    }
+                  },
+                  "Property": "Faturamento"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros_Faturamento",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Faturamento"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Procedimentos'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Protocolo'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros_Faturamento.Faturamento"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 16,
+          "visualType": "tableEx",
+          "measures": [
+            "Metas Dra Isa.Indicador",
+            "Sum(Metas Dra Isa.META DO MÊS)",
+            "Sum(Metas Dra Isa.TOTAL DO MÊS)",
+            "Sum(Metas Dra Isa.PROJEÇÃO)",
+            "Metas Dra Isa.% Meta Dra Thais"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "Metas Dra Isa.Indicador",
+            "Sum(Metas Dra Isa.META DO MÊS)",
+            "Sum(Metas Dra Isa.TOTAL DO MÊS)",
+            "Sum(Metas Dra Isa.PROJEÇÃO)",
+            "Metas Dra Isa.% Meta Dra Thais"
+          ]
+        },
+        {
+          "pageName": "Pediatria",
+          "pageIndex": 5,
+          "visualIndex": 17,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Metas Dra Isa.Indicador"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "Metas Dra Isa.Indicador"
+          ]
+        }
+      ],
+      "slicers": [
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "visualIndex": 1
+        },
+        {
+          "label": "Tabela_Parametros.Canal Leads",
+          "queryRef": "Tabela_Parametros.Canal Leads",
+          "visualIndex": 7
+        },
+        {
+          "label": "Metas Dra Isa.Indicador",
+          "queryRef": "Metas Dra Isa.Indicador",
+          "visualIndex": 17
+        }
+      ]
+    },
+    {
+      "name": "Dermatologia",
+      "index": 6,
+      "visualCount": 17,
+      "slicerCount": 3,
+      "visuals": [
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 0,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasThais.Faturamento Geral Dra Thaís",
+            "_MedidasThais.Faturamento Geral Dra Thaís LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasThais.Faturamento Geral Dra Thaís",
+            "_MedidasThais.Faturamento Geral Dra Thaís LM"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 1,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 2,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasThais.Faturamento Procedimentos",
+            "_MedidasThais.Faturamento Procedimentos LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasThais.Faturamento Procedimentos",
+            "_MedidasThais.Faturamento Procedimentos LM"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 3,
+          "visualType": "lineChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasThais.Faturamento Dra Thaís Selecionado"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasThais.Faturamento Dra Thaís Selecionado"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 4,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasThais.Ticket Medio Upsell Dra Thaís",
+            "_MedidasThais.Ticket Medio Upsell Dra Thaís LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasThais.Ticket Medio Upsell Dra Thaís",
+            "_MedidasThais.Ticket Medio Upsell Dra Thaís LM"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 5,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Ticket Medio Consulta Dra Isa LM",
+            "_MedidasThais.Ticket Medio Consulta Dra Thaís"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasIsa.Ticket Medio Consulta Dra Isa LM",
+            "_MedidasThais.Ticket Medio Consulta Dra Thaís"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 6,
+          "visualType": "lineChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasThais.Ticket Médio Dra Thaís Selecionado"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "b8ed49f3136ddd62a7a3",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Comparecidos_Consultas"
+                }
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasThais.Ticket Médio Dra Thaís Selecionado"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 7,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Tabela_Parametros.Canal Leads"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 8,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasThais.Qtd Consultas Dra Thaís",
+            "_MedidasThais.Qtd Consultas Dra Thaís LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasThais.Qtd Consultas Dra Thaís",
+            "_MedidasThais.Qtd Consultas Dra Thaís LM"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 9,
+          "visualType": "kpi",
+          "measures": [
+            "dCalendario.Ano",
+            "_MedidasThais.Marcados Selecionados Dra Thaís",
+            "_MedidasThais.Marcados Selecionados Dra Thaís LM"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Ano",
+            "_MedidasThais.Marcados Selecionados Dra Thaís",
+            "_MedidasThais.Marcados Selecionados Dra Thaís LM"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 10,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 11,
+          "visualType": "textbox",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 12,
+          "visualType": "advancedSlicerVisual",
+          "measures": [
+            "Tabela_Parametros_TicketMedio.Ticket Médio"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "82398605924640401b73",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros_TicketMedio"
+                    }
+                  },
+                  "Property": "Ticket Médio"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros_TicketMedio",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Ticket Médio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Geral'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros_TicketMedio.Ticket Médio"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 13,
+          "visualType": "advancedSlicerVisual",
+          "measures": [
+            "Tabela_Parametros_Faturamento.Faturamento"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "81953f03b84c504e0377",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabela_Parametros_Faturamento"
+                    }
+                  },
+                  "Property": "Faturamento"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "Tabela_Parametros_Faturamento",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "t"
+                                    }
+                                  },
+                                  "Property": "Faturamento"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Protocolo'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Vacina'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros_Faturamento.Faturamento"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 14,
+          "visualType": "funnel",
+          "measures": [
+            "_MedidasThais.Valor Etapa Funil Dra Thais",
+            "Tabela_Parametros FunilHorario.Etapa"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "_MedidasThais.Valor Etapa Funil Dra Thais",
+            "Tabela_Parametros FunilHorario.Etapa"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 15,
+          "visualType": "tableEx",
+          "measures": [
+            "Metas Dra Thais.Valor",
+            "Sum(Metas Dra Thais.META DO MÊS)",
+            "Sum(Metas Dra Thais.TOTAL DO MÊS)",
+            "Sum(Metas Dra Thais.PROJEÇÃO)",
+            "Metas Dra Thais.% Meta Dra Thais"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "Metas Dra Thais.Valor",
+            "Sum(Metas Dra Thais.META DO MÊS)",
+            "Sum(Metas Dra Thais.TOTAL DO MÊS)",
+            "Sum(Metas Dra Thais.PROJEÇÃO)",
+            "Metas Dra Thais.% Meta Dra Thais"
+          ]
+        },
+        {
+          "pageName": "Dermatologia",
+          "pageIndex": 6,
+          "visualIndex": 16,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Metas Dra Thais.Indicador"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "Metas Dra Thais.Indicador"
+          ]
+        }
+      ],
+      "slicers": [
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "visualIndex": 1
+        },
+        {
+          "label": "Tabela_Parametros.Canal Leads",
+          "queryRef": "Tabela_Parametros.Canal Leads",
+          "visualIndex": 7
+        },
+        {
+          "label": "Metas Dra Thais.Indicador",
+          "queryRef": "Metas Dra Thais.Indicador",
+          "visualIndex": 16
+        }
+      ]
+    },
+    {
+      "name": "Metas",
+      "index": 7,
+      "visualCount": 7,
+      "slicerCount": 3,
+      "visuals": [
+        {
+          "pageName": "Metas",
+          "pageIndex": 7,
+          "visualIndex": 0,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano"
+          ]
+        },
+        {
+          "pageName": "Metas",
+          "pageIndex": 7,
+          "visualIndex": 1,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dServiços.Serviço"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dServiços.Serviço"
+          ]
+        },
+        {
+          "pageName": "Metas",
+          "pageIndex": 7,
+          "visualIndex": 2,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Metas",
+          "pageIndex": 7,
+          "visualIndex": 3,
+          "visualType": "lineStackedColumnComboChart",
+          "measures": [
+            "Append metas.Mês",
+            "Sum(Append metas.TOTAL DO MÊS)",
+            "Sum(Append metas.META DO MÊS)"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "f297e6736f3d5544664a",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Filtro Indicador Meta"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Filtro Indicador Meta"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "1L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            }
+          ],
+          "queryRefs": [
+            "Append metas.Mês",
+            "Sum(Append metas.TOTAL DO MÊS)",
+            "Sum(Append metas.META DO MÊS)"
+          ]
+        },
+        {
+          "pageName": "Metas",
+          "pageIndex": 7,
+          "visualIndex": 4,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ]
+        },
+        {
+          "pageName": "Metas",
+          "pageIndex": 7,
+          "visualIndex": 5,
+          "visualType": "advancedSlicerVisual",
+          "measures": [
+            "Append metas.Indicador"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "1b125b2631133da335e6",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Filtra Indicador bateu meta"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Filtra Indicador bateu meta"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "1L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            }
+          ],
+          "queryRefs": [
+            "Append metas.Indicador"
+          ]
+        },
+        {
+          "pageName": "Metas",
+          "pageIndex": 7,
+          "visualIndex": 6,
+          "visualType": "advancedSlicerVisual",
+          "measures": [
+            "Append metas.Indicador"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "23065f50d192e31a067a",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Filtra Indicador bateu meta"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Filtra Indicador bateu meta"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            },
+            {
+              "name": "ca2f74e735683b317e0c",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Append metas"
+                    }
+                  },
+                  "Property": "META DO MÊS"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "a",
+                    "Entity": "Append metas",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "a"
+                              }
+                            },
+                            "Property": "META DO MÊS"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            }
+          ],
+          "queryRefs": [
+            "Append metas.Indicador"
+          ]
+        }
+      ],
+      "slicers": [
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "visualIndex": 0
+        },
+        {
+          "label": "dServiços.Serviço",
+          "queryRef": "dServiços.Serviço",
+          "visualIndex": 1
+        },
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "visualIndex": 4
+        }
+      ]
+    },
+    {
+      "name": "Duplicata de Metas",
+      "index": 8,
+      "visualCount": 10,
+      "slicerCount": 3,
+      "visuals": [
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 0,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano"
+          ]
+        },
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 1,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "Acrescentar1.Doutor (a)"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "Acrescentar1.Doutor (a)"
+          ]
+        },
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 2,
+          "visualType": "image",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        },
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 3,
+          "visualType": "slicer",
+          "measures": [],
+          "dimensions": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ],
+          "filters": [],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês"
+          ]
+        },
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 4,
+          "visualType": "lineClusteredColumnComboChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "_MedidasGeral.Leads_Selecionados",
+            "_MedidasGeral.Marcados Selecionados"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Leads_Selecionados"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Leads_Selecionados"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 0,
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "_MedidasGeral.Leads_Selecionados",
+            "_MedidasGeral.Marcados Selecionados"
+          ]
+        },
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 5,
+          "visualType": "lineStackedColumnComboChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "_MedidasGeral.Taxa de Conversão"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Leads_Selecionados"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Leads_Selecionados"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1,
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "_MedidasGeral.Taxa de Conversão"
+          ]
+        },
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 6,
+          "visualType": "lineStackedColumnComboChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasGeral.Faturamento canal"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Faturamento"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Faturamento"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1,
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasGeral.Faturamento canal"
+          ]
+        },
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 7,
+          "visualType": "lineStackedColumnComboChart",
+          "measures": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasFernando.Ticket Médio Serviço Selecionado"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "b8ed49f3136ddd62a7a3",
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Comparecidos_Consultas"
+                }
+              },
+              "type": "Advanced",
+              "howCreated": 1
+            },
+            {
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Ticket Medio Consultas"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Ticket Medio Consultas"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 1,
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+            "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+            "dCalendario.Semana",
+            "dCalendario.NomeDia abrev",
+            "_MedidasFernando.Ticket Médio Serviço Selecionado"
+          ]
+        },
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 8,
+          "visualType": "tableEx",
+          "measures": [
+            "Tabela_Parametros.Canal Leads",
+            "_MedidasGeral.Leads_Selecionados",
+            "_MedidasGeral.Meta Leads Canal"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "expression": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_MedidasGeral"
+                    }
+                  },
+                  "Property": "Leads_Selecionados"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "_",
+                    "Entity": "_MedidasGeral",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "_"
+                              }
+                            },
+                            "Property": "Leads_Selecionados"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Advanced",
+              "howCreated": 0,
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Tabela_Parametros.Canal Leads",
+            "_MedidasGeral.Leads_Selecionados",
+            "_MedidasGeral.Meta Leads Canal"
+          ]
+        },
+        {
+          "pageName": "Duplicata de Metas",
+          "pageIndex": 8,
+          "visualIndex": 9,
+          "visualType": "tableEx",
+          "measures": [
+            "Metas Dr Fernando.Indicador",
+            "Sum(Metas Dr Fernando.META DO MÊS)",
+            "Sum(Metas Dr Fernando.TOTAL DO MÊS)",
+            "Sum(Metas Dr Fernando.PROJEÇÃO)",
+            "Metas Dr Fernando.% Meta"
+          ],
+          "dimensions": [],
+          "filters": [
+            {
+              "name": "7996385f9fb0afec06a0",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metas Dr Fernando"
+                    }
+                  },
+                  "Property": "Indicador"
+                }
+              },
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "m",
+                    "Entity": "Metas Dr Fernando",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Not": {
+                        "Expression": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "m"
+                                    }
+                                  },
+                                  "Property": "Indicador"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Leads Pagos - Meta'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "type": "Categorical",
+              "howCreated": 0,
+              "objects": {
+                "general": [
+                  {
+                    "properties": {
+                      "isInvertedSelectionMode": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "true"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "isHiddenInViewMode": false
+            }
+          ],
+          "queryRefs": [
+            "Metas Dr Fernando.Indicador",
+            "Sum(Metas Dr Fernando.META DO MÊS)",
+            "Sum(Metas Dr Fernando.TOTAL DO MÊS)",
+            "Sum(Metas Dr Fernando.PROJEÇÃO)",
+            "Metas Dr Fernando.% Meta"
+          ]
+        }
+      ],
+      "slicers": [
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "visualIndex": 0
+        },
+        {
+          "label": "Acrescentar1.Doutor (a)",
+          "queryRef": "Acrescentar1.Doutor (a)",
+          "visualIndex": 1
+        },
+        {
+          "label": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "visualIndex": 3
+        }
+      ]
+    },
+    {
+      "name": "Página 1",
+      "index": 9,
+      "visualCount": 2,
+      "slicerCount": 0,
+      "visuals": [
+        {
+          "pageName": "Página 1",
+          "pageIndex": 9,
+          "visualIndex": 0,
+          "visualType": "tableEx",
+          "measures": [
+            "dServiços.Serviço",
+            "_MedidasGeral.Faturamento"
+          ],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": [
+            "dServiços.Serviço",
+            "_MedidasGeral.Faturamento"
+          ]
+        },
+        {
+          "pageName": "Página 1",
+          "pageIndex": 9,
+          "visualIndex": 1,
+          "visualType": "FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A",
+          "measures": [],
+          "dimensions": [],
+          "filters": [],
+          "queryRefs": []
+        }
+      ],
+      "slicers": []
+    }
+  ],
+  "allMeasures": [
+    "Acrescentar1.Doutor (a)",
+    "Acrescentar1.Ticket Médio Consultas",
+    "Append metas.Indicador",
+    "Append metas.Mês",
+    "Leads SImulado.Valor Leads Sim.",
+    "Metas Dr Fernando.% Meta",
+    "Metas Dr Fernando.Indicador",
+    "Metas Dra Isa.% Meta Dra Thais",
+    "Metas Dra Isa.Indicador",
+    "Metas Dra Thais.% Meta Dra Thais",
+    "Metas Dra Thais.Valor",
+    "Sum(Acrescentar1.Conversão Upsell)",
+    "Sum(Append metas.META DO MÊS)",
+    "Sum(Append metas.TOTAL DO MÊS)",
+    "Sum(Metas Dr Fernando.META DO MÊS)",
+    "Sum(Metas Dr Fernando.PROJEÇÃO)",
+    "Sum(Metas Dr Fernando.TOTAL DO MÊS)",
+    "Sum(Metas Dra Isa.META DO MÊS)",
+    "Sum(Metas Dra Isa.PROJEÇÃO)",
+    "Sum(Metas Dra Isa.TOTAL DO MÊS)",
+    "Sum(Metas Dra Thais.META DO MÊS)",
+    "Sum(Metas Dra Thais.PROJEÇÃO)",
+    "Sum(Metas Dra Thais.TOTAL DO MÊS)",
+    "Tabela_Parametros FunilHorario.Etapa",
+    "Tabela_Parametros.Canal Leads",
+    "Tabela_Parametros_Faturamento.Faturamento",
+    "Tabela_Parametros_TicketMedio.Ticket Médio",
+    "_MedidasFernando.Comparecidos",
+    "_MedidasFernando.Conversao1 Geral",
+    "_MedidasFernando.Conversao2 Geral",
+    "_MedidasFernando.Conversao3 Geral",
+    "_MedidasFernando.Conversao4 Geral",
+    "_MedidasFernando.Faturamento",
+    "_MedidasFernando.Faturamento Dr Fernando Selecionado",
+    "_MedidasFernando.Faturamento Fernando LM",
+    "_MedidasFernando.Faturamento Protocolo LM",
+    "_MedidasFernando.Faturamento canal Dr Fernando",
+    "_MedidasFernando.Faturamento dia",
+    "_MedidasFernando.Leads Selecionados LM",
+    "_MedidasFernando.Leads_Selecionados",
+    "_MedidasFernando.Leads_Selecionados Dr Fernando",
+    "_MedidasFernando.Marcados Indicação Nutrologia",
+    "_MedidasFernando.Marcados Selecionados Dr Fernando",
+    "_MedidasFernando.Marcações Selecionados Fernando LM",
+    "_MedidasFernando.Meta Taxa de Conversão Aptos a indicar",
+    "_MedidasFernando.Meta Taxa de Conversão Marcados",
+    "_MedidasFernando.Meta Taxa de Conversão Pcts indicaram",
+    "_MedidasFernando.Meta Taxa de Conversão Upsell",
+    "_MedidasFernando.Ocupação Agenda",
+    "_MedidasFernando.Taxa de Conversão",
+    "_MedidasFernando.Taxa de Conversão Aptos a indicar",
+    "_MedidasFernando.Taxa de Conversão Dr Fernando",
+    "_MedidasFernando.Taxa de Conversão Marcados",
+    "_MedidasFernando.Taxa de Conversão Pcts indicaram",
+    "_MedidasFernando.Taxa de Conversão Total Geral",
+    "_MedidasFernando.Taxa de Conversão Upsell",
+    "_MedidasFernando.Ticket Medio Geral Dr Fernando LM",
+    "_MedidasFernando.Ticket Medio Upsell Dr Fernando",
+    "_MedidasFernando.Ticket Médio Agenda LM",
+    "_MedidasFernando.Ticket Médio Canal",
+    "_MedidasFernando.Ticket Médio Dr Fernando Selecionado",
+    "_MedidasFernando.Ticket Médio Serviço Selecionado",
+    "_MedidasFernando.Valor Etapa Funil Dr Fernando",
+    "_MedidasGeral.% Meta Total",
+    "_MedidasGeral.Comparecidos_Consultas",
+    "_MedidasGeral.Conversão Upsell Indicação Nutrologia",
+    "_MedidasGeral.Conversão Upsell canal",
+    "_MedidasGeral.Faturamento",
+    "_MedidasGeral.Faturamento LM",
+    "_MedidasGeral.Faturamento Simulado",
+    "_MedidasGeral.Faturamento canal",
+    "_MedidasGeral.Leads Indicação Nutrologia",
+    "_MedidasGeral.Leads_Selecionados",
+    "_MedidasGeral.Marcados Selecionados",
+    "_MedidasGeral.Marcados Simulado",
+    "_MedidasGeral.Meta Leads Canal",
+    "_MedidasGeral.Meta Leads Indicação",
+    "_MedidasGeral.Meta Marcados Indicaçao",
+    "_MedidasGeral.Meta Pacientes Aptos",
+    "_MedidasGeral.Meta Pacientes que passaram indicação",
+    "_MedidasGeral.Meta Upsell Indicaçao",
+    "_MedidasGeral.Ocupação Agenda",
+    "_MedidasGeral.Pacientes aptos",
+    "_MedidasGeral.Pacientes ativos",
+    "_MedidasGeral.Pacientes que indicaram",
+    "_MedidasGeral.Projeção Leads Indicação",
+    "_MedidasGeral.Projeção Marcados Indicaçao",
+    "_MedidasGeral.Projeção Pacientes Aptos",
+    "_MedidasGeral.Projeção Pacientes que passaram indicação",
+    "_MedidasGeral.Projeção Upsell Indicaçao",
+    "_MedidasGeral.Qtd Upsell",
+    "_MedidasGeral.Taxa de Conversão",
+    "_MedidasGeral.Ticket Medio Consultas",
+    "_MedidasGeral.Ticket Médio Agenda",
+    "_MedidasIsa.Faturamento Dra Isa Selecionado",
+    "_MedidasIsa.Faturamento Geral Dra Isa",
+    "_MedidasIsa.Faturamento Geral Dra Isa LM",
+    "_MedidasIsa.Faturamento Vacina",
+    "_MedidasIsa.Faturamento Vacina LM",
+    "_MedidasIsa.Leads_Selecionados Dra Isa",
+    "_MedidasIsa.Leads_Selecionados Dra Isa LM",
+    "_MedidasIsa.Marcados Selecionados Dra Isa",
+    "_MedidasIsa.Marcados Selecionados Dra Isa LM",
+    "_MedidasIsa.Taxa de Conversão Dra Isa",
+    "_MedidasIsa.Ticket Medio Consulta Dra Isa",
+    "_MedidasIsa.Ticket Medio Consulta Dra Isa LM",
+    "_MedidasIsa.Ticket Medio Upsell Dra Isa",
+    "_MedidasIsa.Ticket Medio Upsell Dra Isa LM",
+    "_MedidasIsa.Ticket Médio Dra Isa Selecionado",
+    "_MedidasIsa.Valor Etapa Funil Dra Isa",
+    "_MedidasThais.Faturamento Dra Thaís Selecionado",
+    "_MedidasThais.Faturamento Geral Dra Thaís",
+    "_MedidasThais.Faturamento Geral Dra Thaís LM",
+    "_MedidasThais.Faturamento Procedimentos",
+    "_MedidasThais.Faturamento Procedimentos LM",
+    "_MedidasThais.Marcados Selecionados Dra Thaís",
+    "_MedidasThais.Marcados Selecionados Dra Thaís LM",
+    "_MedidasThais.Qtd Consultas Dra Thaís",
+    "_MedidasThais.Qtd Consultas Dra Thaís LM",
+    "_MedidasThais.Ticket Medio Consulta Dra Thaís",
+    "_MedidasThais.Ticket Medio Upsell Dra Thaís",
+    "_MedidasThais.Ticket Medio Upsell Dra Thaís LM",
+    "_MedidasThais.Ticket Médio Dra Thaís Selecionado",
+    "_MedidasThais.Valor Etapa Funil Dra Thais",
+    "dCalendario.Ano",
+    "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+    "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+    "dCalendario.Data.Variation.Hierarquia de datas.Trimestre",
+    "dCalendario.NomeDia abrev",
+    "dCalendario.Semana",
+    "dServiços.Serviço"
+  ],
+  "allDimensions": [
+    "Acrescentar1.Doutor (a)",
+    "Metas Dr Fernando.Indicador",
+    "Metas Dra Isa.Indicador",
+    "Metas Dra Thais.Indicador",
+    "Parâmetro.Parâmetro",
+    "Tabela_Parametros.Canal Leads",
+    "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+    "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+    "dServiços.Serviço"
+  ],
+  "allSlicers": [
+    {
+      "page": "Geral",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "visualIndex": 0
+    },
+    {
+      "page": "Geral",
+      "queryRef": "Tabela_Parametros.Canal Leads",
+      "visualIndex": 5
+    },
+    {
+      "page": "Geral",
+      "queryRef": "dServiços.Serviço",
+      "visualIndex": 7
+    },
+    {
+      "page": "Geral",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+      "visualIndex": 15
+    },
+    {
+      "page": "Simulado",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "visualIndex": 0
+    },
+    {
+      "page": "Simulado",
+      "queryRef": "dServiços.Serviço",
+      "visualIndex": 1
+    },
+    {
+      "page": "Simulado",
+      "queryRef": "Parâmetro.Parâmetro",
+      "visualIndex": 3
+    },
+    {
+      "page": "Funil",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "visualIndex": 12
+    },
+    {
+      "page": "Funil",
+      "queryRef": "Acrescentar1.Doutor (a)",
+      "visualIndex": 13
+    },
+    {
+      "page": "Funil Indicação",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "visualIndex": 0
+    },
+    {
+      "page": "Funil Indicação",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+      "visualIndex": 28
+    },
+    {
+      "page": "Nutrologia",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "visualIndex": 1
+    },
+    {
+      "page": "Nutrologia",
+      "queryRef": "Tabela_Parametros.Canal Leads",
+      "visualIndex": 7
+    },
+    {
+      "page": "Nutrologia",
+      "queryRef": "Metas Dr Fernando.Indicador",
+      "visualIndex": 17
+    },
+    {
+      "page": "Pediatria",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "visualIndex": 1
+    },
+    {
+      "page": "Pediatria",
+      "queryRef": "Tabela_Parametros.Canal Leads",
+      "visualIndex": 7
+    },
+    {
+      "page": "Pediatria",
+      "queryRef": "Metas Dra Isa.Indicador",
+      "visualIndex": 17
+    },
+    {
+      "page": "Dermatologia",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "visualIndex": 1
+    },
+    {
+      "page": "Dermatologia",
+      "queryRef": "Tabela_Parametros.Canal Leads",
+      "visualIndex": 7
+    },
+    {
+      "page": "Dermatologia",
+      "queryRef": "Metas Dra Thais.Indicador",
+      "visualIndex": 16
+    },
+    {
+      "page": "Metas",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "visualIndex": 0
+    },
+    {
+      "page": "Metas",
+      "queryRef": "dServiços.Serviço",
+      "visualIndex": 1
+    },
+    {
+      "page": "Metas",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+      "visualIndex": 4
+    },
+    {
+      "page": "Duplicata de Metas",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "visualIndex": 0
+    },
+    {
+      "page": "Duplicata de Metas",
+      "queryRef": "Acrescentar1.Doutor (a)",
+      "visualIndex": 1
+    },
+    {
+      "page": "Duplicata de Metas",
+      "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+      "visualIndex": 3
+    }
+  ],
+  "visualTypeCounts": {
+    "slicer": 26,
+    "cardVisual": 5,
+    "columnChart": 2,
+    "pivotTable": 4,
+    "clusteredBarChart": 2,
+    "image": 16,
+    "card": 31,
+    "advancedSlicerVisual": 9,
+    "textbox": 13,
+    "unknown": 4,
+    "kpi": 23,
+    "lineChart": 6,
+    "funnel": 3,
+    "tableEx": 6,
+    "lineStackedColumnComboChart": 4,
+    "lineClusteredColumnComboChart": 1,
+    "FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A": 1
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_062.txt",
+  "timestamp": "2026-06-19T02:11:01.186Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasFernando.Faturamento Protocolo LM",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasFernando.Faturamento canal Dr Fernando"
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasGeral.MesAnterior"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Ano",
+      "entity": "dCalendario",
+      "property": "Ano",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 2026,
+          "M0": 632478
+        }
+      ]
+    }
+  ],
+  "directProperties": {
+    "M2": "Mar/2026: "
+  },
+  "totalRows": 1
+}

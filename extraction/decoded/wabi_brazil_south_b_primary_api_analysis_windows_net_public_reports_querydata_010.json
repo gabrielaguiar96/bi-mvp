@@ -1,0 +1,50 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_010.txt",
+  "timestamp": "2026-06-19T02:10:31.973Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "Acrescentar1.Ticket Médio Consultas",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+      "property": "Ano",
+      "depth": 0
+    },
+    {
+      "id": "G1",
+      "name": "dCalendario.Data.Variation.Hierarquia de datas.Trimestre",
+      "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+      "property": "Trimestre",
+      "depth": 0
+    },
+    {
+      "id": "G2",
+      "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+      "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+      "property": "Mês",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 2026,
+          "G1": 0,
+          "G2": 0,
+          "M0": "12541.157657657657"
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

@@ -1,0 +1,4964 @@
+[
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_004.txt",
+    "timestamp": "2026-06-19T01:55:47.353Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Comparecidos_Consultas",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Consultas Realizadas LY",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 209,
+            "M1": 216
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_005.txt",
+    "timestamp": "2026-06-19T02:10:31.957Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Faturamento",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dServiços.Serviço",
+        "entity": "dServiços",
+        "property": "Serviço",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Nutrologia",
+            "M0": 1020706
+          },
+          {
+            "G0": "Pediatria",
+            "M0": 213862.5
+          },
+          {
+            "G0": "Dermatologia",
+            "M0": 157500
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 3
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_006.txt",
+    "timestamp": "2026-06-19T02:10:31.957Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Ticket Medio Consultas",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Ticket Medio LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.Ticket Medio LY"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "12541.157657657657",
+            "M1": "10706.049325842696",
+            "M2": "11692.261214953271"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_007.txt",
+    "timestamp": "2026-06-19T02:10:31.957Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Faturamento canal",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.% Faturamento LY",
+        "format": "0.00%;-0.00%;0.00%"
+      },
+      {
+        "id": "M2",
+        "name": "Sum(dCalendario.Ano)",
+        "format": "0"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Ano",
+        "depth": 0
+      },
+      {
+        "id": "G1",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Trimestre",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Trimestre",
+        "depth": 0
+      },
+      {
+        "id": "G2",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Mês",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "G1": 0,
+            "G2": 0,
+            "M0": 1392068.5,
+            "M1": "0.55643217333597272",
+            "M2": 40520
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_008.txt",
+    "timestamp": "2026-06-19T02:10:31.957Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Faturamento canal",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasFernando.Ticket Médio Canal",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros.Canal Leads",
+        "entity": "Tabela_Parametros",
+        "property": "Canal Leads",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Retenção",
+            "M0": 557344,
+            "M1": 17417
+          },
+          {
+            "G0": "Orgânico",
+            "M0": 236878,
+            "M1": 23687.8
+          },
+          {
+            "G0": "Ativo",
+            "M0": 153120,
+            "M1": 15312
+          },
+          {
+            "G0": "Indicação",
+            "M0": 109164,
+            "M1": 18194
+          },
+          {
+            "G0": "Crossell",
+            "M0": 50700,
+            "M1": 0
+          },
+          {
+            "G0": "Pago",
+            "M0": 0,
+            "M1": 0
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 6
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_009.txt",
+    "timestamp": "2026-06-19T02:10:31.957Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Faturamento",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Faturamento LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.% Meta Total",
+        "format": "0.00%;-0.00%;0.00%"
+      },
+      {
+        "id": "M3",
+        "name": "_MedidasGeral.Barra Progresso Meta mês"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 1392068.5,
+            "M1": 952838.39,
+            "M2": "0.93427416107382555"
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M3": "data:image/svg+xml;utf8,<svg width='200' height='70' viewBox='0 0 200 70' fill='none' xmlns='http://www.w3.org/2000/svg'><rect id='f001' x='0' y='37' width='190' height='15' fill='#1AAB40' opacity='0.4' /><rect id='f002' x='0' y='37' width='190' height='15' fill='#1AAB40' /><text id='f003' fill='#000000' font-family='Segoe UI' font-size='18' font-weight='400'><tspan x='0' y='28'> Meta mês: </tspan></text><text id='f004' fill='#1AAB40' font-family='Segoe UI' font-size='18' font-weight='600'><tspan x='120' y='28'>146,10%</tspan></text><rect id='f005' x='131' y='32' width='2' height='25' fill='#FFFFFF' /></svg>"
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_010.txt",
+    "timestamp": "2026-06-19T02:10:31.973Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "Acrescentar1.Ticket Médio Consultas",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Ano",
+        "depth": 0
+      },
+      {
+        "id": "G1",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Trimestre",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Trimestre",
+        "depth": 0
+      },
+      {
+        "id": "G2",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Mês",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "G1": 0,
+            "G2": 0,
+            "M0": "12541.157657657657"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_011.txt",
+    "timestamp": "2026-06-19T02:10:32.083Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Ocupação Agenda",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Ocupação Agenda LM",
+        "format": "0"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.Ocupação Agenda LY",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 228,
+            "M1": 198,
+            "M2": 236
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_012.txt",
+    "timestamp": "2026-06-19T02:10:32.114Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Conversão Upsell canal"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Conversão Upsell LM",
+        "format": "0"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.Conversão Upsell LY",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 58,
+            "M1": 160
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_013.txt",
+    "timestamp": "2026-06-19T02:10:32.145Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Conversão Upsell canal"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros.Canal Leads",
+        "entity": "Tabela_Parametros",
+        "property": "Canal Leads",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Retenção",
+            "M0": 32
+          },
+          {
+            "G0": "Ativo",
+            "M0": 10
+          },
+          {
+            "G0": "Orgânico",
+            "M0": 10
+          },
+          {
+            "G0": "Indicação",
+            "M0": 6
+          },
+          {
+            "G0": "Crossell",
+            "M0": 0
+          },
+          {
+            "G0": "Pago",
+            "M0": 0
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 6
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_014.txt",
+    "timestamp": "2026-06-19T02:10:32.114Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Taxa de Conversão",
+        "format": "0.00%;-0.00%;0.00%",
+        "subtotalIds": [
+          "A0"
+        ]
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasFernando.Leads_Selecionados",
+        "format": "0",
+        "subtotalIds": [
+          "A1"
+        ]
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.Marcados Selecionados",
+        "format": "0",
+        "subtotalIds": [
+          "A2"
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros.Canal Leads",
+        "entity": "Tabela_Parametros",
+        "property": "Canal Leads",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "A0": "0.20245398773006135",
+            "A1": 489,
+            "A2": 99
+          }
+        ]
+      },
+      {
+        "memberId": "DM1",
+        "subtotalOf": "DM0",
+        "rows": [
+          {
+            "G0": "Retenção",
+            "M0": "0.91935483870967738",
+            "M1": 62,
+            "M2": 57
+          },
+          {
+            "G0": "Ativo",
+            "M0": 0.21,
+            "M1": 200,
+            "M2": 42
+          },
+          {
+            "G0": "Crossell",
+            "M0": "0.14285714285714285",
+            "M1": 49,
+            "M2": 7
+          },
+          {
+            "G0": "Orgânico",
+            "M0": "0.11202185792349727",
+            "M1": 366,
+            "M2": 41
+          },
+          {
+            "G0": "Indicação",
+            "M0": "0.084112149532710276",
+            "M1": 107,
+            "M2": 9
+          },
+          {
+            "G0": "Pago",
+            "M0": 0,
+            "M1": 16,
+            "M2": 0
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 7
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_015.txt",
+    "timestamp": "2026-06-19T02:10:42.599Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dServiços.Serviço",
+        "entity": "dServiços",
+        "property": "Serviço",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "By Evuli"
+          },
+          {
+            "G0": "Cirurgia Plástica"
+          },
+          {
+            "G0": "Dermatologia"
+          },
+          {
+            "G0": "Evuli Dietas"
+          },
+          {
+            "G0": "Nutrologia"
+          },
+          {
+            "G0": "Nutrologia 2"
+          },
+          {
+            "G0": "Pediatria"
+          },
+          {
+            "G0": "Suplementação"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 8
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_016.txt",
+    "timestamp": "2026-06-19T02:10:42.599Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Ano",
+        "depth": 0
+      },
+      {
+        "id": "G1",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Mês",
+        "depth": 1
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": []
+      },
+      {
+        "memberId": "DM1",
+        "subtotalOf": "DM0",
+        "rows": [
+          {
+            "G0": 2026
+          },
+          {
+            "G0": 2025
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 2
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_017.txt",
+    "timestamp": "2026-06-19T02:10:42.63Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "Leads SImulado.Valor Leads Sim.",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 10
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_018.txt",
+    "timestamp": "2026-06-19T02:10:42.614Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Marcados Selecionados",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 5
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_019.txt",
+    "timestamp": "2026-06-19T02:10:42.614Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Leads_Selecionados",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 100
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_020.txt",
+    "timestamp": "2026-06-19T02:10:42.614Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Taxa de Conversão",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 0.05
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_021.txt",
+    "timestamp": "2026-06-19T02:10:42.755Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Parâmetro.Parâmetro",
+        "entity": "Leads SImulado",
+        "property": "Parâmetro",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 0
+          },
+          {
+            "G0": 10
+          },
+          {
+            "G0": 20
+          },
+          {
+            "G0": 30
+          },
+          {
+            "G0": 40
+          },
+          {
+            "G0": 50
+          },
+          {
+            "G0": 60
+          },
+          {
+            "G0": 70
+          },
+          {
+            "G0": 80
+          },
+          {
+            "G0": 90
+          },
+          {
+            "G0": 100
+          },
+          {
+            "G0": 110
+          },
+          {
+            "G0": 120
+          },
+          {
+            "G0": 130
+          },
+          {
+            "G0": 140
+          },
+          {
+            "G0": 150
+          },
+          {
+            "G0": 160
+          },
+          {
+            "G0": 170
+          },
+          {
+            "G0": 180
+          },
+          {
+            "G0": 190
+          },
+          {
+            "G0": 200
+          },
+          {
+            "G0": 210
+          },
+          {
+            "G0": 220
+          },
+          {
+            "G0": 230
+          },
+          {
+            "G0": 240
+          },
+          {
+            "G0": 250
+          },
+          {
+            "G0": 260
+          },
+          {
+            "G0": 270
+          },
+          {
+            "G0": 280
+          },
+          {
+            "G0": 290
+          },
+          {
+            "G0": 300
+          },
+          {
+            "G0": 310
+          },
+          {
+            "G0": 320
+          },
+          {
+            "G0": 330
+          },
+          {
+            "G0": 340
+          },
+          {
+            "G0": 350
+          },
+          {
+            "G0": 360
+          },
+          {
+            "G0": 370
+          },
+          {
+            "G0": 380
+          },
+          {
+            "G0": 390
+          },
+          {
+            "G0": 400
+          },
+          {
+            "G0": 410
+          },
+          {
+            "G0": 420
+          },
+          {
+            "G0": 430
+          },
+          {
+            "G0": 440
+          },
+          {
+            "G0": 450
+          },
+          {
+            "G0": 460
+          },
+          {
+            "G0": 470
+          },
+          {
+            "G0": 480
+          },
+          {
+            "G0": 490
+          },
+          {
+            "G0": 500
+          },
+          {
+            "G0": 510
+          },
+          {
+            "G0": 520
+          },
+          {
+            "G0": 530
+          },
+          {
+            "G0": 540
+          },
+          {
+            "G0": 550
+          },
+          {
+            "G0": 560
+          },
+          {
+            "G0": 570
+          },
+          {
+            "G0": 580
+          },
+          {
+            "G0": 590
+          },
+          {
+            "G0": 600
+          },
+          {
+            "G0": 610
+          },
+          {
+            "G0": 620
+          },
+          {
+            "G0": 630
+          },
+          {
+            "G0": 640
+          },
+          {
+            "G0": 650
+          },
+          {
+            "G0": 660
+          },
+          {
+            "G0": 670
+          },
+          {
+            "G0": 680
+          },
+          {
+            "G0": 690
+          },
+          {
+            "G0": 700
+          },
+          {
+            "G0": 710
+          },
+          {
+            "G0": 720
+          },
+          {
+            "G0": 730
+          },
+          {
+            "G0": 740
+          },
+          {
+            "G0": 750
+          },
+          {
+            "G0": 760
+          },
+          {
+            "G0": 770
+          },
+          {
+            "G0": 780
+          },
+          {
+            "G0": 790
+          },
+          {
+            "G0": 800
+          },
+          {
+            "G0": 810
+          },
+          {
+            "G0": 820
+          },
+          {
+            "G0": 830
+          },
+          {
+            "G0": 840
+          },
+          {
+            "G0": 850
+          },
+          {
+            "G0": 860
+          },
+          {
+            "G0": 870
+          },
+          {
+            "G0": 880
+          },
+          {
+            "G0": 890
+          },
+          {
+            "G0": 900
+          },
+          {
+            "G0": 910
+          },
+          {
+            "G0": 920
+          },
+          {
+            "G0": 930
+          },
+          {
+            "G0": 940
+          },
+          {
+            "G0": 950
+          },
+          {
+            "G0": 960
+          },
+          {
+            "G0": 970
+          },
+          {
+            "G0": 980
+          },
+          {
+            "G0": 990
+          },
+          {
+            "G0": 1000
+          },
+          {
+            "G0": 1010
+          },
+          {
+            "G0": 1020
+          },
+          {
+            "G0": 1030
+          },
+          {
+            "G0": 1040
+          },
+          {
+            "G0": 1050
+          },
+          {
+            "G0": 1060
+          },
+          {
+            "G0": 1070
+          },
+          {
+            "G0": 1080
+          },
+          {
+            "G0": 1090
+          },
+          {
+            "G0": 1100
+          },
+          {
+            "G0": 1110
+          },
+          {
+            "G0": 1120
+          },
+          {
+            "G0": 1130
+          },
+          {
+            "G0": 1140
+          },
+          {
+            "G0": 1150
+          },
+          {
+            "G0": 1160
+          },
+          {
+            "G0": 1170
+          },
+          {
+            "G0": 1180
+          },
+          {
+            "G0": 1190
+          },
+          {
+            "G0": 1200
+          },
+          {
+            "G0": 1210
+          },
+          {
+            "G0": 1220
+          },
+          {
+            "G0": 1230
+          },
+          {
+            "G0": 1240
+          },
+          {
+            "G0": 1250
+          },
+          {
+            "G0": 1260
+          },
+          {
+            "G0": 1270
+          },
+          {
+            "G0": 1280
+          },
+          {
+            "G0": 1290
+          },
+          {
+            "G0": 1300
+          },
+          {
+            "G0": 1310
+          },
+          {
+            "G0": 1320
+          },
+          {
+            "G0": 1330
+          },
+          {
+            "G0": 1340
+          },
+          {
+            "G0": 1350
+          },
+          {
+            "G0": 1360
+          },
+          {
+            "G0": 1370
+          },
+          {
+            "G0": 1380
+          },
+          {
+            "G0": 1390
+          },
+          {
+            "G0": 1400
+          },
+          {
+            "G0": 1410
+          },
+          {
+            "G0": 1420
+          },
+          {
+            "G0": 1430
+          },
+          {
+            "G0": 1440
+          },
+          {
+            "G0": 1450
+          },
+          {
+            "G0": 1460
+          },
+          {
+            "G0": 1470
+          },
+          {
+            "G0": 1480
+          },
+          {
+            "G0": 1490
+          },
+          {
+            "G0": 1500
+          },
+          {
+            "G0": 1510
+          },
+          {
+            "G0": 1520
+          },
+          {
+            "G0": 1530
+          },
+          {
+            "G0": 1540
+          },
+          {
+            "G0": 1550
+          },
+          {
+            "G0": 1560
+          },
+          {
+            "G0": 1570
+          },
+          {
+            "G0": 1580
+          },
+          {
+            "G0": 1590
+          },
+          {
+            "G0": 1600
+          },
+          {
+            "G0": 1610
+          },
+          {
+            "G0": 1620
+          },
+          {
+            "G0": 1630
+          },
+          {
+            "G0": 1640
+          },
+          {
+            "G0": 1650
+          },
+          {
+            "G0": 1660
+          },
+          {
+            "G0": 1670
+          },
+          {
+            "G0": 1680
+          },
+          {
+            "G0": 1690
+          },
+          {
+            "G0": 1700
+          },
+          {
+            "G0": 1710
+          },
+          {
+            "G0": 1720
+          },
+          {
+            "G0": 1730
+          },
+          {
+            "G0": 1740
+          },
+          {
+            "G0": 1750
+          },
+          {
+            "G0": 1760
+          },
+          {
+            "G0": 1770
+          },
+          {
+            "G0": 1780
+          },
+          {
+            "G0": 1790
+          },
+          {
+            "G0": 1800
+          },
+          {
+            "G0": 1810
+          },
+          {
+            "G0": 1820
+          },
+          {
+            "G0": 1830
+          },
+          {
+            "G0": 1840
+          },
+          {
+            "G0": 1850
+          },
+          {
+            "G0": 1860
+          },
+          {
+            "G0": 1870
+          },
+          {
+            "G0": 1880
+          },
+          {
+            "G0": 1890
+          },
+          {
+            "G0": 1900
+          },
+          {
+            "G0": 1910
+          },
+          {
+            "G0": 1920
+          },
+          {
+            "G0": 1930
+          },
+          {
+            "G0": 1940
+          },
+          {
+            "G0": 1950
+          },
+          {
+            "G0": 1960
+          },
+          {
+            "G0": 1970
+          },
+          {
+            "G0": 1980
+          },
+          {
+            "G0": 1990
+          },
+          {
+            "G0": 2000
+          },
+          {
+            "G0": 2010
+          },
+          {
+            "G0": 2020
+          },
+          {
+            "G0": 2030
+          },
+          {
+            "G0": 2040
+          },
+          {
+            "G0": 2050
+          },
+          {
+            "G0": 2060
+          },
+          {
+            "G0": 2070
+          },
+          {
+            "G0": 2080
+          },
+          {
+            "G0": 2090
+          },
+          {
+            "G0": 2100
+          },
+          {
+            "G0": 2110
+          },
+          {
+            "G0": 2120
+          },
+          {
+            "G0": 2130
+          },
+          {
+            "G0": 2140
+          },
+          {
+            "G0": 2150
+          },
+          {
+            "G0": 2160
+          },
+          {
+            "G0": 2170
+          },
+          {
+            "G0": 2180
+          },
+          {
+            "G0": 2190
+          },
+          {
+            "G0": 2200
+          },
+          {
+            "G0": 2210
+          },
+          {
+            "G0": 2220
+          },
+          {
+            "G0": 2230
+          },
+          {
+            "G0": 2240
+          },
+          {
+            "G0": 2250
+          },
+          {
+            "G0": 2260
+          },
+          {
+            "G0": 2270
+          },
+          {
+            "G0": 2280
+          },
+          {
+            "G0": 2290
+          },
+          {
+            "G0": 2300
+          },
+          {
+            "G0": 2310
+          },
+          {
+            "G0": 2320
+          },
+          {
+            "G0": 2330
+          },
+          {
+            "G0": 2340
+          },
+          {
+            "G0": 2350
+          },
+          {
+            "G0": 2360
+          },
+          {
+            "G0": 2370
+          },
+          {
+            "G0": 2380
+          },
+          {
+            "G0": 2390
+          },
+          {
+            "G0": 2400
+          },
+          {
+            "G0": 2410
+          },
+          {
+            "G0": 2420
+          },
+          {
+            "G0": 2430
+          },
+          {
+            "G0": 2440
+          },
+          {
+            "G0": 2450
+          },
+          {
+            "G0": 2460
+          },
+          {
+            "G0": 2470
+          },
+          {
+            "G0": 2480
+          },
+          {
+            "G0": 2490
+          },
+          {
+            "G0": 2500
+          },
+          {
+            "G0": 2510
+          },
+          {
+            "G0": 2520
+          },
+          {
+            "G0": 2530
+          },
+          {
+            "G0": 2540
+          },
+          {
+            "G0": 2550
+          },
+          {
+            "G0": 2560
+          },
+          {
+            "G0": 2570
+          },
+          {
+            "G0": 2580
+          },
+          {
+            "G0": 2590
+          },
+          {
+            "G0": 2600
+          },
+          {
+            "G0": 2610
+          },
+          {
+            "G0": 2620
+          },
+          {
+            "G0": 2630
+          },
+          {
+            "G0": 2640
+          },
+          {
+            "G0": 2650
+          },
+          {
+            "G0": 2660
+          },
+          {
+            "G0": 2670
+          },
+          {
+            "G0": 2680
+          },
+          {
+            "G0": 2690
+          },
+          {
+            "G0": 2700
+          },
+          {
+            "G0": 2710
+          },
+          {
+            "G0": 2720
+          },
+          {
+            "G0": 2730
+          },
+          {
+            "G0": 2740
+          },
+          {
+            "G0": 2750
+          },
+          {
+            "G0": 2760
+          },
+          {
+            "G0": 2770
+          },
+          {
+            "G0": 2780
+          },
+          {
+            "G0": 2790
+          },
+          {
+            "G0": 2800
+          },
+          {
+            "G0": 2810
+          },
+          {
+            "G0": 2820
+          },
+          {
+            "G0": 2830
+          },
+          {
+            "G0": 2840
+          },
+          {
+            "G0": 2850
+          },
+          {
+            "G0": 2860
+          },
+          {
+            "G0": 2870
+          },
+          {
+            "G0": 2880
+          },
+          {
+            "G0": 2890
+          },
+          {
+            "G0": 2900
+          },
+          {
+            "G0": 2910
+          },
+          {
+            "G0": 2920
+          },
+          {
+            "G0": 2930
+          },
+          {
+            "G0": 2940
+          },
+          {
+            "G0": 2950
+          },
+          {
+            "G0": 2960
+          },
+          {
+            "G0": 2970
+          },
+          {
+            "G0": 2980
+          },
+          {
+            "G0": 2990
+          },
+          {
+            "G0": 3000
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 301
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_022.txt",
+    "timestamp": "2026-06-19T02:10:42.77Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Marcados Simulado",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 0.5
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_024.txt",
+    "timestamp": "2026-06-19T02:10:42.77Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Faturamento Simulado",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "6404.2253521126759"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_025.txt",
+    "timestamp": "2026-06-19T02:10:42.802Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros.Canal Leads",
+        "entity": "Tabela_Parametros",
+        "property": "Canal Leads",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Ativo"
+          },
+          {
+            "G0": "Crossell"
+          },
+          {
+            "G0": "Google"
+          },
+          {
+            "G0": "Indicação"
+          },
+          {
+            "G0": "Meta"
+          },
+          {
+            "G0": "Orgânico"
+          },
+          {
+            "G0": "Pago"
+          },
+          {
+            "G0": "Retenção"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 8
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_026.txt",
+    "timestamp": "2026-06-19T02:10:48.717Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Conversao1 Geral",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "0.62105263157894741"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_027.txt",
+    "timestamp": "2026-06-19T02:10:48.717Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Conversao3 Geral",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "0.44171779141104295"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_028.txt",
+    "timestamp": "2026-06-19T02:10:48.717Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Comparecidos"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 163
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_029.txt",
+    "timestamp": "2026-06-19T02:10:48.717Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Leads_Selecionados",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 285
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_030.txt",
+    "timestamp": "2026-06-19T02:10:48.764Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Ano",
+        "depth": 0
+      },
+      {
+        "id": "G1",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Mês",
+        "depth": 1
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": []
+      },
+      {
+        "memberId": "DM1",
+        "subtotalOf": "DM0",
+        "rows": [
+          {
+            "G0": 2026
+          },
+          {
+            "G0": 2025
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 2
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_031.txt",
+    "timestamp": "2026-06-19T02:10:48.78Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Conversao2 Geral",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "0.92090395480225984"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_032.txt",
+    "timestamp": "2026-06-19T01:55:51.485Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "Sum(Acrescentar1.Conversão Upsell)"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 62
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_033.txt",
+    "timestamp": "2026-06-19T02:10:48.842Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Qtd Upsell"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 72
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_034.txt",
+    "timestamp": "2026-06-19T02:10:48.858Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Ocupação Agenda",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 177
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_035.txt",
+    "timestamp": "2026-06-19T02:10:48.858Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Conversao4 Geral",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "0.86111111111111116"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_036.txt",
+    "timestamp": "2026-06-19T01:55:51.516Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Taxa de Conversão Total Geral",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "0.21754385964912282"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_037.txt",
+    "timestamp": "2026-06-19T02:10:48.873Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Acrescentar1.Doutor (a)",
+        "entity": "Acrescentar1",
+        "property": "Serviço",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": ""
+          },
+          {
+            "G0": "By Evuli"
+          },
+          {
+            "G0": "Cirurgia Plástica"
+          },
+          {
+            "G0": "Dermatologia"
+          },
+          {
+            "G0": "Evuli Dietas"
+          },
+          {
+            "G0": "Nutrologia"
+          },
+          {
+            "G0": "Nutrologia 2"
+          },
+          {
+            "G0": "Pediatria"
+          },
+          {
+            "G0": "Suplementação"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 9
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_040.txt",
+    "timestamp": "2026-06-19T02:10:54.975Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Taxa de Conversão Aptos a indicar",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "0.40833333333333333"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_041.txt",
+    "timestamp": "2026-06-19T02:10:54.975Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Meta Upsell Indicaçao",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 50
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_042.txt",
+    "timestamp": "2026-06-19T02:10:54.959Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Pacientes ativos",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 120
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_043.txt",
+    "timestamp": "2026-06-19T02:10:54.975Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Pacientes aptos",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Projeção Pacientes Aptos",
+        "format": "0"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 49,
+            "M1": 49
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_044.txt",
+    "timestamp": "2026-06-19T02:10:55.006Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Leads Indicação Nutrologia",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Projeção Leads Indicação",
+        "format": "0"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 35,
+            "M1": 35
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_045.txt",
+    "timestamp": "2026-06-19T02:10:55.021Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Meta Taxa de Conversão Marcados",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 0.5
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_046.txt",
+    "timestamp": "2026-06-19T02:10:55.131Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Meta Pacientes que passaram indicação",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 40
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_047.txt",
+    "timestamp": "2026-06-19T02:10:55.131Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Taxa de Conversão Pcts indicaram",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "0.44897959183673469"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_048.txt",
+    "timestamp": "2026-06-19T02:10:55.131Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Meta Taxa de Conversão Upsell",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 1.25
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_049.txt",
+    "timestamp": "2026-06-19T02:10:55.131Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Marcados Indicação Nutrologia",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Projeção Marcados Indicaçao",
+        "format": "0"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 4,
+            "M1": 4
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_050.txt",
+    "timestamp": "2026-06-19T02:10:55.147Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Meta Leads Indicação",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 80
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_051.txt",
+    "timestamp": "2026-06-19T02:10:55.162Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Meta Pacientes Aptos",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 105
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_052.txt",
+    "timestamp": "2026-06-19T02:10:55.256Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Taxa de Conversão Marcados",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "0.11428571428571428"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_053.txt",
+    "timestamp": "2026-06-19T02:10:55.272Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Pacientes que indicaram",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Projeção Pacientes que passaram indicação",
+        "format": "0"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 22,
+            "M1": 22
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_054.txt",
+    "timestamp": "2026-06-19T02:10:55.298Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Taxa de Conversão Upsell",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 0.75
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_055.txt",
+    "timestamp": "2026-06-19T02:10:55.272Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Meta Taxa de Conversão Aptos a indicar",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 0.875
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_056.txt",
+    "timestamp": "2026-06-19T02:10:55.287Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Meta Taxa de Conversão Pcts indicaram",
+        "format": "0.00%;-0.00%;0.00%"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": "0.38095238095238093"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_057.txt",
+    "timestamp": "2026-06-19T02:10:55.334Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Projeção Upsell Indicaçao",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasGeral.Conversão Upsell Indicação Nutrologia",
+        "format": "0"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 3,
+            "M1": 3
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_058.txt",
+    "timestamp": "2026-06-19T02:10:55.381Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Meta Marcados Indicaçao",
+        "format": "0"
+      }
+    ],
+    "dimensions": [],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "M0": 40
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_059.txt",
+    "timestamp": "2026-06-19T02:11:01.186Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros_TicketMedio.Ticket Médio",
+        "entity": "Tabela_Parametros_TicketMedio",
+        "property": "Ticket Médio",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Geral"
+          },
+          {
+            "G0": "Upsell"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 2
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_060.txt",
+    "timestamp": "2026-06-19T02:11:01.201Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Faturamento Dr Fernando Selecionado",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 21750
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "A0": 1
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_061.txt",
+    "timestamp": "2026-06-19T02:11:01.186Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Valor Etapa Funil Dr Fernando",
+        "format": "0"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros FunilHorario.Etapa",
+        "entity": "Tabela_Parametros_FunilHorario",
+        "property": "Etapa",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 0,
+            "M0": 112
+          },
+          {
+            "G0": 1,
+            "M0": 58
+          },
+          {
+            "G0": 2,
+            "M0": 58
+          },
+          {
+            "G0": 3,
+            "M0": 50
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 4
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_062.txt",
+    "timestamp": "2026-06-19T02:11:01.186Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Faturamento Protocolo LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasFernando.Faturamento canal Dr Fernando"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 632478
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_063.txt",
+    "timestamp": "2026-06-19T02:11:01.186Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Leads_Selecionados Dr Fernando",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasFernando.Leads Selecionados LM",
+        "format": "#,0"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 0,
+            "M0": 0
+          },
+          {
+            "G0": 2025,
+            "M0": 0
+          },
+          {
+            "G0": 2026,
+            "M0": 413,
+            "M1": 340
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 3
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_064.txt",
+    "timestamp": "2026-06-19T02:11:01.201Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Marcados Selecionados Dr Fernando",
+        "format": "0",
+        "subtotalIds": [
+          "A0"
+        ]
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasFernando.Taxa de Conversão Dr Fernando",
+        "format": "0.00%;-0.00%;0.00%",
+        "subtotalIds": [
+          "A1"
+        ]
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasFernando.Leads_Selecionados Dr Fernando",
+        "format": "0",
+        "subtotalIds": [
+          "A2"
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros.Canal Leads",
+        "entity": "Tabela_Parametros",
+        "property": "Canal Leads",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "A0": 38,
+            "A1": "0.092009685230024216",
+            "A2": 413
+          }
+        ]
+      },
+      {
+        "memberId": "DM1",
+        "subtotalOf": "DM0",
+        "rows": [
+          {
+            "G0": "Retenção",
+            "M0": 25,
+            "M1": "0.36764705882352944",
+            "M2": 68
+          },
+          {
+            "G0": "Orgânico",
+            "M0": 11,
+            "M1": "0.092436974789915971",
+            "M2": 119
+          },
+          {
+            "G0": "Ativo",
+            "M0": 7,
+            "M1": 0.035,
+            "M2": 200
+          },
+          {
+            "G0": "Indicação",
+            "M0": 7,
+            "M1": "0.26923076923076922",
+            "M2": 26
+          },
+          {
+            "G0": "Pago",
+            "M0": 2,
+            "M1": 0
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 6
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_065.txt",
+    "timestamp": "2026-06-19T02:11:01.374Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros_Faturamento.Faturamento",
+        "entity": "Tabela_Parametros_Faturamento",
+        "property": "Faturamento",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Consulta"
+          },
+          {
+            "G0": "Geral"
+          },
+          {
+            "G0": "Protocolo"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 3
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_066.txt",
+    "timestamp": "2026-06-19T02:11:01.358Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Marcados Selecionados Dr Fernando",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasFernando.Marcações Selecionados Fernando LM"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 38,
+            "M1": 52
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_067.txt",
+    "timestamp": "2026-06-19T02:11:01.343Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Ticket Medio Upsell Dr Fernando",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasFernando.Ticket Medio Geral Dr Fernando LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 12649.56,
+            "M1": "17518.748732394364"
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_068.txt",
+    "timestamp": "2026-06-19T02:11:01.405Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "Sum(Metas Dr Fernando.META DO MÊS)"
+      },
+      {
+        "id": "M1",
+        "name": "Sum(Metas Dr Fernando.TOTAL DO MÊS)",
+        "format": "#,0.00"
+      },
+      {
+        "id": "M2",
+        "name": "Metas Dr Fernando.% Meta",
+        "format": "0.00%;-0.00%;0.00%"
+      },
+      {
+        "id": "M3",
+        "name": "Sum(Metas Dr Fernando.PROJEÇÃO)",
+        "format": "#,0"
+      },
+      {
+        "id": "M4",
+        "name": "Metas Dr Fernando.Cor Meta projetado Dr Fernando"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Metas Dr Fernando.Indicador",
+        "entity": "Metas Dr Fernando",
+        "property": "Indicador",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Marcação - Retenção",
+            "M0": 50,
+            "M1": 25,
+            "M2": 0.5,
+            "M3": 25,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Pago",
+            "M0": 3,
+            "M1": 2,
+            "M2": "0.66666666666666663",
+            "M3": 2,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Orgânico",
+            "M0": 22,
+            "M1": 11,
+            "M2": 0.5,
+            "M3": 11,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Indicação",
+            "M0": 20,
+            "M1": 4,
+            "M2": 0.2,
+            "M3": 4,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Ativo",
+            "M0": 20,
+            "M1": 7,
+            "M2": 0.35,
+            "M3": 7,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Leads - Orgânicos",
+            "M0": 150,
+            "M1": 119,
+            "M2": "0.79333333333333333",
+            "M3": 119,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Leads - Indicação Sucesso - Upsell",
+            "M0": 80,
+            "M1": 26,
+            "M2": 0.325,
+            "M3": 26,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Leads - Indicação Dr. Fernando",
+            "M0": 0,
+            "M1": 0,
+            "M2": 0,
+            "M3": 0,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Faturamento do dia",
+            "M0": 800000,
+            "M1": 632478,
+            "M2": 0.7905975,
+            "M3": 632478,
+            "M4": "#F5B4BA"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 9
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_069.txt",
+    "timestamp": "2026-06-19T02:11:01.421Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Ticket Médio Agenda"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasFernando.Ticket Médio Agenda LM"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": "10904.793103448275",
+            "M1": "11511.39240506329"
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_070.txt",
+    "timestamp": "2026-06-19T02:11:01.405Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Ticket Médio Dr Fernando Selecionado",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 12649.56
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "A0": 1
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_071.txt",
+    "timestamp": "2026-06-19T02:11:01.499Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasFernando.Faturamento Fernando LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasFernando.Faturamento dia"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 1243831.16,
+            "M1": 632478
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_072.txt",
+    "timestamp": "2026-06-19T02:11:07.366Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Faturamento Dra Isa Selecionado",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Mês",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 0,
+            "M0": 213862.5
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_073.txt",
+    "timestamp": "2026-06-19T02:11:07.366Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Leads_Selecionados Dra Isa"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasIsa.Leads_Selecionados Dra Isa LM"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 214,
+            "M1": 170
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Abr/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_074.txt",
+    "timestamp": "2026-06-19T02:11:07.382Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros_TicketMedio.Ticket Médio",
+        "entity": "Tabela_Parametros_TicketMedio",
+        "property": "Ticket Médio",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Consulta"
+          },
+          {
+            "G0": "Upsell"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 2
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_075.txt",
+    "timestamp": "2026-06-19T02:11:07.366Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Valor Etapa Funil Dra Isa",
+        "format": "0"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros FunilHorario.Etapa",
+        "entity": "Tabela_Parametros_FunilHorario",
+        "property": "Etapa",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 0,
+            "M0": 114
+          },
+          {
+            "G0": 1,
+            "M0": 98
+          },
+          {
+            "G0": 2,
+            "M0": 98
+          },
+          {
+            "G0": 3,
+            "M0": 9
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 4
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_076.txt",
+    "timestamp": "2026-06-19T02:11:07.382Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Marcados Selecionados Dra Isa",
+        "format": "0",
+        "subtotalIds": [
+          "A0"
+        ]
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasIsa.Taxa de Conversão Dra Isa",
+        "format": "0.00%;-0.00%;0.00%",
+        "subtotalIds": [
+          "A1"
+        ]
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasIsa.Leads_Selecionados Dra Isa",
+        "subtotalIds": [
+          "A2"
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros.Canal Leads",
+        "entity": "Tabela_Parametros",
+        "property": "Canal Leads",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "A0": 21,
+            "A1": "0.098130841121495324",
+            "A2": 214
+          }
+        ]
+      },
+      {
+        "memberId": "DM1",
+        "subtotalOf": "DM0",
+        "rows": [
+          {
+            "G0": "Indicação",
+            "M0": 0,
+            "M1": 0,
+            "M2": 0
+          },
+          {
+            "G0": "Orgânico",
+            "M0": 21,
+            "M1": "0.10552763819095477",
+            "M2": 199
+          },
+          {
+            "G0": "Pago",
+            "M0": 0,
+            "M1": 0,
+            "M2": 15
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 4
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_077.txt",
+    "timestamp": "2026-06-19T02:11:07.382Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Faturamento Vacina"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasIsa.Faturamento Vacina LM"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 10380,
+            "M1": 10570.42
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Abr/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_078.txt",
+    "timestamp": "2026-06-19T02:11:07.507Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Ticket Medio Upsell Dra Isa",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasIsa.Ticket Medio Upsell Dra Isa LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 0,
+            "M1": 0
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Abr/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_079.txt",
+    "timestamp": "2026-06-19T02:11:07.523Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros_Faturamento.Faturamento",
+        "entity": "Tabela_Parametros_Faturamento",
+        "property": "Faturamento",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Consulta"
+          },
+          {
+            "G0": "Geral"
+          },
+          {
+            "G0": "Vacina"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 3
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_080.txt",
+    "timestamp": "2026-06-19T02:11:07.523Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "Sum(Metas Dra Isa.TOTAL DO MÊS)"
+      },
+      {
+        "id": "M1",
+        "name": "Sum(Metas Dra Isa.META DO MÊS)"
+      },
+      {
+        "id": "M2",
+        "name": "Metas Dra Isa.% Meta Dra Thais",
+        "format": "0.00%;-0.00%;0.00%"
+      },
+      {
+        "id": "M3",
+        "name": "Sum(Metas Dra Isa.PROJEÇÃO)",
+        "format": "#,0"
+      },
+      {
+        "id": "M4",
+        "name": "Metas Dra Isa.Cor Meta projetado Dra Isa"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Metas Dra Isa.Indicador",
+        "entity": "Metas Dra Isa",
+        "property": "Indicador",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Ticket Médio Upsell",
+            "M0": "4127.1785714285716",
+            "M1": 0,
+            "M2": 3349,
+            "M3": "#B4F6BE"
+          },
+          {
+            "G0": "Qde de Upsell - Vacinas",
+            "M0": 9,
+            "M1": 0,
+            "M2": 3349,
+            "M3": 9
+          },
+          {
+            "G0": "Qde de Upsell - Plano de Acomp Geral",
+            "M0": 39,
+            "M1": 0,
+            "M2": 3349,
+            "M3": 39
+          },
+          {
+            "G0": "Qde de Upsell - Pago",
+            "M0": 0,
+            "M1": 0,
+            "M2": 3349,
+            "M3": 0
+          },
+          {
+            "G0": "Qde de Upsell - Orgânico",
+            "M0": 19,
+            "M1": 0,
+            "M2": 3349,
+            "M3": 19
+          },
+          {
+            "G0": "Qde de Upsell - Indicação",
+            "M0": 0,
+            "M1": 0,
+            "M2": 3349,
+            "M3": 0
+          },
+          {
+            "G0": "Qde de Upsell - Acompanhamento",
+            "M0": 20,
+            "M1": 0,
+            "M2": 3349,
+            "M3": 20
+          },
+          {
+            "G0": "Marcação - Retenção",
+            "M0": 27,
+            "M1": 50,
+            "M2": 0.54,
+            "M3": 27,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Pago",
+            "M0": 0,
+            "M1": 5,
+            "M2": 0,
+            "M3": 0,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Orgânico",
+            "M0": 21,
+            "M1": 25,
+            "M2": 0.84,
+            "M3": 21,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Indicação",
+            "M0": 0,
+            "M1": 5,
+            "M2": 0,
+            "M3": 0,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Ativo",
+            "M0": 7,
+            "M1": 10,
+            "M2": 0.7,
+            "M3": 7,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Leads Pagos - Google",
+            "M0": 15,
+            "M1": 80,
+            "M2": 0.1875,
+            "M3": 15,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Leads - Orgânicos",
+            "M0": 199,
+            "M1": 100,
+            "M2": 1.99,
+            "M3": 199,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Leads - Indicação",
+            "M0": 0,
+            "M1": 15,
+            "M2": 0,
+            "M3": 0,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Faturamento do dia",
+            "M0": 213862.5,
+            "M1": 240000,
+            "M2": 0.89109375,
+            "M3": 213862.5,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Vacina",
+            "M0": 10380,
+            "M1": 40000,
+            "M2": 0.2595,
+            "M3": 10380,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Planos de Acompanhamento - Pago",
+            "M0": 0,
+            "M1": 3600,
+            "M2": 0,
+            "M3": 0,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Planos de Acompanhamento - Orgânico",
+            "M0": 90110,
+            "M1": 50000,
+            "M2": 1.8022,
+            "M3": 90110,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Fat. Planos de Acompanhamento - Indicação",
+            "M0": 0,
+            "M1": 3600,
+            "M2": 0,
+            "M3": 0,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Planos de Acompanhamento - Acompanhamentos",
+            "M0": 83231.5,
+            "M1": 128700,
+            "M2": "0.64670940170940172",
+            "M3": 83231.5,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Consulta",
+            "M0": 30141,
+            "M1": 40000,
+            "M2": 0.753525,
+            "M3": 30141,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Conversão Vacina",
+            "M0": 10,
+            "M1": 0,
+            "M2": 0,
+            "M3": 10,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Conversão Upsell - Pago",
+            "M0": 0,
+            "M1": 0,
+            "M2": 0,
+            "M3": 0,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Conversão Upsell - Orgânico",
+            "M0": 16,
+            "M1": 0,
+            "M2": 0,
+            "M3": 16,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Conversão Upsell - Indicação",
+            "M0": 0,
+            "M1": 0,
+            "M2": 0,
+            "M3": 0,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Conversão Upsell - Acompanhamento",
+            "M0": 26,
+            "M1": 0,
+            "M2": 0,
+            "M3": 26,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Conversão - Plano de Acomp Geral",
+            "M0": 42,
+            "M1": 50,
+            "M2": 0.84,
+            "M3": 42,
+            "M4": "#F5B4BA"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 28
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_081.txt",
+    "timestamp": "2026-06-19T02:11:07.523Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Marcados Selecionados Dra Isa",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasIsa.Marcados Selecionados Dra Isa LM"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 21,
+            "M1": 23
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Abr/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_082.txt",
+    "timestamp": "2026-06-19T02:11:07.554Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Ticket Médio Dra Isa Selecionado",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Mês",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 0,
+            "M0": "307.5612244897959"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_083.txt",
+    "timestamp": "2026-06-19T02:11:07.57Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Ticket Medio Consulta Dra Isa"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasIsa.Ticket Medio Consulta Dra Isa LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": "307.5612244897959",
+            "M1": "353.648021978022"
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Abr/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_084.txt",
+    "timestamp": "2026-06-19T02:11:07.648Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Faturamento Geral Dra Isa"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasIsa.Faturamento Geral Dra Isa LM"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 213862.5,
+            "M1": 225650.39
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_085.txt",
+    "timestamp": "2026-06-19T02:11:13.592Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasThais.Ticket Medio Upsell Dra Thaís",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasThais.Ticket Medio Upsell Dra Thaís LM"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": []
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 0
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_086.txt",
+    "timestamp": "2026-06-19T02:11:13.592Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasThais.Valor Etapa Funil Dra Thais",
+        "format": "0"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros FunilHorario.Etapa",
+        "entity": "Tabela_Parametros_FunilHorario",
+        "property": "Etapa",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 0,
+            "M0": 70
+          },
+          {
+            "G0": 1,
+            "M0": 43
+          },
+          {
+            "G0": 2,
+            "M0": 36
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 3
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_087.txt",
+    "timestamp": "2026-06-19T02:11:13.577Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasThais.Faturamento Dra Thaís Selecionado",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Mês",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 0,
+            "M0": 9600
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_088.txt",
+    "timestamp": "2026-06-19T02:11:13.592Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros_TicketMedio.Ticket Médio",
+        "entity": "Tabela_Parametros_TicketMedio",
+        "property": "Ticket Médio",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Consulta"
+          },
+          {
+            "G0": "Upsell"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 2
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_089.txt",
+    "timestamp": "2026-06-19T02:11:13.577Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasThais.Faturamento Procedimentos",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasThais.Faturamento Procedimentos LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": []
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 0
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_090.txt",
+    "timestamp": "2026-06-19T02:11:13.592Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasThais.Qtd Consultas Dra Thaís",
+        "format": "0"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasThais.Qtd Consultas Dra Thaís LM"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 36,
+            "M1": 35
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_091.txt",
+    "timestamp": "2026-06-19T02:11:13.749Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasThais.Ticket Médio Dra Thaís Selecionado",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+        "property": "Mês",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 0,
+            "M0": "266.66666666666669"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_092.txt",
+    "timestamp": "2026-06-19T02:11:13.749Z",
+    "fromCache": false,
+    "measures": [],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Tabela_Parametros_Faturamento.Faturamento",
+        "entity": "Tabela_Parametros_Faturamento",
+        "property": "Faturamento",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Consulta"
+          },
+          {
+            "G0": "Geral"
+          },
+          {
+            "G0": "Procedimentos"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 3
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_093.txt",
+    "timestamp": "2026-06-19T02:11:13.749Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasThais.Marcados Selecionados Dra Thaís"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasThais.Marcados Selecionados Dra Thaís LM"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 24,
+            "M1": 11
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_094.txt",
+    "timestamp": "2026-06-19T02:11:13.764Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasIsa.Ticket Medio Consulta Dra Isa LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasThais.Ticket Medio Consulta Dra Thaís"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.MesAnterior"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": "410.93075471698114",
+            "M1": "266.66666666666669"
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M2": "Mar/2026: "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_095.txt",
+    "timestamp": "2026-06-19T02:11:13.78Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasThais.Faturamento Geral Dra Thaís",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "_MedidasThais.Faturamento Geral Dra Thaís LM",
+        "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "dCalendario.Ano",
+        "entity": "dCalendario",
+        "property": "Ano",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": 2026,
+            "M0": 94710,
+            "M1": 119165
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_096.txt",
+    "timestamp": "2026-06-19T02:11:13.781Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "Sum(Metas Dra Thais.META DO MÊS)"
+      },
+      {
+        "id": "M1",
+        "name": "Sum(Metas Dra Thais.TOTAL DO MÊS)"
+      },
+      {
+        "id": "M2",
+        "name": "Metas Dra Thais.% Meta Dra Thais",
+        "format": "0.00%;-0.00%;0.00%"
+      },
+      {
+        "id": "M3",
+        "name": "Sum(Metas Dra Thais.PROJEÇÃO)",
+        "format": "#,0"
+      },
+      {
+        "id": "M4",
+        "name": "Metas Dra Thais.Cor Meta projetado Dra Thais"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Metas Dra Thais.Valor",
+        "entity": "Metas Dra Thais",
+        "property": "Indicador",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Conversão Upsell - Acompanhamento",
+            "M0": 0,
+            "M1": 8,
+            "M2": 0,
+            "M3": 8,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Conversão Upsell - Crossell",
+            "M0": 0,
+            "M1": 4,
+            "M2": 0,
+            "M3": 4,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Conversão Upsell - Indicação",
+            "M0": 0,
+            "M1": 2,
+            "M2": 0,
+            "M3": 2,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Conversão Upsell - Orgânico",
+            "M0": 0,
+            "M1": 2,
+            "M2": 0,
+            "M3": 2,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Conversão Upsell Geral",
+            "M0": 36,
+            "M1": 16,
+            "M2": "0.44444444444444442",
+            "M3": 16,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Consulta",
+            "M0": 10000,
+            "M1": 9600,
+            "M2": 0.96,
+            "M3": 9600,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Protocolo Acompahamento",
+            "M0": 54000,
+            "M1": 32000,
+            "M2": "0.59259259259259256",
+            "M3": 32000,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Protocolo Crossell",
+            "M0": 40000,
+            "M1": 26460,
+            "M2": 0.6615,
+            "M3": 26460,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Protocolo Indicação",
+            "M0": 33600,
+            "M1": 11300,
+            "M2": "0.33630952380952384",
+            "M3": 11300,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Fat. Protocolo Orgânico",
+            "M0": 32000,
+            "M1": 15350,
+            "M2": 0.4796875,
+            "M3": 15350,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Faturamento do dia",
+            "M0": 105000,
+            "M1": 94710,
+            "M2": 0.902,
+            "M3": 94710,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Leads - Crossell",
+            "M0": 14,
+            "M1": 5,
+            "M2": "0.35714285714285715",
+            "M3": 5,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Leads - Indicação",
+            "M0": 14,
+            "M1": 4,
+            "M2": "0.2857142857142857",
+            "M3": 4,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Leads - Orgânicos",
+            "M0": 150,
+            "M1": 42,
+            "M2": 0.28,
+            "M3": 42,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Leads - Pagos",
+            "M0": 50,
+            "M1": 4,
+            "M2": 0.08,
+            "M3": 4,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Ativo",
+            "M0": 16,
+            "M1": 18,
+            "M2": 1.125,
+            "M3": 18,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Marcação - Crossell",
+            "M0": 11,
+            "M1": 2,
+            "M2": "0.18181818181818182",
+            "M3": 2,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Indicação",
+            "M0": 9,
+            "M1": 4,
+            "M2": "0.44444444444444442",
+            "M3": 4,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Orgânico",
+            "M0": 7,
+            "M1": 2,
+            "M2": "0.2857142857142857",
+            "M3": 2,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Marcação - Pago",
+            "M0": 1,
+            "M1": 0,
+            "M2": 0,
+            "M3": 0,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Qde de Upsell - Acompanhamento",
+            "M0": 0,
+            "M1": 18,
+            "M2": 0,
+            "M3": 18,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Qde de Upsell - Crossell",
+            "M0": 0,
+            "M1": 5,
+            "M2": 0,
+            "M3": 5,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Qde de Upsell - Geral",
+            "M0": 40,
+            "M1": 30,
+            "M2": 0.75,
+            "M3": 30,
+            "M4": "#F5B4BA"
+          },
+          {
+            "G0": "Qde de Upsell - Indicação",
+            "M0": 0,
+            "M1": 4,
+            "M2": 0,
+            "M3": 4,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Qde de Upsell - Orgânico",
+            "M0": 0,
+            "M1": 3,
+            "M2": 0,
+            "M3": 3,
+            "M4": "#B4F6BE"
+          },
+          {
+            "G0": "Ticket Médio Upsell",
+            "M0": 5919.375,
+            "M1": 5919.375,
+            "M2": 0,
+            "M4": "#B4F6BE"
+          }
+        ]
+      }
+    ],
+    "directProperties": {},
+    "totalRows": 26
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_097.txt",
+    "timestamp": "2026-06-19T02:11:19.694Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Titulo Indicador bateu Meta"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Append metas.Indicador",
+        "entity": "Append metas",
+        "property": "Indicador",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Conversão Upsell - Acompanhamento"
+          },
+          {
+            "G0": "Conversão Upsell - Ativo"
+          },
+          {
+            "G0": "Conversão Upsell - Crossell"
+          },
+          {
+            "G0": "Conversão Upsell - Orgânico"
+          },
+          {
+            "G0": "Conversão Upsell - Retenção"
+          },
+          {
+            "G0": "Fat. Planos de Acompanhamento - Orgânico"
+          },
+          {
+            "G0": "Fat. Protocolo Crossell"
+          },
+          {
+            "G0": "Fat. Protocolo Retenção"
+          },
+          {
+            "G0": "Qde de Upsell - Geral"
+          },
+          {
+            "G0": "Ticket Médio Ativo"
+          },
+          {
+            "G0": "Ticket Médio Indicação"
+          },
+          {
+            "G0": "Ticket Médio Organico"
+          },
+          {
+            "G0": "Ticket Médio Upsell"
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M0": "Indicadores que bateram meta em "
+    },
+    "totalRows": 13
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_098.txt",
+    "timestamp": "2026-06-19T02:11:19.694Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "_MedidasGeral.Titulo Indicador Não bateu Meta"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Append metas.Indicador",
+        "entity": "Append metas",
+        "property": "Indicador",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "Faturamento do dia"
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M0": "Indicadores que não bateram meta em "
+    },
+    "totalRows": 1
+  },
+  {
+    "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_099.txt",
+    "timestamp": "2026-06-19T02:11:19.71Z",
+    "fromCache": false,
+    "measures": [
+      {
+        "id": "M0",
+        "name": "Sum(Append metas.TOTAL DO MÊS)",
+        "format": "#,0.00"
+      },
+      {
+        "id": "M1",
+        "name": "Sum(Append metas.META DO MÊS)",
+        "format": "#,0.00"
+      },
+      {
+        "id": "M2",
+        "name": "_MedidasGeral.% Meta Indicador"
+      },
+      {
+        "id": "M3",
+        "name": "_MedidasGeral.Titulo Indicador vs Meta"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "G0",
+        "name": "Append metas.Mês",
+        "entity": "Append metas",
+        "property": "Mês",
+        "depth": 0
+      }
+    ],
+    "groups": [
+      {
+        "memberId": "DM0",
+        "rows": [
+          {
+            "G0": "2026-01-01",
+            "M0": 1233927.99,
+            "M1": 1210000,
+            "M2": "1.0197751983471075"
+          },
+          {
+            "G0": "2026-02-01",
+            "M0": 953173,
+            "M1": 950000,
+            "M2": 1.00334
+          },
+          {
+            "G0": "2026-03-01",
+            "M0": "1243831.1600000001",
+            "M1": 1065000,
+            "M2": "1.1679165821596245"
+          },
+          {
+            "G0": "2026-04-01",
+            "M0": 952838.39,
+            "M1": 1065000,
+            "M2": "0.89468393427230053"
+          },
+          {
+            "G0": "2026-05-01",
+            "M0": 1392068.5,
+            "M1": 1490000,
+            "M2": "0.93427416107382555"
+          },
+          {
+            "G0": "2026-06-01",
+            "M0": 540154.95,
+            "M1": 960000,
+            "M2": "0.56266140624999994"
+          }
+        ]
+      }
+    ],
+    "directProperties": {
+      "M3": "Faturamento do dia vs meta por Mês"
+    },
+    "totalRows": 6
+  }
+]

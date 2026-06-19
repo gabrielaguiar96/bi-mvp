@@ -1,0 +1,25 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_034.txt",
+  "timestamp": "2026-06-19T02:10:48.858Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasFernando.Ocupação Agenda",
+      "format": "0"
+    }
+  ],
+  "dimensions": [],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "M0": 177
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

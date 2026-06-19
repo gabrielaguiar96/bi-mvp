@@ -1,0 +1,25 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_042.txt",
+  "timestamp": "2026-06-19T02:10:54.959Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasGeral.Pacientes ativos",
+      "format": "0"
+    }
+  ],
+  "dimensions": [],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "M0": 120
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

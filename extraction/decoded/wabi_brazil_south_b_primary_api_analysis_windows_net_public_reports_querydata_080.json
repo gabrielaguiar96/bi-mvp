@@ -1,0 +1,264 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_080.txt",
+  "timestamp": "2026-06-19T02:11:07.523Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "Sum(Metas Dra Isa.TOTAL DO MÊS)"
+    },
+    {
+      "id": "M1",
+      "name": "Sum(Metas Dra Isa.META DO MÊS)"
+    },
+    {
+      "id": "M2",
+      "name": "Metas Dra Isa.% Meta Dra Thais",
+      "format": "0.00%;-0.00%;0.00%"
+    },
+    {
+      "id": "M3",
+      "name": "Sum(Metas Dra Isa.PROJEÇÃO)",
+      "format": "#,0"
+    },
+    {
+      "id": "M4",
+      "name": "Metas Dra Isa.Cor Meta projetado Dra Isa"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Metas Dra Isa.Indicador",
+      "entity": "Metas Dra Isa",
+      "property": "Indicador",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "Ticket Médio Upsell",
+          "M0": "4127.1785714285716",
+          "M1": 0,
+          "M2": 3349,
+          "M3": "#B4F6BE"
+        },
+        {
+          "G0": "Qde de Upsell - Vacinas",
+          "M0": 9,
+          "M1": 0,
+          "M2": 3349,
+          "M3": 9
+        },
+        {
+          "G0": "Qde de Upsell - Plano de Acomp Geral",
+          "M0": 39,
+          "M1": 0,
+          "M2": 3349,
+          "M3": 39
+        },
+        {
+          "G0": "Qde de Upsell - Pago",
+          "M0": 0,
+          "M1": 0,
+          "M2": 3349,
+          "M3": 0
+        },
+        {
+          "G0": "Qde de Upsell - Orgânico",
+          "M0": 19,
+          "M1": 0,
+          "M2": 3349,
+          "M3": 19
+        },
+        {
+          "G0": "Qde de Upsell - Indicação",
+          "M0": 0,
+          "M1": 0,
+          "M2": 3349,
+          "M3": 0
+        },
+        {
+          "G0": "Qde de Upsell - Acompanhamento",
+          "M0": 20,
+          "M1": 0,
+          "M2": 3349,
+          "M3": 20
+        },
+        {
+          "G0": "Marcação - Retenção",
+          "M0": 27,
+          "M1": 50,
+          "M2": 0.54,
+          "M3": 27,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Pago",
+          "M0": 0,
+          "M1": 5,
+          "M2": 0,
+          "M3": 0,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Orgânico",
+          "M0": 21,
+          "M1": 25,
+          "M2": 0.84,
+          "M3": 21,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Indicação",
+          "M0": 0,
+          "M1": 5,
+          "M2": 0,
+          "M3": 0,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Marcação - Ativo",
+          "M0": 7,
+          "M1": 10,
+          "M2": 0.7,
+          "M3": 7,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Leads Pagos - Google",
+          "M0": 15,
+          "M1": 80,
+          "M2": 0.1875,
+          "M3": 15,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Leads - Orgânicos",
+          "M0": 199,
+          "M1": 100,
+          "M2": 1.99,
+          "M3": 199,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Leads - Indicação",
+          "M0": 0,
+          "M1": 15,
+          "M2": 0,
+          "M3": 0,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Faturamento do dia",
+          "M0": 213862.5,
+          "M1": 240000,
+          "M2": 0.89109375,
+          "M3": 213862.5,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Vacina",
+          "M0": 10380,
+          "M1": 40000,
+          "M2": 0.2595,
+          "M3": 10380,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Planos de Acompanhamento - Pago",
+          "M0": 0,
+          "M1": 3600,
+          "M2": 0,
+          "M3": 0,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Planos de Acompanhamento - Orgânico",
+          "M0": 90110,
+          "M1": 50000,
+          "M2": 1.8022,
+          "M3": 90110,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Fat. Planos de Acompanhamento - Indicação",
+          "M0": 0,
+          "M1": 3600,
+          "M2": 0,
+          "M3": 0,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Planos de Acompanhamento - Acompanhamentos",
+          "M0": 83231.5,
+          "M1": 128700,
+          "M2": "0.64670940170940172",
+          "M3": 83231.5,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Fat. Consulta",
+          "M0": 30141,
+          "M1": 40000,
+          "M2": 0.753525,
+          "M3": 30141,
+          "M4": "#F5B4BA"
+        },
+        {
+          "G0": "Conversão Vacina",
+          "M0": 10,
+          "M1": 0,
+          "M2": 0,
+          "M3": 10,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Conversão Upsell - Pago",
+          "M0": 0,
+          "M1": 0,
+          "M2": 0,
+          "M3": 0,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Conversão Upsell - Orgânico",
+          "M0": 16,
+          "M1": 0,
+          "M2": 0,
+          "M3": 16,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Conversão Upsell - Indicação",
+          "M0": 0,
+          "M1": 0,
+          "M2": 0,
+          "M3": 0,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Conversão Upsell - Acompanhamento",
+          "M0": 26,
+          "M1": 0,
+          "M2": 0,
+          "M3": 26,
+          "M4": "#B4F6BE"
+        },
+        {
+          "G0": "Conversão - Plano de Acomp Geral",
+          "M0": 42,
+          "M1": 50,
+          "M2": 0.84,
+          "M3": 42,
+          "M4": "#F5B4BA"
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 28
+}

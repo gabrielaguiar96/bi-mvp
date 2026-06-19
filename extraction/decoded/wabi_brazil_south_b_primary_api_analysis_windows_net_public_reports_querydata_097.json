@@ -1,0 +1,70 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_097.txt",
+  "timestamp": "2026-06-19T02:11:19.694Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasGeral.Titulo Indicador bateu Meta"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Append metas.Indicador",
+      "entity": "Append metas",
+      "property": "Indicador",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "Conversão Upsell - Acompanhamento"
+        },
+        {
+          "G0": "Conversão Upsell - Ativo"
+        },
+        {
+          "G0": "Conversão Upsell - Crossell"
+        },
+        {
+          "G0": "Conversão Upsell - Orgânico"
+        },
+        {
+          "G0": "Conversão Upsell - Retenção"
+        },
+        {
+          "G0": "Fat. Planos de Acompanhamento - Orgânico"
+        },
+        {
+          "G0": "Fat. Protocolo Crossell"
+        },
+        {
+          "G0": "Fat. Protocolo Retenção"
+        },
+        {
+          "G0": "Qde de Upsell - Geral"
+        },
+        {
+          "G0": "Ticket Médio Ativo"
+        },
+        {
+          "G0": "Ticket Médio Indicação"
+        },
+        {
+          "G0": "Ticket Médio Organico"
+        },
+        {
+          "G0": "Ticket Médio Upsell"
+        }
+      ]
+    }
+  ],
+  "directProperties": {
+    "M0": "Indicadores que bateram meta em "
+  },
+  "totalRows": 13
+}

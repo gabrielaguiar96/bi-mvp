@@ -1,0 +1,45 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_081.txt",
+  "timestamp": "2026-06-19T02:11:07.523Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasIsa.Marcados Selecionados Dra Isa",
+      "format": "0"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasIsa.Marcados Selecionados Dra Isa LM"
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasGeral.MesAnterior"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Ano",
+      "entity": "dCalendario",
+      "property": "Ano",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 2026,
+          "M0": 21,
+          "M1": 23
+        }
+      ]
+    }
+  ],
+  "directProperties": {
+    "M2": "Abr/2026: "
+  },
+  "totalRows": 1
+}

@@ -1,0 +1,40 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_043.txt",
+  "timestamp": "2026-06-19T02:10:54.975Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasGeral.Pacientes aptos",
+      "format": "0"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasGeral.Projeção Pacientes Aptos",
+      "format": "0"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Ano",
+      "entity": "dCalendario",
+      "property": "Ano",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 2026,
+          "M0": 49,
+          "M1": 49
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

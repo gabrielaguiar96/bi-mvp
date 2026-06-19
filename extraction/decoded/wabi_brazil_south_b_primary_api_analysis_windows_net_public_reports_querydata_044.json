@@ -1,0 +1,40 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_044.txt",
+  "timestamp": "2026-06-19T02:10:55.006Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasGeral.Leads Indicação Nutrologia",
+      "format": "0"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasGeral.Projeção Leads Indicação",
+      "format": "0"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Ano",
+      "entity": "dCalendario",
+      "property": "Ano",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 2026,
+          "M0": 35,
+          "M1": 35
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

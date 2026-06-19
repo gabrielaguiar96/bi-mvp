@@ -1,0 +1,46 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_075.txt",
+  "timestamp": "2026-06-19T02:11:07.366Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasIsa.Valor Etapa Funil Dra Isa",
+      "format": "0"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Tabela_Parametros FunilHorario.Etapa",
+      "entity": "Tabela_Parametros_FunilHorario",
+      "property": "Etapa",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 0,
+          "M0": 114
+        },
+        {
+          "G0": 1,
+          "M0": 98
+        },
+        {
+          "G0": 2,
+          "M0": 98
+        },
+        {
+          "G0": 3,
+          "M0": 9
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 4
+}

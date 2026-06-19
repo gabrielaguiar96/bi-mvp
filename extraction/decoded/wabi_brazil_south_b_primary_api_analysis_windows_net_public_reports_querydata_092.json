@@ -1,0 +1,33 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_092.txt",
+  "timestamp": "2026-06-19T02:11:13.749Z",
+  "fromCache": false,
+  "measures": [],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Tabela_Parametros_Faturamento.Faturamento",
+      "entity": "Tabela_Parametros_Faturamento",
+      "property": "Faturamento",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "Consulta"
+        },
+        {
+          "G0": "Geral"
+        },
+        {
+          "G0": "Procedimentos"
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 3
+}

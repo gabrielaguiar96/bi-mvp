@@ -1,0 +1,42 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_005.txt",
+  "timestamp": "2026-06-19T02:10:31.957Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasFernando.Faturamento",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dServiços.Serviço",
+      "entity": "dServiços",
+      "property": "Serviço",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "Nutrologia",
+          "M0": 1020706
+        },
+        {
+          "G0": "Pediatria",
+          "M0": 213862.5
+        },
+        {
+          "G0": "Dermatologia",
+          "M0": 157500
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 3
+}

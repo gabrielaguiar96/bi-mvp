@@ -1,0 +1,24 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_032.txt",
+  "timestamp": "2026-06-19T01:55:51.485Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "Sum(Acrescentar1.Conversão Upsell)"
+    }
+  ],
+  "dimensions": [],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "M0": 62
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

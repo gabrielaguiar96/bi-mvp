@@ -1,0 +1,53 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_013.txt",
+  "timestamp": "2026-06-19T02:10:32.145Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasGeral.Conversão Upsell canal"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Tabela_Parametros.Canal Leads",
+      "entity": "Tabela_Parametros",
+      "property": "Canal Leads",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": "Retenção",
+          "M0": 32
+        },
+        {
+          "G0": "Ativo",
+          "M0": 10
+        },
+        {
+          "G0": "Orgânico",
+          "M0": 10
+        },
+        {
+          "G0": "Indicação",
+          "M0": 6
+        },
+        {
+          "G0": "Crossell",
+          "M0": 0
+        },
+        {
+          "G0": "Pago",
+          "M0": 0
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 6
+}

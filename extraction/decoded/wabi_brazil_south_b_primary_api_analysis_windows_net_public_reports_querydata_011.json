@@ -1,0 +1,37 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_011.txt",
+  "timestamp": "2026-06-19T02:10:32.083Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasGeral.Ocupação Agenda",
+      "format": "0"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasGeral.Ocupação Agenda LM",
+      "format": "0"
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasGeral.Ocupação Agenda LY",
+      "format": "0"
+    }
+  ],
+  "dimensions": [],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "M0": 228,
+          "M1": 198,
+          "M2": 236
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}

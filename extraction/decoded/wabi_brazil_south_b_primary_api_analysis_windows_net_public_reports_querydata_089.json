@@ -1,0 +1,40 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_089.txt",
+  "timestamp": "2026-06-19T02:11:13.577Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasThais.Faturamento Procedimentos",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasThais.Faturamento Procedimentos LM",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasGeral.MesAnterior"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Ano",
+      "entity": "dCalendario",
+      "property": "Ano",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": []
+    }
+  ],
+  "directProperties": {
+    "M2": "Mar/2026: "
+  },
+  "totalRows": 0
+}

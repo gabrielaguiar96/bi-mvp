@@ -1,0 +1,77 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_076.txt",
+  "timestamp": "2026-06-19T02:11:07.382Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasIsa.Marcados Selecionados Dra Isa",
+      "format": "0",
+      "subtotalIds": [
+        "A0"
+      ]
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasIsa.Taxa de Conversão Dra Isa",
+      "format": "0.00%;-0.00%;0.00%",
+      "subtotalIds": [
+        "A1"
+      ]
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasIsa.Leads_Selecionados Dra Isa",
+      "subtotalIds": [
+        "A2"
+      ]
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "Tabela_Parametros.Canal Leads",
+      "entity": "Tabela_Parametros",
+      "property": "Canal Leads",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "A0": 21,
+          "A1": "0.098130841121495324",
+          "A2": 214
+        }
+      ]
+    },
+    {
+      "memberId": "DM1",
+      "subtotalOf": "DM0",
+      "rows": [
+        {
+          "G0": "Indicação",
+          "M0": 0,
+          "M1": 0,
+          "M2": 0
+        },
+        {
+          "G0": "Orgânico",
+          "M0": 21,
+          "M1": "0.10552763819095477",
+          "M2": 199
+        },
+        {
+          "G0": "Pago",
+          "M0": 0,
+          "M1": 0,
+          "M2": 15
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 4
+}

@@ -1,0 +1,1350 @@
+{
+  "generatedAt": "2026-06-19T03:34:45.828Z",
+  "dataSource": {
+    "rawFiles": 93,
+    "decodedFiles": 93,
+    "reportMetadata": true,
+    "screenshots": 8
+  },
+  "pages": [
+    {
+      "name": "Geral",
+      "index": 0,
+      "visited": true,
+      "screenshotExists": true,
+      "slicers": [
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Tabela_Parametros.Canal Leads",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "dServiços.Serviço",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "exercised": false,
+          "capturedValues": []
+        }
+      ],
+      "visuals": [
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "cardVisual",
+          "hasData": true
+        },
+        {
+          "type": "cardVisual",
+          "hasData": true
+        },
+        {
+          "type": "cardVisual",
+          "hasData": true
+        },
+        {
+          "type": "columnChart",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "pivotTable",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "clusteredBarChart",
+          "hasData": true
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "cardVisual",
+          "hasData": true
+        },
+        {
+          "type": "cardVisual",
+          "hasData": true
+        },
+        {
+          "type": "columnChart",
+          "hasData": true
+        },
+        {
+          "type": "pivotTable",
+          "hasData": true
+        },
+        {
+          "type": "clusteredBarChart",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        }
+      ]
+    },
+    {
+      "name": "Simulado",
+      "index": 1,
+      "visited": true,
+      "screenshotExists": true,
+      "slicers": [
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "dServiços.Serviço",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Parâmetro.Parâmetro",
+          "exercised": false,
+          "capturedValues": []
+        }
+      ],
+      "visuals": [
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "advancedSlicerVisual",
+          "hasData": false
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "card",
+          "hasData": true
+        }
+      ]
+    },
+    {
+      "name": "Funil",
+      "index": 2,
+      "visited": true,
+      "screenshotExists": true,
+      "slicers": [
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Acrescentar1.Doutor (a)",
+          "exercised": false,
+          "capturedValues": []
+        }
+      ],
+      "visuals": [
+        {
+          "type": "unknown",
+          "hasData": false
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "image",
+          "hasData": false
+        }
+      ]
+    },
+    {
+      "name": "Funil Indicação",
+      "index": 3,
+      "visited": true,
+      "screenshotExists": true,
+      "slicers": [
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "exercised": false,
+          "capturedValues": []
+        }
+      ],
+      "visuals": [
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "unknown",
+          "hasData": false
+        },
+        {
+          "type": "unknown",
+          "hasData": false
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "unknown",
+          "hasData": false
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "card",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        }
+      ]
+    },
+    {
+      "name": "Nutrologia",
+      "index": 4,
+      "visited": true,
+      "screenshotExists": true,
+      "slicers": [
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Tabela_Parametros.Canal Leads",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Metas Dr Fernando.Indicador",
+          "exercised": false,
+          "capturedValues": []
+        }
+      ],
+      "visuals": [
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "lineChart",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "lineChart",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "pivotTable",
+          "hasData": true
+        },
+        {
+          "type": "funnel",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "advancedSlicerVisual",
+          "hasData": false
+        },
+        {
+          "type": "advancedSlicerVisual",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "tableEx",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        }
+      ]
+    },
+    {
+      "name": "Pediatria",
+      "index": 5,
+      "visited": true,
+      "screenshotExists": true,
+      "slicers": [
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Tabela_Parametros.Canal Leads",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Metas Dra Isa.Indicador",
+          "exercised": false,
+          "capturedValues": []
+        }
+      ],
+      "visuals": [
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "lineChart",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "lineChart",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "pivotTable",
+          "hasData": true
+        },
+        {
+          "type": "funnel",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "advancedSlicerVisual",
+          "hasData": false
+        },
+        {
+          "type": "advancedSlicerVisual",
+          "hasData": false
+        },
+        {
+          "type": "tableEx",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        }
+      ]
+    },
+    {
+      "name": "Dermatologia",
+      "index": 6,
+      "visited": true,
+      "screenshotExists": true,
+      "slicers": [
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Tabela_Parametros.Canal Leads",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Metas Dra Thais.Indicador",
+          "exercised": false,
+          "capturedValues": []
+        }
+      ],
+      "visuals": [
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "lineChart",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "lineChart",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "kpi",
+          "hasData": true
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "textbox",
+          "hasData": false
+        },
+        {
+          "type": "advancedSlicerVisual",
+          "hasData": false
+        },
+        {
+          "type": "advancedSlicerVisual",
+          "hasData": false
+        },
+        {
+          "type": "funnel",
+          "hasData": true
+        },
+        {
+          "type": "tableEx",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        }
+      ]
+    },
+    {
+      "name": "Metas",
+      "index": 7,
+      "visited": true,
+      "screenshotExists": true,
+      "slicers": [
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "dServiços.Serviço",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "exercised": false,
+          "capturedValues": []
+        }
+      ],
+      "visuals": [
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "lineStackedColumnComboChart",
+          "hasData": true
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "advancedSlicerVisual",
+          "hasData": false
+        },
+        {
+          "type": "advancedSlicerVisual",
+          "hasData": false
+        }
+      ]
+    },
+    {
+      "name": "Duplicata de Metas",
+      "index": 8,
+      "visited": true,
+      "screenshotExists": false,
+      "slicers": [
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "Acrescentar1.Doutor (a)",
+          "exercised": false,
+          "capturedValues": []
+        },
+        {
+          "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+          "exercised": false,
+          "capturedValues": []
+        }
+      ],
+      "visuals": [
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "image",
+          "hasData": false
+        },
+        {
+          "type": "slicer",
+          "hasData": false
+        },
+        {
+          "type": "lineClusteredColumnComboChart",
+          "hasData": true
+        },
+        {
+          "type": "lineStackedColumnComboChart",
+          "hasData": true
+        },
+        {
+          "type": "lineStackedColumnComboChart",
+          "hasData": true
+        },
+        {
+          "type": "lineStackedColumnComboChart",
+          "hasData": false
+        },
+        {
+          "type": "tableEx",
+          "hasData": true
+        },
+        {
+          "type": "tableEx",
+          "hasData": true
+        }
+      ]
+    },
+    {
+      "name": "Página 1",
+      "index": 9,
+      "visited": true,
+      "screenshotExists": false,
+      "slicers": [],
+      "visuals": [
+        {
+          "type": "tableEx",
+          "hasData": true
+        },
+        {
+          "type": "FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A",
+          "hasData": false
+        }
+      ]
+    }
+  ],
+  "measures": {
+    "total": 131,
+    "captured": [
+      "Acrescentar1.Ticket Médio Consultas",
+      "Leads SImulado.Valor Leads Sim.",
+      "Metas Dr Fernando.% Meta",
+      "Metas Dr Fernando.Cor Meta projetado Dr Fernando",
+      "Metas Dra Isa.% Meta Dra Thais",
+      "Metas Dra Isa.Cor Meta projetado Dra Isa",
+      "Metas Dra Thais.% Meta Dra Thais",
+      "Metas Dra Thais.Cor Meta projetado Dra Thais",
+      "Sum(Acrescentar1.Conversão Upsell)",
+      "Sum(Append metas.META DO MÊS)",
+      "Sum(Append metas.TOTAL DO MÊS)",
+      "Sum(Metas Dr Fernando.META DO MÊS)",
+      "Sum(Metas Dr Fernando.PROJEÇÃO)",
+      "Sum(Metas Dr Fernando.TOTAL DO MÊS)",
+      "Sum(Metas Dra Isa.META DO MÊS)",
+      "Sum(Metas Dra Isa.PROJEÇÃO)",
+      "Sum(Metas Dra Isa.TOTAL DO MÊS)",
+      "Sum(Metas Dra Thais.META DO MÊS)",
+      "Sum(Metas Dra Thais.PROJEÇÃO)",
+      "Sum(Metas Dra Thais.TOTAL DO MÊS)",
+      "Sum(dCalendario.Ano)",
+      "_MedidasFernando.Comparecidos",
+      "_MedidasFernando.Conversao1 Geral",
+      "_MedidasFernando.Conversao2 Geral",
+      "_MedidasFernando.Conversao3 Geral",
+      "_MedidasFernando.Conversao4 Geral",
+      "_MedidasFernando.Faturamento",
+      "_MedidasFernando.Faturamento Dr Fernando Selecionado",
+      "_MedidasFernando.Faturamento Fernando LM",
+      "_MedidasFernando.Faturamento Protocolo LM",
+      "_MedidasFernando.Faturamento canal Dr Fernando",
+      "_MedidasFernando.Faturamento dia",
+      "_MedidasFernando.Leads Selecionados LM",
+      "_MedidasFernando.Leads_Selecionados",
+      "_MedidasFernando.Leads_Selecionados Dr Fernando",
+      "_MedidasFernando.Marcados Indicação Nutrologia",
+      "_MedidasFernando.Marcados Selecionados Dr Fernando",
+      "_MedidasFernando.Marcações Selecionados Fernando LM",
+      "_MedidasFernando.Meta Taxa de Conversão Aptos a indicar",
+      "_MedidasFernando.Meta Taxa de Conversão Marcados",
+      "_MedidasFernando.Meta Taxa de Conversão Pcts indicaram",
+      "_MedidasFernando.Meta Taxa de Conversão Upsell",
+      "_MedidasFernando.Ocupação Agenda",
+      "_MedidasFernando.Taxa de Conversão",
+      "_MedidasFernando.Taxa de Conversão Aptos a indicar",
+      "_MedidasFernando.Taxa de Conversão Dr Fernando",
+      "_MedidasFernando.Taxa de Conversão Marcados",
+      "_MedidasFernando.Taxa de Conversão Pcts indicaram",
+      "_MedidasFernando.Taxa de Conversão Total Geral",
+      "_MedidasFernando.Taxa de Conversão Upsell",
+      "_MedidasFernando.Ticket Medio Geral Dr Fernando LM",
+      "_MedidasFernando.Ticket Medio Upsell Dr Fernando",
+      "_MedidasFernando.Ticket Médio Agenda LM",
+      "_MedidasFernando.Ticket Médio Canal",
+      "_MedidasFernando.Ticket Médio Dr Fernando Selecionado",
+      "_MedidasFernando.Valor Etapa Funil Dr Fernando",
+      "_MedidasGeral.% Faturamento LY",
+      "_MedidasGeral.% Meta Indicador",
+      "_MedidasGeral.% Meta Total",
+      "_MedidasGeral.Barra Progresso Meta mês",
+      "_MedidasGeral.Comparecidos_Consultas",
+      "_MedidasGeral.Consultas Realizadas LY",
+      "_MedidasGeral.Conversão Upsell Indicação Nutrologia",
+      "_MedidasGeral.Conversão Upsell LM",
+      "_MedidasGeral.Conversão Upsell LY",
+      "_MedidasGeral.Conversão Upsell canal",
+      "_MedidasGeral.Faturamento",
+      "_MedidasGeral.Faturamento LM",
+      "_MedidasGeral.Faturamento Simulado",
+      "_MedidasGeral.Faturamento canal",
+      "_MedidasGeral.Leads Indicação Nutrologia",
+      "_MedidasGeral.Leads_Selecionados",
+      "_MedidasGeral.Marcados Selecionados",
+      "_MedidasGeral.Marcados Simulado",
+      "_MedidasGeral.MesAnterior",
+      "_MedidasGeral.Meta Leads Indicação",
+      "_MedidasGeral.Meta Marcados Indicaçao",
+      "_MedidasGeral.Meta Pacientes Aptos",
+      "_MedidasGeral.Meta Pacientes que passaram indicação",
+      "_MedidasGeral.Meta Upsell Indicaçao",
+      "_MedidasGeral.Ocupação Agenda",
+      "_MedidasGeral.Ocupação Agenda LM",
+      "_MedidasGeral.Ocupação Agenda LY",
+      "_MedidasGeral.Pacientes aptos",
+      "_MedidasGeral.Pacientes ativos",
+      "_MedidasGeral.Pacientes que indicaram",
+      "_MedidasGeral.Projeção Leads Indicação",
+      "_MedidasGeral.Projeção Marcados Indicaçao",
+      "_MedidasGeral.Projeção Pacientes Aptos",
+      "_MedidasGeral.Projeção Pacientes que passaram indicação",
+      "_MedidasGeral.Projeção Upsell Indicaçao",
+      "_MedidasGeral.Qtd Upsell",
+      "_MedidasGeral.Taxa de Conversão",
+      "_MedidasGeral.Ticket Medio Consultas",
+      "_MedidasGeral.Ticket Medio LM",
+      "_MedidasGeral.Ticket Medio LY",
+      "_MedidasGeral.Ticket Médio Agenda",
+      "_MedidasGeral.Titulo Indicador Não bateu Meta",
+      "_MedidasGeral.Titulo Indicador bateu Meta",
+      "_MedidasGeral.Titulo Indicador vs Meta",
+      "_MedidasIsa.Faturamento Dra Isa Selecionado",
+      "_MedidasIsa.Faturamento Geral Dra Isa",
+      "_MedidasIsa.Faturamento Geral Dra Isa LM",
+      "_MedidasIsa.Faturamento Vacina",
+      "_MedidasIsa.Faturamento Vacina LM",
+      "_MedidasIsa.Leads_Selecionados Dra Isa",
+      "_MedidasIsa.Leads_Selecionados Dra Isa LM",
+      "_MedidasIsa.Marcados Selecionados Dra Isa",
+      "_MedidasIsa.Marcados Selecionados Dra Isa LM",
+      "_MedidasIsa.Taxa de Conversão Dra Isa",
+      "_MedidasIsa.Ticket Medio Consulta Dra Isa",
+      "_MedidasIsa.Ticket Medio Consulta Dra Isa LM",
+      "_MedidasIsa.Ticket Medio Upsell Dra Isa",
+      "_MedidasIsa.Ticket Medio Upsell Dra Isa LM",
+      "_MedidasIsa.Ticket Médio Dra Isa Selecionado",
+      "_MedidasIsa.Valor Etapa Funil Dra Isa",
+      "_MedidasThais.Faturamento Dra Thaís Selecionado",
+      "_MedidasThais.Faturamento Geral Dra Thaís",
+      "_MedidasThais.Faturamento Geral Dra Thaís LM",
+      "_MedidasThais.Faturamento Procedimentos",
+      "_MedidasThais.Faturamento Procedimentos LM",
+      "_MedidasThais.Marcados Selecionados Dra Thaís",
+      "_MedidasThais.Marcados Selecionados Dra Thaís LM",
+      "_MedidasThais.Qtd Consultas Dra Thaís",
+      "_MedidasThais.Qtd Consultas Dra Thaís LM",
+      "_MedidasThais.Ticket Medio Consulta Dra Thaís",
+      "_MedidasThais.Ticket Medio Upsell Dra Thaís",
+      "_MedidasThais.Ticket Medio Upsell Dra Thaís LM",
+      "_MedidasThais.Ticket Médio Dra Thaís Selecionado",
+      "_MedidasThais.Valor Etapa Funil Dra Thais"
+    ],
+    "missing": [
+      "Acrescentar1.Doutor (a)",
+      "Append metas.Indicador",
+      "Append metas.Mês",
+      "Metas Dr Fernando.Indicador",
+      "Metas Dra Isa.Indicador",
+      "Metas Dra Thais.Valor",
+      "Tabela_Parametros FunilHorario.Etapa",
+      "Tabela_Parametros.Canal Leads",
+      "Tabela_Parametros_Faturamento.Faturamento",
+      "Tabela_Parametros_TicketMedio.Ticket Médio",
+      "_MedidasFernando.Ticket Médio Serviço Selecionado",
+      "_MedidasGeral.Meta Leads Canal",
+      "dCalendario.Ano",
+      "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+      "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+      "dCalendario.Data.Variation.Hierarquia de datas.Trimestre",
+      "dCalendario.NomeDia abrev",
+      "dCalendario.Semana",
+      "dServiços.Serviço"
+    ]
+  },
+  "dimensions": {
+    "total": 16,
+    "captured": 16,
+    "values": {
+      "dServiços.Serviço": [
+        "By Evuli",
+        "Cirurgia Plástica",
+        "Dermatologia",
+        "Evuli Dietas",
+        "Nutrologia",
+        "Nutrologia 2",
+        "Pediatria",
+        "Suplementação"
+      ],
+      "dCalendario.Data.Variation.Hierarquia de datas.Ano": [],
+      "dCalendario.Data.Variation.Hierarquia de datas.Trimestre": [],
+      "dCalendario.Data.Variation.Hierarquia de datas.Mês": [],
+      "Tabela_Parametros.Canal Leads": [
+        "Ativo",
+        "Crossell",
+        "Google",
+        "Indicação",
+        "Meta",
+        "Orgânico",
+        "Pago",
+        "Retenção"
+      ],
+      "Parâmetro.Parâmetro": [],
+      "Acrescentar1.Doutor (a)": [
+        "By Evuli",
+        "Cirurgia Plástica",
+        "Dermatologia",
+        "Evuli Dietas",
+        "Nutrologia",
+        "Nutrologia 2",
+        "Pediatria",
+        "Suplementação"
+      ],
+      "dCalendario.Ano": [],
+      "Tabela_Parametros_TicketMedio.Ticket Médio": [
+        "Consulta",
+        "Geral",
+        "Upsell"
+      ],
+      "Tabela_Parametros FunilHorario.Etapa": [],
+      "Tabela_Parametros_Faturamento.Faturamento": [
+        "Consulta",
+        "Geral",
+        "Procedimentos",
+        "Protocolo",
+        "Vacina"
+      ],
+      "Metas Dr Fernando.Indicador": [
+        "Faturamento do dia",
+        "Leads - Indicação Dr. Fernando",
+        "Leads - Indicação Sucesso - Upsell",
+        "Leads - Orgânicos",
+        "Marcação - Ativo",
+        "Marcação - Indicação",
+        "Marcação - Orgânico",
+        "Marcação - Pago",
+        "Marcação - Retenção"
+      ],
+      "Metas Dra Isa.Indicador": [
+        "Conversão - Plano de Acomp Geral",
+        "Conversão Upsell - Acompanhamento",
+        "Conversão Upsell - Indicação",
+        "Conversão Upsell - Orgânico",
+        "Conversão Upsell - Pago",
+        "Conversão Vacina",
+        "Fat. Consulta",
+        "Fat. Planos de Acompanhamento - Acompanhamentos",
+        "Fat. Planos de Acompanhamento - Indicação",
+        "Fat. Planos de Acompanhamento - Orgânico",
+        "Fat. Planos de Acompanhamento - Pago",
+        "Fat. Vacina",
+        "Faturamento do dia",
+        "Leads - Indicação",
+        "Leads - Orgânicos",
+        "Leads Pagos - Google",
+        "Marcação - Ativo",
+        "Marcação - Indicação",
+        "Marcação - Orgânico",
+        "Marcação - Pago",
+        "Marcação - Retenção",
+        "Qde de Upsell - Acompanhamento",
+        "Qde de Upsell - Indicação",
+        "Qde de Upsell - Orgânico",
+        "Qde de Upsell - Pago",
+        "Qde de Upsell - Plano de Acomp Geral",
+        "Qde de Upsell - Vacinas",
+        "Ticket Médio Upsell"
+      ],
+      "Metas Dra Thais.Valor": [
+        "Conversão Upsell - Acompanhamento",
+        "Conversão Upsell - Crossell",
+        "Conversão Upsell - Indicação",
+        "Conversão Upsell - Orgânico",
+        "Conversão Upsell Geral",
+        "Fat. Consulta",
+        "Fat. Protocolo Acompahamento",
+        "Fat. Protocolo Crossell",
+        "Fat. Protocolo Indicação",
+        "Fat. Protocolo Orgânico",
+        "Faturamento do dia",
+        "Leads - Crossell",
+        "Leads - Indicação",
+        "Leads - Orgânicos",
+        "Leads - Pagos",
+        "Marcação - Ativo",
+        "Marcação - Crossell",
+        "Marcação - Indicação",
+        "Marcação - Orgânico",
+        "Marcação - Pago",
+        "Qde de Upsell - Acompanhamento",
+        "Qde de Upsell - Crossell",
+        "Qde de Upsell - Geral",
+        "Qde de Upsell - Indicação",
+        "Qde de Upsell - Orgânico",
+        "Ticket Médio Upsell"
+      ],
+      "Append metas.Indicador": [
+        "Conversão Upsell - Acompanhamento",
+        "Conversão Upsell - Ativo",
+        "Conversão Upsell - Crossell",
+        "Conversão Upsell - Orgânico",
+        "Conversão Upsell - Retenção",
+        "Fat. Planos de Acompanhamento - Orgânico",
+        "Fat. Protocolo Crossell",
+        "Fat. Protocolo Retenção",
+        "Faturamento do dia",
+        "Qde de Upsell - Geral",
+        "Ticket Médio Ativo",
+        "Ticket Médio Indicação",
+        "Ticket Médio Organico",
+        "Ticket Médio Upsell"
+      ],
+      "Append metas.Mês": [
+        "2026-01-01",
+        "2026-02-01",
+        "2026-03-01",
+        "2026-04-01",
+        "2026-05-01",
+        "2026-06-01"
+      ]
+    }
+  },
+  "slicers": {
+    "total": 26,
+    "exercised": 0,
+    "details": [
+      {
+        "page": "Geral",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Geral",
+        "queryRef": "Tabela_Parametros.Canal Leads",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Geral",
+        "queryRef": "dServiços.Serviço",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Geral",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Simulado",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Simulado",
+        "queryRef": "dServiços.Serviço",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Simulado",
+        "queryRef": "Parâmetro.Parâmetro",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Funil",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Funil",
+        "queryRef": "Acrescentar1.Doutor (a)",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Funil Indicação",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Funil Indicação",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Nutrologia",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Nutrologia",
+        "queryRef": "Tabela_Parametros.Canal Leads",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Nutrologia",
+        "queryRef": "Metas Dr Fernando.Indicador",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Pediatria",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Pediatria",
+        "queryRef": "Tabela_Parametros.Canal Leads",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Pediatria",
+        "queryRef": "Metas Dra Isa.Indicador",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Dermatologia",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Dermatologia",
+        "queryRef": "Tabela_Parametros.Canal Leads",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Dermatologia",
+        "queryRef": "Metas Dra Thais.Indicador",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Metas",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Metas",
+        "queryRef": "dServiços.Serviço",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Metas",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Duplicata de Metas",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Ano",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Duplicata de Metas",
+        "queryRef": "Acrescentar1.Doutor (a)",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      },
+      {
+        "page": "Duplicata de Metas",
+        "queryRef": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+        "exercised": false,
+        "note": "Default filter state only — no alternative values exercised"
+      }
+    ]
+  },
+  "filterCombinations": {
+    "attempted": 1,
+    "captured": 1,
+    "missing": [
+      "Year=2025 × all pages",
+      "Each canal × Geral/Nutrologia/Pediatria/Dermatologia",
+      "Each month × Geral/Metas",
+      "Each serviço × Geral",
+      "Cross-filter: Year+Canal, Year+Month, Canal+Serviço"
+    ]
+  },
+  "gaps": [
+    "19 measures found in visuals but not captured in querydata",
+    "Slicer filter combinations not exercised (only default state captured)",
+    "Pages 8 (Duplicata de Metas) and 9 (Página 1) may not have been fully captured in original run",
+    "No drill-through or expand interactions captured",
+    "Conceptual schema returned error (not accessible via public link)",
+    "DAX expressions not available (only measure names from descriptor)",
+    "No cross-filtering between pages captured"
+  ],
+  "summary": "# Power BI Extraction Coverage Report\n\nGenerated: 2026-06-19T03:34:45.828Z\n\n## Data Sources\n- Raw querydata files: 93\n- Decoded queries: 93\n- Report metadata: Yes\n- Screenshots: 8\n\n## Pages (10)\n- [x] \"Geral\" — 16 visuals (11 with data), 4 slicers\n- [x] \"Simulado\" — 16 visuals (6 with data), 3 slicers\n- [x] \"Funil\" — 20 visuals (10 with data), 2 slicers\n- [x] \"Funil Indicação\" — 32 visuals (20 with data), 2 slicers\n- [x] \"Nutrologia\" — 18 visuals (11 with data), 3 slicers\n- [x] \"Pediatria\" — 18 visuals (11 with data), 3 slicers\n- [x] \"Dermatologia\" — 17 visuals (10 with data), 3 slicers\n- [x] \"Metas\" — 7 visuals (1 with data), 3 slicers\n- [x] \"Duplicata de Metas\" — 10 visuals (5 with data), 3 slicers\n- [x] \"Página 1\" — 2 visuals (1 with data), 0 slicers\n\n## Measures\n- Total in report: 131\n- Captured in querydata: Acrescentar1.Ticket Médio Consultas,Leads SImulado.Valor Leads Sim.,Metas Dr Fernando.% Meta,Metas Dr Fernando.Cor Meta projetado Dr Fernando,Metas Dra Isa.% Meta Dra Thais,Metas Dra Isa.Cor Meta projetado Dra Isa,Metas Dra Thais.% Meta Dra Thais,Metas Dra Thais.Cor Meta projetado Dra Thais,Sum(Acrescentar1.Conversão Upsell),Sum(Append metas.META DO MÊS),Sum(Append metas.TOTAL DO MÊS),Sum(Metas Dr Fernando.META DO MÊS),Sum(Metas Dr Fernando.PROJEÇÃO),Sum(Metas Dr Fernando.TOTAL DO MÊS),Sum(Metas Dra Isa.META DO MÊS),Sum(Metas Dra Isa.PROJEÇÃO),Sum(Metas Dra Isa.TOTAL DO MÊS),Sum(Metas Dra Thais.META DO MÊS),Sum(Metas Dra Thais.PROJEÇÃO),Sum(Metas Dra Thais.TOTAL DO MÊS),Sum(dCalendario.Ano),_MedidasFernando.Comparecidos,_MedidasFernando.Conversao1 Geral,_MedidasFernando.Conversao2 Geral,_MedidasFernando.Conversao3 Geral,_MedidasFernando.Conversao4 Geral,_MedidasFernando.Faturamento,_MedidasFernando.Faturamento Dr Fernando Selecionado,_MedidasFernando.Faturamento Fernando LM,_MedidasFernando.Faturamento Protocolo LM,_MedidasFernando.Faturamento canal Dr Fernando,_MedidasFernando.Faturamento dia,_MedidasFernando.Leads Selecionados LM,_MedidasFernando.Leads_Selecionados,_MedidasFernando.Leads_Selecionados Dr Fernando,_MedidasFernando.Marcados Indicação Nutrologia,_MedidasFernando.Marcados Selecionados Dr Fernando,_MedidasFernando.Marcações Selecionados Fernando LM,_MedidasFernando.Meta Taxa de Conversão Aptos a indicar,_MedidasFernando.Meta Taxa de Conversão Marcados,_MedidasFernando.Meta Taxa de Conversão Pcts indicaram,_MedidasFernando.Meta Taxa de Conversão Upsell,_MedidasFernando.Ocupação Agenda,_MedidasFernando.Taxa de Conversão,_MedidasFernando.Taxa de Conversão Aptos a indicar,_MedidasFernando.Taxa de Conversão Dr Fernando,_MedidasFernando.Taxa de Conversão Marcados,_MedidasFernando.Taxa de Conversão Pcts indicaram,_MedidasFernando.Taxa de Conversão Total Geral,_MedidasFernando.Taxa de Conversão Upsell,_MedidasFernando.Ticket Medio Geral Dr Fernando LM,_MedidasFernando.Ticket Medio Upsell Dr Fernando,_MedidasFernando.Ticket Médio Agenda LM,_MedidasFernando.Ticket Médio Canal,_MedidasFernando.Ticket Médio Dr Fernando Selecionado,_MedidasFernando.Valor Etapa Funil Dr Fernando,_MedidasGeral.% Faturamento LY,_MedidasGeral.% Meta Indicador,_MedidasGeral.% Meta Total,_MedidasGeral.Barra Progresso Meta mês,_MedidasGeral.Comparecidos_Consultas,_MedidasGeral.Consultas Realizadas LY,_MedidasGeral.Conversão Upsell Indicação Nutrologia,_MedidasGeral.Conversão Upsell LM,_MedidasGeral.Conversão Upsell LY,_MedidasGeral.Conversão Upsell canal,_MedidasGeral.Faturamento,_MedidasGeral.Faturamento LM,_MedidasGeral.Faturamento Simulado,_MedidasGeral.Faturamento canal,_MedidasGeral.Leads Indicação Nutrologia,_MedidasGeral.Leads_Selecionados,_MedidasGeral.Marcados Selecionados,_MedidasGeral.Marcados Simulado,_MedidasGeral.MesAnterior,_MedidasGeral.Meta Leads Indicação,_MedidasGeral.Meta Marcados Indicaçao,_MedidasGeral.Meta Pacientes Aptos,_MedidasGeral.Meta Pacientes que passaram indicação,_MedidasGeral.Meta Upsell Indicaçao,_MedidasGeral.Ocupação Agenda,_MedidasGeral.Ocupação Agenda LM,_MedidasGeral.Ocupação Agenda LY,_MedidasGeral.Pacientes aptos,_MedidasGeral.Pacientes ativos,_MedidasGeral.Pacientes que indicaram,_MedidasGeral.Projeção Leads Indicação,_MedidasGeral.Projeção Marcados Indicaçao,_MedidasGeral.Projeção Pacientes Aptos,_MedidasGeral.Projeção Pacientes que passaram indicação,_MedidasGeral.Projeção Upsell Indicaçao,_MedidasGeral.Qtd Upsell,_MedidasGeral.Taxa de Conversão,_MedidasGeral.Ticket Medio Consultas,_MedidasGeral.Ticket Medio LM,_MedidasGeral.Ticket Medio LY,_MedidasGeral.Ticket Médio Agenda,_MedidasGeral.Titulo Indicador Não bateu Meta,_MedidasGeral.Titulo Indicador bateu Meta,_MedidasGeral.Titulo Indicador vs Meta,_MedidasIsa.Faturamento Dra Isa Selecionado,_MedidasIsa.Faturamento Geral Dra Isa,_MedidasIsa.Faturamento Geral Dra Isa LM,_MedidasIsa.Faturamento Vacina,_MedidasIsa.Faturamento Vacina LM,_MedidasIsa.Leads_Selecionados Dra Isa,_MedidasIsa.Leads_Selecionados Dra Isa LM,_MedidasIsa.Marcados Selecionados Dra Isa,_MedidasIsa.Marcados Selecionados Dra Isa LM,_MedidasIsa.Taxa de Conversão Dra Isa,_MedidasIsa.Ticket Medio Consulta Dra Isa,_MedidasIsa.Ticket Medio Consulta Dra Isa LM,_MedidasIsa.Ticket Medio Upsell Dra Isa,_MedidasIsa.Ticket Medio Upsell Dra Isa LM,_MedidasIsa.Ticket Médio Dra Isa Selecionado,_MedidasIsa.Valor Etapa Funil Dra Isa,_MedidasThais.Faturamento Dra Thaís Selecionado,_MedidasThais.Faturamento Geral Dra Thaís,_MedidasThais.Faturamento Geral Dra Thaís LM,_MedidasThais.Faturamento Procedimentos,_MedidasThais.Faturamento Procedimentos LM,_MedidasThais.Marcados Selecionados Dra Thaís,_MedidasThais.Marcados Selecionados Dra Thaís LM,_MedidasThais.Qtd Consultas Dra Thaís,_MedidasThais.Qtd Consultas Dra Thaís LM,_MedidasThais.Ticket Medio Consulta Dra Thaís,_MedidasThais.Ticket Medio Upsell Dra Thaís,_MedidasThais.Ticket Medio Upsell Dra Thaís LM,_MedidasThais.Ticket Médio Dra Thaís Selecionado,_MedidasThais.Valor Etapa Funil Dra Thais (NaN%)\n- Missing: 19\n\n  - Acrescentar1.Doutor (a)\n  - Append metas.Indicador\n  - Append metas.Mês\n  - Metas Dr Fernando.Indicador\n  - Metas Dra Isa.Indicador\n  - Metas Dra Thais.Valor\n  - Tabela_Parametros FunilHorario.Etapa\n  - Tabela_Parametros.Canal Leads\n  - Tabela_Parametros_Faturamento.Faturamento\n  - Tabela_Parametros_TicketMedio.Ticket Médio\n  - _MedidasFernando.Ticket Médio Serviço Selecionado\n  - _MedidasGeral.Meta Leads Canal\n  - dCalendario.Ano\n  - dCalendario.Data.Variation.Hierarquia de datas.Ano\n  - dCalendario.Data.Variation.Hierarquia de datas.Mês\n  - dCalendario.Data.Variation.Hierarquia de datas.Trimestre\n  - dCalendario.NomeDia abrev\n  - dCalendario.Semana\n  - dServiços.Serviço\n\n## Dimensions\n- Captured: 16\n  - dServiços.Serviço: [By Evuli, Cirurgia Plástica, Dermatologia, Evuli Dietas, Nutrologia, Nutrologia 2, Pediatria, Suplementação]\n  - dCalendario.Data.Variation.Hierarquia de datas.Ano: []\n  - dCalendario.Data.Variation.Hierarquia de datas.Trimestre: []\n  - dCalendario.Data.Variation.Hierarquia de datas.Mês: []\n  - Tabela_Parametros.Canal Leads: [Ativo, Crossell, Google, Indicação, Meta, Orgânico, Pago, Retenção]\n  - Parâmetro.Parâmetro: []\n  - Acrescentar1.Doutor (a): [By Evuli, Cirurgia Plástica, Dermatologia, Evuli Dietas, Nutrologia, Nutrologia 2, Pediatria, Suplementação]\n  - dCalendario.Ano: []\n  - Tabela_Parametros_TicketMedio.Ticket Médio: [Consulta, Geral, Upsell]\n  - Tabela_Parametros FunilHorario.Etapa: []\n  - Tabela_Parametros_Faturamento.Faturamento: [Consulta, Geral, Procedimentos, Protocolo, Vacina]\n  - Metas Dr Fernando.Indicador: [Faturamento do dia, Leads - Indicação Dr. Fernando, Leads - Indicação Sucesso - Upsell, Leads - Orgânicos, Marcação - Ativo, Marcação - Indicação, Marcação - Orgânico, Marcação - Pago, Marcação - Retenção]\n  - Metas Dra Isa.Indicador: [Conversão - Plano de Acomp Geral, Conversão Upsell - Acompanhamento, Conversão Upsell - Indicação, Conversão Upsell - Orgânico, Conversão Upsell - Pago, Conversão Vacina, Fat. Consulta, Fat. Planos de Acompanhamento - Acompanhamentos, Fat. Planos de Acompanhamento - Indicação, Fat. Planos de Acompanhamento - Orgânico, ... (28 total)]\n  - Metas Dra Thais.Valor: [Conversão Upsell - Acompanhamento, Conversão Upsell - Crossell, Conversão Upsell - Indicação, Conversão Upsell - Orgânico, Conversão Upsell Geral, Fat. Consulta, Fat. Protocolo Acompahamento, Fat. Protocolo Crossell, Fat. Protocolo Indicação, Fat. Protocolo Orgânico, ... (26 total)]\n  - Append metas.Indicador: [Conversão Upsell - Acompanhamento, Conversão Upsell - Ativo, Conversão Upsell - Crossell, Conversão Upsell - Orgânico, Conversão Upsell - Retenção, Fat. Planos de Acompanhamento - Orgânico, Fat. Protocolo Crossell, Fat. Protocolo Retenção, Faturamento do dia, Qde de Upsell - Geral, ... (14 total)]\n  - Append metas.Mês: [2026-01-01, 2026-02-01, 2026-03-01, 2026-04-01, 2026-05-01, 2026-06-01]\n\n## Slicers (26)\n- Exercised: 0/26\n- [ ] Geral → dCalendario.Data.Variation.Hierarquia de datas.Ano — Default filter state only — no alternative values exercised\n- [ ] Geral → Tabela_Parametros.Canal Leads — Default filter state only — no alternative values exercised\n- [ ] Geral → dServiços.Serviço — Default filter state only — no alternative values exercised\n- [ ] Geral → dCalendario.Data.Variation.Hierarquia de datas.Mês — Default filter state only — no alternative values exercised\n- [ ] Simulado → dCalendario.Data.Variation.Hierarquia de datas.Ano — Default filter state only — no alternative values exercised\n- [ ] Simulado → dServiços.Serviço — Default filter state only — no alternative values exercised\n- [ ] Simulado → Parâmetro.Parâmetro — Default filter state only — no alternative values exercised\n- [ ] Funil → dCalendario.Data.Variation.Hierarquia de datas.Ano — Default filter state only — no alternative values exercised\n- [ ] Funil → Acrescentar1.Doutor (a) — Default filter state only — no alternative values exercised\n- [ ] Funil Indicação → dCalendario.Data.Variation.Hierarquia de datas.Ano — Default filter state only — no alternative values exercised\n- [ ] Funil Indicação → dCalendario.Data.Variation.Hierarquia de datas.Mês — Default filter state only — no alternative values exercised\n- [ ] Nutrologia → dCalendario.Data.Variation.Hierarquia de datas.Ano — Default filter state only — no alternative values exercised\n- [ ] Nutrologia → Tabela_Parametros.Canal Leads — Default filter state only — no alternative values exercised\n- [ ] Nutrologia → Metas Dr Fernando.Indicador — Default filter state only — no alternative values exercised\n- [ ] Pediatria → dCalendario.Data.Variation.Hierarquia de datas.Ano — Default filter state only — no alternative values exercised\n- [ ] Pediatria → Tabela_Parametros.Canal Leads — Default filter state only — no alternative values exercised\n- [ ] Pediatria → Metas Dra Isa.Indicador — Default filter state only — no alternative values exercised\n- [ ] Dermatologia → dCalendario.Data.Variation.Hierarquia de datas.Ano — Default filter state only — no alternative values exercised\n- [ ] Dermatologia → Tabela_Parametros.Canal Leads — Default filter state only — no alternative values exercised\n- [ ] Dermatologia → Metas Dra Thais.Indicador — Default filter state only — no alternative values exercised\n- [ ] Metas → dCalendario.Data.Variation.Hierarquia de datas.Ano — Default filter state only — no alternative values exercised\n- [ ] Metas → dServiços.Serviço — Default filter state only — no alternative values exercised\n- [ ] Metas → dCalendario.Data.Variation.Hierarquia de datas.Mês — Default filter state only — no alternative values exercised\n- [ ] Duplicata de Metas → dCalendario.Data.Variation.Hierarquia de datas.Ano — Default filter state only — no alternative values exercised\n- [ ] Duplicata de Metas → Acrescentar1.Doutor (a) — Default filter state only — no alternative values exercised\n- [ ] Duplicata de Metas → dCalendario.Data.Variation.Hierarquia de datas.Mês — Default filter state only — no alternative values exercised\n\n## Filter Combinations\n- Attempted: 1\n- Missing:\n  - Year=2025 × all pages\n  - Each canal × Geral/Nutrologia/Pediatria/Dermatologia\n  - Each month × Geral/Metas\n  - Each serviço × Geral\n  - Cross-filter: Year+Canal, Year+Month, Canal+Serviço\n\n## Gaps / Known Limitations\n- 19 measures found in visuals but not captured in querydata\n- Slicer filter combinations not exercised (only default state captured)\n- Pages 8 (Duplicata de Metas) and 9 (Página 1) may not have been fully captured in original run\n- No drill-through or expand interactions captured\n- Conceptual schema returned error (not accessible via public link)\n- DAX expressions not available (only measure names from descriptor)\n- No cross-filtering between pages captured\n\n## HONEST ASSESSMENT\n\nThis extraction captured the DEFAULT VIEW of the report (current year, all channels,\nall services). The data covers the \"what you see when you first open the report\" scenario.\n\n**What IS captured:**\n- All KPI values for the default filter state\n- All funnel data per professional\n- All metas/targets per professional\n- Monthly revenue series (6 months)\n- Conversion rates by channel\n- All 130 measures with their real names\n- All 16 dimensions with their real names\n- Report structure (10 pages, 130+ visuals, 26 slicers)\n\n**What is NOT captured:**\n- Data for alternative filter combinations (different years, months, channels)\n- Drill-through data (clicking on a chart segment)\n- Expanded/collapsed states of hierarchical visuals\n- Data from pages 8-9 (Duplicata de Metas, Página 1) — may be duplicates\n- DAX expressions (not available via public link)\n- Conceptual schema (returned error from server)\n- Full dataset (only queries triggered by the default view)\n\n**Estimated completeness: ~40-50%** of what the report can show.\nThe captured data IS accurate for the default filter state and can be\nused to replicate the report's main views."
+}

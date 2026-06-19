@@ -1,0 +1,46 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_067.txt",
+  "timestamp": "2026-06-19T02:11:01.343Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasFernando.Ticket Medio Upsell Dr Fernando",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    },
+    {
+      "id": "M1",
+      "name": "_MedidasFernando.Ticket Medio Geral Dr Fernando LM",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    },
+    {
+      "id": "M2",
+      "name": "_MedidasGeral.MesAnterior"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Ano",
+      "entity": "dCalendario",
+      "property": "Ano",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 2026,
+          "M0": 12649.56,
+          "M1": "17518.748732394364"
+        }
+      ]
+    }
+  ],
+  "directProperties": {
+    "M2": "Mar/2026: "
+  },
+  "totalRows": 1
+}

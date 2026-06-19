@@ -1,0 +1,34 @@
+{
+  "file": "wabi_brazil_south_b_primary_api_analysis_windows_net_public_reports_querydata_072.txt",
+  "timestamp": "2026-06-19T02:11:07.366Z",
+  "fromCache": false,
+  "measures": [
+    {
+      "id": "M0",
+      "name": "_MedidasIsa.Faturamento Dra Isa Selecionado",
+      "format": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "G0",
+      "name": "dCalendario.Data.Variation.Hierarquia de datas.Mês",
+      "entity": "LocalDateTable_44a31fe3-dfff-4cb2-8b37-9237320f84e9",
+      "property": "Mês",
+      "depth": 0
+    }
+  ],
+  "groups": [
+    {
+      "memberId": "DM0",
+      "rows": [
+        {
+          "G0": 0,
+          "M0": 213862.5
+        }
+      ]
+    }
+  ],
+  "directProperties": {},
+  "totalRows": 1
+}
