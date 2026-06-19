@@ -854,6 +854,49 @@ export const conversaoEtapas = {
   etapa4: 0.8611, // Upsell → Faturamento
 };
 
+/**
+ * Taxas de conversão por etapa do funil, segmentadas por serviço.
+ *
+ * Derivado do export `funis` (dados reais do Power BI).
+ * Cada serviço tem taxas calculadas a partir dos valores absolutos do funil:
+ *   taxa = valor_etapa_atual / valor_etapa_anterior
+ *
+ * "Todos" usa médias ponderadas por volume em cada etapa.
+ * Dermatologia não tem etapa de upsell (apenas 2 steps).
+ */
+export const conversaoEtapasPorServico: Record<
+  string,
+  { etapas: { label: string; taxa: number }[] }
+> = {
+  Nutrologia: {
+    etapas: [
+      { label: "Leads → Agenda", taxa: 58 / 112 },       // 0.518
+      { label: "Agenda → Comp.", taxa: 58 / 58 },         // 1.000
+      { label: "Comp. → Upsell", taxa: 50 / 58 },         // 0.862
+    ],
+  },
+  Pediatria: {
+    etapas: [
+      { label: "Leads → Agenda", taxa: 98 / 114 },        // 0.860
+      { label: "Agenda → Comp.", taxa: 98 / 98 },          // 1.000
+      { label: "Comp. → Upsell", taxa: 9 / 98 },           // 0.092
+    ],
+  },
+  Dermatologia: {
+    etapas: [
+      { label: "Leads → Agenda", taxa: 43 / 70 },          // 0.614
+      { label: "Agenda → Comp.", taxa: 36 / 43 },           // 0.837
+    ],
+  },
+  Todos: {
+    etapas: [
+      { label: "Leads → Agenda", taxa: (58 + 98 + 43) / (112 + 114 + 70) },   // 0.661
+      { label: "Agenda → Comp.", taxa: (58 + 98 + 36) / (58 + 98 + 43) },      // 0.965
+      { label: "Comp. → Upsell", taxa: (50 + 9) / (58 + 98 + 36) },            // 0.307
+    ],
+  },
+};
+
 // Conversão por canal por profissional (extraído das páginas 5, 6, 7 do Power BI)
 export const conversaoPorCanalProfissional = {
   "Dr Fernando": [
