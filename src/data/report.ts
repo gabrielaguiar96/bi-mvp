@@ -728,6 +728,14 @@ export const metaLeadsCanal = {
   },
 };
 
+/**
+ * Dados consolidados por canal de aquisição.
+ *
+ * **Semântica dos campos:**
+ * - `conversao` (0-1): taxa de conversão (leads → marcados), expressa como fração decimal.
+ * - `conversaoUpsell` (inteiro ≥ 0): **contagem** de eventos de upsell ocorridos no canal,
+ *   não uma taxa nem percentual. Exemplo: 32 significa que houve 32 upsells naquele canal.
+ */
 export const dadosPorCanal = {
   "Retenção": {
     faturamento: 557_344,

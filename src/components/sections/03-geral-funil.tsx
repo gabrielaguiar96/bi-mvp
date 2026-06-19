@@ -122,7 +122,7 @@ export function GeralFunilSection() {
                   <th className="pb-2 pr-4 text-right font-medium">Meta Leads</th>
                   <th className="pb-2 pr-4 text-right font-medium">Marcados</th>
                   <th className="pb-2 pr-4 text-right font-medium">Conversão</th>
-                  <th className="pb-2 pr-4 text-right font-medium">Upsell</th>
+                  <th className="pb-2 pr-4 text-right font-medium">Qtd Upsell</th>
                   <th className="pb-2 font-medium">Participação</th>
                 </tr>
               </thead>
