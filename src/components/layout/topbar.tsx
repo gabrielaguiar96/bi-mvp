@@ -19,6 +19,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { FilterStatus } from "./filter-status";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -38,7 +39,8 @@ export function Topbar({ active, onNavigate }: TopbarProps) {
     filters.canal !== "Todos" || filters.servico !== "Todos" || filters.mes !== "Todos" || filters.ano !== "Todos";
 
   return (
-    <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-xl md:px-6">
+    <div className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur-xl">
+    <header className="flex h-16 items-center gap-3 px-4 md:px-6">
       {/* Mobile nav trigger */}
       <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
         <SheetTrigger asChild>
@@ -161,6 +163,8 @@ export function Topbar({ active, onNavigate }: TopbarProps) {
 
       <ModeToggle />
     </header>
+    <FilterStatus />
+    </div>
   );
 }
 
