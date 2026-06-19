@@ -1,20 +1,18 @@
 "use client";
 
-import { DollarSign, Users, CalendarCheck, TrendingUp, Database, CalendarRange } from "lucide-react";
+import { DollarSign, Users, CalendarCheck, TrendingUp } from "lucide-react";
 import { SectionHeader } from "./section-header";
 import { KpiCard } from "@/components/charts/kpi-card";
 import { LineChartCard } from "@/components/charts/line-chart";
 import { BarChartCard } from "@/components/charts/bar-chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import {
   anual,
-  faturamentoMensal2026,
+  faturamentoMensal,
   faturamentoPorCanalAno,
-  meta,
-  extractionMeta,
 } from "@/data/report";
-import { formatBRL, formatNumber } from "@/lib/format";
+import { formatBRL, formatNumber, formatPct } from "@/lib/format";
+import { FilterNotice } from "./filter-notice";
 
 export function ResumoAnualSection() {
   // Dados anuais comparativos
@@ -30,16 +28,20 @@ export function ResumoAnualSection() {
   );
 
   // Faturamento mensal 2026 para o gráfico de linhas
-  const serieMensal = faturamentoMensal2026.map((m) => ({
-    mes: m.mes,
-    faturamento: Math.round(m.valor),
+  const fatMensal2026 = faturamentoMensal.filter((m) => m.mes.includes("2026"));
+  const serieMensal = fatMensal2026.map((m) => ({
+    mes: m.mes.replace(" 2026", ""),
+    faturamento: Math.round(m.realizado),
   }));
 
   // Média mensal 2026
   const mediaMensal2026 =
-    faturamentoMensal2026.length > 0
-      ? y2026.faturamento / faturamentoMensal2026.length
+    fatMensal2026.length > 0
+      ? y2026.faturamento / fatMensal2026.length
       : 0;
+
+  // Total para porcentagens na tabela de canais
+  const totalCanalAno = canalAno.reduce((s, x) => s + x.faturamento, 0);
 
   return (
     <div className="space-y-6">
@@ -47,6 +49,7 @@ export function ResumoAnualSection() {
         title="Resumo Anual"
         description="Comparativo 2025 vs 2026 acumulado e detalhamento mensal do ano corrente."
       />
+      <FilterNotice ignore={["canal", "servico", "mes", "ano"]} />
 
       {/* KPIs comparativos 2025 vs 2026 */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -96,10 +99,7 @@ export function ResumoAnualSection() {
               % Meta 2026
             </p>
             <p className="mt-2 text-3xl font-semibold tabular text-primary">
-              {(y2026.pctMeta * 100).toLocaleString("pt-BR", {
-                maximumFractionDigits: 1,
-              })}
-              %
+              {formatPct(y2026.pctMeta)}
             </p>
             <p className="mt-1 text-xs text-muted-foreground">
               Acumulado até o mês corrente
@@ -115,7 +115,8 @@ export function ResumoAnualSection() {
               {formatBRL(mediaMensal2026)}
             </p>
             <p className="mt-1 text-xs text-muted-foreground">
-              {faturamentoMensal2026.length} meses de dados
+              {fatMensal2026.length} meses de dados
+              {fatMensal2026.length >= 6 && " (junho parcial)"}
             </p>
           </CardContent>
         </Card>
@@ -125,10 +126,7 @@ export function ResumoAnualSection() {
               % Meta 2025
             </p>
             <p className="mt-2 text-3xl font-semibold tabular text-positive">
-              {(y2025.pctMeta * 100).toLocaleString("pt-BR", {
-                maximumFractionDigits: 1,
-              })}
-              %
+              {formatPct(y2025.pctMeta)}
             </p>
             <p className="mt-1 text-xs text-muted-foreground">
               Ano completo — meta batida
@@ -193,8 +191,7 @@ export function ResumoAnualSection() {
                   {canalAno
                     .sort((a, b) => b.faturamento - a.faturamento)
                     .map((c) => {
-                      const total = canalAno.reduce((s, x) => s + x.faturamento, 0);
-                      const pct = total > 0 ? (c.faturamento / total) * 100 : 0;
+                      const pct = totalCanalAno > 0 ? (c.faturamento / totalCanalAno) * 100 : 0;
                       return (
                         <tr
                           key={c.canal}
@@ -219,28 +216,6 @@ export function ResumoAnualSection() {
           </CardContent>
         </Card>
       </div>
-
-      {/* Metadados da extração */}
-      <Card className="glass">
-        <CardContent className="flex flex-wrap items-center gap-x-6 gap-y-2 p-4 text-xs text-muted-foreground">
-          <span className="flex items-center gap-1.5">
-            <Database className="size-3" />
-            Extraído via {extractionMeta.method}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <CalendarRange className="size-3" />
-            Snapshot: {extractionMeta.capturedAt}
-          </span>
-          <span>
-            {extractionMeta.querydataResponses} respostas Playwright +{" "}
-            {extractionMeta.apiQueries} queries API
-          </span>
-          <span>{extractionMeta.uniqueMeasures} measures únicas</span>
-          <span className="ml-auto">
-            <Badge variant="secondary">{meta.snapshotLabel}</Badge>
-          </span>
-        </CardContent>
-      </Card>
     </div>
   );
 }

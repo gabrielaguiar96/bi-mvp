@@ -99,15 +99,15 @@ function fmt(v: unknown): number {
 }
 
 function fmtDate(ts: unknown): string {
+  const months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
   if (typeof ts === "number") {
     const d = new Date(ts);
-    const months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
-    return `${months[d.getMonth()]} ${d.getFullYear()}`;
+    return `${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
   }
   if (typeof ts === "string" && ts.includes("-")) {
-    const d = new Date(ts);
-    const months = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
-    return `${months[d.getMonth()]} ${d.getFullYear()}`;
+    // Parse manually to avoid timezone issues (new Date("2026-01-01") = UTC, but getMonth() returns local)
+    const [y, m] = ts.split("-").map(Number);
+    return `${months[m - 1]} ${y}`;
   }
   return String(ts);
 }

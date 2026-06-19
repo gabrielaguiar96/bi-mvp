@@ -6,11 +6,15 @@ import { filtros } from "@/data/report";
 export type FilterState = {
   canal: string | "Todos";
   servico: string | "Todos";
+  mes: string | "Todos";
+  ano: string | "Todos";
 };
 
 const DEFAULT_FILTERS: FilterState = {
   canal: "Todos",
   servico: "Todos",
+  mes: "Todos",
+  ano: "Todos",
 };
 
 type FilterContextValue = {

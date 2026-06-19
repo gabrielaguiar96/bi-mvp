@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import {
   DollarSign,
   Receipt,
@@ -14,24 +15,29 @@ import { DonutChartCard } from "@/components/charts/donut-chart";
 import { BarChartCard } from "@/components/charts/bar-chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  kpisGeral,
   ticketMedioServico,
   dadosPorServico,
 } from "@/data/report";
 import { useFilteredData } from "@/lib/use-filtered-data";
+import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
 import { formatBRL, formatNumber, formatPct } from "@/lib/format";
-import { FilterNotice } from "./filter-notice";
 
 export function GeralSection() {
-  const { faturamentoPorCanal, faturamentoPorServico } = useFilteredData();
-  const donutCanal = faturamentoPorCanal
-    .filter((c) => c.faturamento > 0)
-    .map((c) => ({ name: c.canal, value: c.faturamento }));
+  const { kpisGeral, faturamentoPorCanal, faturamentoPorServico } = useFilteredData();
+  const donutCanal = useMemo(
+    () => faturamentoPorCanal
+      .filter((c) => c.faturamento > 0)
+      .map((c) => ({ name: c.canal, value: c.faturamento })),
+    [faturamentoPorCanal]
+  );
 
-  const barCanal = faturamentoPorCanal.map((c) => ({
-    canal: c.canal,
-    ticket: Math.round(c.ticketMedio),
-  }));
+  const barCanal = useMemo(
+    () => faturamentoPorCanal.map((c) => ({
+      canal: c.canal,
+      ticket: Math.round(c.ticketMedio),
+    })),
+    [faturamentoPorCanal]
+  );
 
   return (
     <div className="space-y-6">
@@ -39,7 +45,8 @@ export function GeralSection() {
         title="Indicadores Gerais"
         description="Visão consolidada com comparativos frente ao mês e ano anteriores."
       />
-      <FilterNotice ignore={["ano", "mes"]} />
+      <PartialMonthNotice />
+      <Month2025Notice />
 
       {/* KPIs com comparativo */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -123,12 +130,13 @@ export function GeralSection() {
           height={300}
         />
 
-        {/* Ticket Médio por Serviço */}
+        {/* Ticket Médio por Serviço — dados do período (snapshot) */}
         <Card className="glass">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
               <Ticket className="size-4" />
               Ticket Médio por Serviço
+              <span className="ml-auto text-[10px] font-normal text-muted-foreground/60">acumulado 2026</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -140,30 +148,36 @@ export function GeralSection() {
             </div>
             <div className="space-y-3">
               {Object.entries(ticketMedioServico.porServico).map(
-                ([servico, valor]) => (
-                  <div
-                    key={servico}
-                    className="flex items-center justify-between border-b border-border/40 pb-2 last:border-0 last:pb-0"
-                  >
-                    <span className="text-sm text-muted-foreground">
-                      {servico}
-                    </span>
-                    <span className="font-semibold tabular">
-                      {valor > 0 ? formatBRL(valor) : "—"}
-                    </span>
-                  </div>
-                )
+                ([servico, valor]) => {
+                  // Fallback: use ticketMedioConsultas from dadosPorServico when ticketMedioServico is 0
+                  const ds = dadosPorServico[servico as keyof typeof dadosPorServico];
+                  const displayValor = valor > 0 ? valor : (ds?.ticketMedioConsultas ?? 0);
+                  return (
+                    <div
+                      key={servico}
+                      className="flex items-center justify-between border-b border-border/40 pb-2 last:border-0 last:pb-0"
+                    >
+                      <span className="text-sm text-muted-foreground">
+                        {servico}
+                      </span>
+                      <span className="font-semibold tabular">
+                        {displayValor > 0 ? formatBRL(displayValor) : "—"}
+                      </span>
+                    </div>
+                  );
+                }
               )}
             </div>
           </CardContent>
         </Card>
       </div>
 
-      {/* Tabela consolidada por serviço */}
+      {/* Tabela consolidada por serviço — dados do período (snapshot) */}
       <Card className="glass">
         <CardHeader>
-          <CardTitle className="text-sm font-medium text-muted-foreground">
+          <CardTitle className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
             Dados Consolidados por Serviço
+            <span className="ml-auto text-[10px] font-normal text-muted-foreground/60">acumulado 2026</span>
           </CardTitle>
         </CardHeader>
         <CardContent>

@@ -38,7 +38,7 @@ export const kpisGeral = {
   },
   totalLeads: { atual: 285, mesAnterior: 340 },
   ocupacaoAgenda: { atual: 228, mesAnterior: 198, anoAnterior: 236 },
-  comparecidos: { atual: 209, anoAnterior: 216 },
+  comparecidos: { atual: 209, mesAnterior: undefined as number | undefined, anoAnterior: 216 },
   qtdUpsell: { atual: 72 },
   conversaoUpsell: { atual: 62, mesAnterior: 160 },
   ticketMedioConsultas: {
@@ -153,37 +153,15 @@ export const conversaoPorCanal = [
 ];
 
 // ---------- Faturamento por canal ----------
+// Nota: o Power BI não atribui todo faturamento a um canal de aquisição.
+// O gap (~R$ 285k em maio) corresponde a receita sem canal definido (protocolos, planos, etc.)
 export const faturamentoPorCanal = [
-  {
-    "canal": "Retenção",
-    "faturamento": 557344,
-    "ticketMedio": 17417
-  },
-  {
-    "canal": "Orgânico",
-    "faturamento": 236878,
-    "ticketMedio": 23687.8
-  },
-  {
-    "canal": "Ativo",
-    "faturamento": 153120,
-    "ticketMedio": 15312
-  },
-  {
-    "canal": "Indicação",
-    "faturamento": 109164,
-    "ticketMedio": 18194
-  },
-  {
-    "canal": "Crossell",
-    "faturamento": 50700,
-    "ticketMedio": 0
-  },
-  {
-    "canal": "Pago",
-    "faturamento": 0,
-    "ticketMedio": 0
-  }
+  { canal: "Retenção", faturamento: 557_344, ticketMedio: 17_417 },
+  { canal: "Orgânico", faturamento: 236_878, ticketMedio: 23_687.80 },
+  { canal: "Ativo", faturamento: 153_120, ticketMedio: 15_312 },
+  { canal: "Indicação", faturamento: 109_164, ticketMedio: 18_194 },
+  { canal: "Crossell", faturamento: 50_700, ticketMedio: 7_243 },
+  { canal: "Pago", faturamento: 0, ticketMedio: 0 },
 ];
 
 // ---------- Faturamento por serviço ----------
@@ -204,36 +182,24 @@ export const faturamentoPorServico = [
 
 // ---------- Série histórica: Faturamento realizado vs Meta ----------
 export const faturamentoMensal = [
-  {
-    "mes": "Dez 2025",
-    "realizado": 1233927.99,
-    "meta": 1210000
-  },
-  {
-    "mes": "Jan 2026",
-    "realizado": 953173,
-    "meta": 950000
-  },
-  {
-    "mes": "Fev 2026",
-    "realizado": 1243831.1600000001,
-    "meta": 1065000
-  },
-  {
-    "mes": "Mar 2026",
-    "realizado": 952838.39,
-    "meta": 1065000
-  },
-  {
-    "mes": "Abr 2026",
-    "realizado": 1392068.5,
-    "meta": 1490000
-  },
-  {
-    "mes": "Mai 2026",
-    "realizado": 540154.95,
-    "meta": 960000
-  }
+  { mes: "Jan 2025", realizado: 996_586.76, meta: 1_045_300 },
+  { mes: "Fev 2025", realizado: 781_541.49, meta: 892_000 },
+  { mes: "Mar 2025", realizado: 741_876.57, meta: 830_540 },
+  { mes: "Abr 2025", realizado: 879_493.49, meta: 1_000_147 },
+  { mes: "Mai 2025", realizado: 1_251_071.95, meta: 1_000_147 },
+  { mes: "Jun 2025", realizado: 1_284_529.18, meta: 1_008_000 },
+  { mes: "Jul 2025", realizado: 1_232_619.93, meta: 1_260_000 },
+  { mes: "Ago 2025", realizado: 1_393_732.07, meta: 1_260_000 },
+  { mes: "Set 2025", realizado: 1_395_459.37, meta: 1_260_000 },
+  { mes: "Out 2025", realizado: 1_309_090.40, meta: 1_300_000 },
+  { mes: "Nov 2025", realizado: 1_160_169.04, meta: 1_280_000 },
+  { mes: "Dez 2025", realizado: 1_007_114.80, meta: 1_280_000 },
+  { mes: "Jan 2026", realizado: 1_260_872.30, meta: 1_210_000 },
+  { mes: "Fev 2026", realizado: 988_562.82, meta: 950_000 },
+  { mes: "Mar 2026", realizado: 1_243_831.16, meta: 1_065_000 },
+  { mes: "Abr 2026", realizado: 952_838.39, meta: 1_065_000 },
+  { mes: "Mai 2026", realizado: 1_392_068.50, meta: 1_490_000 },
+  { mes: "Jun 2026", realizado: 630_404.95, meta: 960_000 },
 ];
 
 // ---------- Indicação / Pacientes ----------
@@ -321,43 +287,43 @@ export const metasPorIndicador = {
       "indicador": "Ticket Médio Upsell",
       "meta": 0,
       "realizado": 4127.178571428572,
-      "pctMeta": 3349
+      "pctMeta": 0
     },
     {
       "indicador": "Qde de Upsell - Vacinas",
       "meta": 0,
       "realizado": 9,
-      "pctMeta": 3349
+      "pctMeta": 0
     },
     {
       "indicador": "Qde de Upsell - Plano de Acomp Geral",
       "meta": 0,
       "realizado": 39,
-      "pctMeta": 3349
+      "pctMeta": 0
     },
     {
       "indicador": "Qde de Upsell - Pago",
       "meta": 0,
       "realizado": 0,
-      "pctMeta": 3349
+      "pctMeta": 0
     },
     {
       "indicador": "Qde de Upsell - Orgânico",
       "meta": 0,
       "realizado": 19,
-      "pctMeta": 3349
+      "pctMeta": 0
     },
     {
       "indicador": "Qde de Upsell - Indicação",
       "meta": 0,
       "realizado": 0,
-      "pctMeta": 3349
+      "pctMeta": 0
     },
     {
       "indicador": "Qde de Upsell - Acompanhamento",
       "meta": 0,
       "realizado": 20,
-      "pctMeta": 3349
+      "pctMeta": 0
     },
     {
       "indicador": "Marcação - Retenção",
@@ -524,7 +490,7 @@ export const metasPorIndicador = {
       "pctMeta": 0.96
     },
     {
-      "indicador": "Fat. Protocolo Acompahamento",
+      "indicador": "Fat. Protocolo Acompanhamento",
       "meta": 54000,
       "realizado": 32000,
       "pctMeta": 0.59
@@ -641,7 +607,7 @@ export const metasPorIndicador = {
       "indicador": "Ticket Médio Upsell",
       "meta": 5919.375,
       "realizado": 5919.375,
-      "pctMeta": 0
+      "pctMeta": 1
     }
   ]
 },
@@ -653,12 +619,12 @@ export const profissionais = {
     servico: "Nutrologia",
     faturamentoDia: 632478,
     faturamentoDiaLM: 1243831.16,
-    faturamentoProtocolo: 0,
+    faturamentoProtocolo: 632478,
     ticketMedioUpsell: 12649.56,
     ticketMedioUpsellLM: 17518.75,
     ticketMedioAgenda: 10904.79,
     ticketMedioAgendaLM: 11511.39,
-    totalLeads: 0,
+    totalLeads: 413,
     totalLeadsLM: 340,
     marcacoes: 38,
     marcacoesLM: 52,
@@ -692,6 +658,8 @@ export const profissionais = {
 };
 
 // ---------- Filtros disponíveis ----------
+// Nota: canais e servicos incluem apenas os que têm dados no dashboard.
+// O Power BI original tem mais opções (Google, Meta, By Evuli, etc.) mas sem dados extraídos.
 export const filtros = {
   anos: [2025, 2026],
   meses: [
@@ -699,8 +667,8 @@ export const filtros = {
     "maio", "junho", "julho", "agosto",
     "setembro", "outubro", "novembro", "dezembro",
   ],
-  canais: ["Ativo", "Crossell", "Google", "Indicação", "Meta", "Orgânico", "Pago", "Retenção"],
-  servicos: ["By Evuli", "Cirurgia Plástica", "Dermatologia", "Evuli Dietas", "Nutrologia", "Nutrologia 2", "Pediatria", "Suplementação"],
+  canais: ["Ativo", "Crossell", "Indicação", "Orgânico", "Pago", "Retenção"],
+  servicos: ["Dermatologia", "Nutrologia", "Pediatria"],
   periodos: ["Realizado", "Simulado"],
 };
 
@@ -725,15 +693,6 @@ export const anual = {
     leads: 2331,
   },
 };
-
-export const faturamentoMensal2026 = [
-  { mes: "Janeiro", valor: 1_260_872.30 },
-  { mes: "Fevereiro", valor: 988_562.82 },
-  { mes: "Março", valor: 1_243_831.16 },
-  { mes: "Abril", valor: 952_838.39 },
-  { mes: "Maio", valor: 1_392_068.50 },
-  { mes: "Junho", valor: 630_404.95 },
-];
 
 export const faturamentoPorCanalAno = {
   "2026": {
@@ -875,4 +834,312 @@ export const extractionMeta = {
     "Month filters use Portuguese names (e.g., 'maio')",
     "2 queries returned 0 rows (Dra Thaís: upsell, procedimentos) — legitimate empty",
   ],
+};
+
+// ---------- Dados de Fase 2: Medidas que faltavam ----------
+
+// Taxas de conversão por etapa do funil (Dr Fernando)
+export const conversaoEtapas = {
+  etapa1: 0.6211, // Leads → Ocupação Agenda
+  etapa2: 0.9209, // Ocupação → Comparecidos
+  etapa3: 0.4417, // Comparecidos → Upsell
+  etapa4: 0.8611, // Upsell → Faturamento
+};
+
+// Conversão por canal por profissional (extraído das páginas 5, 6, 7 do Power BI)
+export const conversaoPorCanalProfissional = {
+  "Dr Fernando": [
+    { canal: "Retenção", leads: 68, marcados: 25, conversao: 0.3676 },
+    { canal: "Orgânico", leads: 119, marcados: 11, conversao: 0.0924 },
+    { canal: "Ativo", leads: 200, marcados: 7, conversao: 0.035 },
+    { canal: "Indicação", leads: 26, marcados: 7, conversao: 0.2692 },
+    { canal: "Pago", leads: 0, marcados: 2, conversao: 0 },
+  ],
+  "Dra Isa": [
+    { canal: "Indicação", leads: 0, marcados: 0, conversao: 0 },
+    { canal: "Orgânico", leads: 199, marcados: 21, conversao: 0.1055 },
+    { canal: "Pago", leads: 15, marcados: 0, conversao: 0 },
+  ],
+  "Dra Thaís": [
+    // Nota: Dermatologia não tem dados de leads por canal no Power BI.
+    // Os marcados são extraídos mas leads=0, resultando em conversão=0 (fallback no simulador).
+    { canal: "Ativo", leads: 0, marcados: 18, conversao: 0 },
+    { canal: "Crossell", leads: 0, marcados: 2, conversao: 0 },
+    { canal: "Indicação", leads: 0, marcados: 4, conversao: 0 },
+    { canal: "Orgânico", leads: 0, marcados: 2, conversao: 0 },
+    { canal: "Pago", leads: 0, marcados: 0, conversao: 0 },
+  ],
+};
+
+// Ticket Médio por período (Selecionado) — dados do Power BI
+export const ticketMedioPeriodo = {
+  "Dr Fernando": { atual: 12_649.56, periodo: "Abr 2026" },
+  "Dra Isa": { atual: 307.56, periodo: "Mai 2026" },
+  "Dra Thaís": { atual: 266.67, periodo: "Abr 2026" },
+};
+
+// Faturamento por período (Selecionado) — dados do Power BI
+export const faturamentoPeriodo = {
+  "Dr Fernando": { atual: 21_750, periodo: "Abr 2026" },
+  "Dra Isa": { atual: 213_862.50, periodo: "Mai 2026" },
+  "Dra Thaís": { atual: 9_600, periodo: "Abr 2026" },
+};
+
+// ---------- Dados mensais completos (extraídos via API) ----------
+// Cada mês tem TODOS os KPIs principais + faturamento por canal.
+// Usado para filtros de período e gráficos interativos.
+
+export type KpisMes = {
+  faturamento: number;
+  faturamentoLM: number;
+  leads: number;
+  ocupacaoAgenda: number;
+  comparecidos: number;
+  qtdUpsell: number;
+  ticketMedio: number;
+  pctMeta: number;
+  marcados: number;
+  faturamentoPorCanal: Record<string, number>;
+  faturamentoPorServico: Record<string, number>;
+};
+
+export const kpisMensal: Record<string, KpisMes> = {
+  // ---------- 2025 ----------
+  janeiro: {
+    faturamento: 996_586.76,
+    faturamentoLM: 0,
+    leads: 500,
+    ocupacaoAgenda: 222,
+    comparecidos: 211,
+    qtdUpsell: 190,
+    ticketMedio: 9_313.89,
+    pctMeta: 0.953,
+    marcados: 68,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  fevereiro: {
+    faturamento: 781_541.49,
+    faturamentoLM: 996_586.76,
+    leads: 506,
+    ocupacaoAgenda: 191,
+    comparecidos: 182,
+    qtdUpsell: 113,
+    ticketMedio: 9_416.16,
+    pctMeta: 0.876,
+    marcados: 37,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  março: {
+    faturamento: 741_876.57,
+    faturamentoLM: 781_541.49,
+    leads: 661,
+    ocupacaoAgenda: 153,
+    comparecidos: 146,
+    qtdUpsell: 104,
+    ticketMedio: 10_598.24,
+    pctMeta: 0.893,
+    marcados: 53,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  abril: {
+    faturamento: 879_493.49,
+    faturamentoLM: 741_876.57,
+    leads: 504,
+    ocupacaoAgenda: 228,
+    comparecidos: 215,
+    qtdUpsell: 177,
+    ticketMedio: 8_143.46,
+    pctMeta: 0.879,
+    marcados: 64,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  maio: {
+    faturamento: 1_251_071.95,
+    faturamentoLM: 879_493.49,
+    leads: 488,
+    ocupacaoAgenda: 236,
+    comparecidos: 216,
+    qtdUpsell: 222,
+    ticketMedio: 11_692.26,
+    pctMeta: 1.251,
+    marcados: 72,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  junho: {
+    faturamento: 1_284_529.18,
+    faturamentoLM: 1_251_071.95,
+    leads: 335,
+    ocupacaoAgenda: 225,
+    comparecidos: 217,
+    qtdUpsell: 158,
+    ticketMedio: 11_367.51,
+    pctMeta: 1.274,
+    marcados: 64,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  julho: {
+    faturamento: 1_232_619.93,
+    faturamentoLM: 1_284_529.18,
+    leads: 337,
+    ocupacaoAgenda: 262,
+    comparecidos: 240,
+    qtdUpsell: 164,
+    ticketMedio: 9_130.52,
+    pctMeta: 0.978,
+    marcados: 96,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  agosto: {
+    faturamento: 1_393_732.07,
+    faturamentoLM: 1_232_619.93,
+    leads: 315,
+    ocupacaoAgenda: 224,
+    comparecidos: 208,
+    qtdUpsell: 146,
+    ticketMedio: 11_518.45,
+    pctMeta: 1.106,
+    marcados: 75,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  setembro: {
+    faturamento: 1_395_459.37,
+    faturamentoLM: 1_393_732.07,
+    leads: 372,
+    ocupacaoAgenda: 266,
+    comparecidos: 232,
+    qtdUpsell: 128,
+    ticketMedio: 10_413.88,
+    pctMeta: 1.108,
+    marcados: 81,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  outubro: {
+    faturamento: 1_309_090.40,
+    faturamentoLM: 1_395_459.37,
+    leads: 353,
+    ocupacaoAgenda: 250,
+    comparecidos: 225,
+    qtdUpsell: 111,
+    ticketMedio: 10_227.27,
+    pctMeta: 1.007,
+    marcados: 93,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  novembro: {
+    faturamento: 1_160_169.04,
+    faturamentoLM: 1_309_090.40,
+    leads: 344,
+    ocupacaoAgenda: 202,
+    comparecidos: 183,
+    qtdUpsell: 98,
+    ticketMedio: 10_001.46,
+    pctMeta: 0.906,
+    marcados: 65,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  dezembro: {
+    faturamento: 1_007_114.80,
+    faturamentoLM: 1_160_169.04,
+    leads: 285,
+    ocupacaoAgenda: 177,
+    comparecidos: 163,
+    qtdUpsell: 72,
+    ticketMedio: 10_829.19,
+    pctMeta: 0.787,
+    marcados: 40,
+    faturamentoPorCanal: {},
+    faturamentoPorServico: {},
+  },
+  // ---------- 2026 (ano corrente) ----------
+  // Nota: os meses de 2026 abaixo têm faturamentoPorCanal e faturamentoPorServico
+  // porque o Power BI só fornece breakdown por canal/serviço no ano corrente.
+  "janeiro-2026": {
+    faturamento: 1_260_872.30,
+    faturamentoLM: 1_007_114.80,
+    leads: 478,
+    ocupacaoAgenda: 272,
+    comparecidos: 244,
+    qtdUpsell: 7,
+    ticketMedio: 9_271.12,
+    pctMeta: 1.042,
+    marcados: 88,
+    faturamentoPorCanal: { "Retenção": 361_875, "Ativo": 90_250, "Orgânico": 347_850, "Indicação": 103_800, "Crossell": 25_800, "Pago": 0 },
+    faturamentoPorServico: { "Nutrologia": 900_225, "Pediatria": 202_802.99, "Dermatologia": 130_900 },
+  },
+  "fevereiro-2026": {
+    faturamento: 988_562.82,
+    faturamentoLM: 1_260_872.30,
+    leads: 355,
+    ocupacaoAgenda: 204,
+    comparecidos: 186,
+    qtdUpsell: 7,
+    ticketMedio: 10_405.92,
+    pctMeta: 1.041,
+    marcados: 71,
+    faturamentoPorCanal: { "Retenção": 262_850, "Ativo": 113_750, "Orgânico": 191_825, "Indicação": 167_440, "Crossell": 20_700, "Pago": 0 },
+    faturamentoPorServico: { "Nutrologia": 725_025, "Pediatria": 147_808, "Dermatologia": 80_340 },
+  },
+  "março-2026": {
+    faturamento: 1_243_831.16,
+    faturamentoLM: 988_562.82,
+    leads: 415,
+    ocupacaoAgenda: 243,
+    comparecidos: 212,
+    qtdUpsell: 13,
+    ticketMedio: 11_734.26,
+    pctMeta: 1.168,
+    marcados: 79,
+    faturamentoPorCanal: { "Retenção": 518_900, "Ativo": 25_500, "Orgânico": 270_050, "Indicação": 82_625, "Crossell": 17_440, "Pago": 10_500 },
+    faturamentoPorServico: { "Nutrologia": 909_400, "Pediatria": 215_266.16, "Dermatologia": 119_165 },
+  },
+  "abril-2026": {
+    faturamento: 952_838.39,
+    faturamentoLM: 1_243_831.16,
+    leads: 365,
+    ocupacaoAgenda: 198,
+    comparecidos: 180,
+    qtdUpsell: 12,
+    ticketMedio: 10_706.05,
+    pctMeta: 0.895,
+    marcados: 84,
+    faturamentoPorCanal: { "Retenção": 357_678, "Ativo": 50_000, "Orgânico": 125_600, "Indicação": 83_100, "Crossell": 26_460, "Pago": 21_000 },
+    faturamentoPorServico: { "Nutrologia": 632_478, "Pediatria": 225_650.39, "Dermatologia": 94_710 },
+  },
+  "maio-2026": {
+    faturamento: 1_392_068.50,
+    faturamentoLM: 952_838.39,
+    leads: 489,
+    ocupacaoAgenda: 228,
+    comparecidos: 209,
+    qtdUpsell: 9,
+    ticketMedio: 12_541.16,
+    pctMeta: 0.934,
+    marcados: 99,
+    faturamentoPorCanal: { "Retenção": 557_344, "Ativo": 153_120, "Orgânico": 236_878, "Indicação": 109_164, "Crossell": 50_700, "Pago": 0 },
+    faturamentoPorServico: { "Nutrologia": 1_020_706, "Pediatria": 213_862.50, "Dermatologia": 157_500 },
+  },
+  "junho-2026": {
+    faturamento: 630_404.95,
+    faturamentoLM: 1_392_068.50,
+    leads: 229,
+    ocupacaoAgenda: 124,
+    comparecidos: 111,
+    qtdUpsell: 7,
+    ticketMedio: 11_257.23,
+    pctMeta: 0.657,
+    marcados: 61,
+    faturamentoPorCanal: { "Retenção": 251_312, "Ativo": 126_008, "Orgânico": 8_750, "Indicação": 51_364, "Crossell": 3_900, "Pago": 9_000 },
+    faturamentoPorServico: { "Nutrologia": 457_934, "Pediatria": 82_220.95, "Dermatologia": 90_250 },
+  },
 };

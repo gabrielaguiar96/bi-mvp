@@ -31,10 +31,11 @@ export function Topbar({ active, onNavigate }: TopbarProps) {
   const { filters, setFilters, resetFilters, options } = useFilters();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const current = NAV_ITEMS.find((n) => n.id === active)!;
+  const current = NAV_ITEMS.find((n) => n.id === active);
+  if (!current) return null;
 
   const hasActiveFilter =
-    filters.canal !== "Todos" || filters.servico !== "Todos";
+    filters.canal !== "Todos" || filters.servico !== "Todos" || filters.mes !== "Todos" || filters.ano !== "Todos";
 
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-xl md:px-6">
@@ -88,16 +89,6 @@ export function Topbar({ active, onNavigate }: TopbarProps) {
         <p className="hidden truncate text-xs text-muted-foreground sm:block">
           {current.subtitle}
         </p>
-        {hasActiveFilter && (
-          <div className="mt-1 hidden items-center gap-1.5 lg:flex">
-            {filters.canal !== "Todos" && (
-              <ActiveChip label="Canal" value={filters.canal} onClear={() => setFilters({ canal: "Todos" })} />
-            )}
-            {filters.servico !== "Todos" && (
-              <ActiveChip label="Serviço" value={filters.servico} onClear={() => setFilters({ servico: "Todos" })} />
-            )}
-          </div>
-        )}
       </div>
 
       {/* Filters */}
@@ -113,6 +104,44 @@ export function Topbar({ active, onNavigate }: TopbarProps) {
           value={filters.servico}
           onChange={(v) => setFilters({ servico: v as FilterState["servico"] })}
           items={[{ value: "Todos", label: "Todos" }, ...options.servicos.map((s) => ({ value: s, label: s }))]}
+        />
+        <FilterSelect
+          label="Ano"
+          value={filters.ano}
+          onChange={(v) => {
+            const newAno = v as FilterState["ano"];
+            // Reset month if the selected month doesn't exist in the new year
+            if (newAno === "2026" && filters.mes !== "Todos") {
+              const availableMonths2026 = ["janeiro", "fevereiro", "março", "abril", "maio", "junho"];
+              if (!availableMonths2026.includes(filters.mes)) {
+                setFilters({ ano: newAno, mes: "Todos" });
+                return;
+              }
+            }
+            setFilters({ ano: newAno });
+          }}
+          items={[
+            { value: "Todos", label: "Todos" },
+            ...options.anos.map((a) => ({ value: String(a), label: String(a) })),
+          ]}
+        />
+        <FilterSelect
+          label="Mês"
+          value={filters.mes}
+          onChange={(v) => setFilters({ mes: v as FilterState["mes"] })}
+          items={[
+            { value: "Todos", label: "Todos" },
+            ...options.meses
+              .filter((m) => {
+                // 2026 only has data through June
+                if (filters.ano === "2026") {
+                  const months2026 = ["janeiro", "fevereiro", "março", "abril", "maio", "junho"];
+                  return months2026.includes(m);
+                }
+                return true;
+              })
+              .map((m) => ({ value: m, label: m.charAt(0).toUpperCase() + m.slice(1) })),
+          ]}
         />
 
         <Button
@@ -148,7 +177,7 @@ function FilterSelect({
 }) {
   return (
     <Select value={value} onValueChange={onChange}>
-      <SelectTrigger size="sm" className="w-[140px] gap-2" aria-label={label}>
+      <SelectTrigger size="sm" className="w-[180px] gap-2" aria-label={label}>
         <span className="text-muted-foreground">{label}:</span>
         <SelectValue />
       </SelectTrigger>
@@ -160,37 +189,5 @@ function FilterSelect({
         ))}
       </SelectContent>
     </Select>
-  );
-}
-
-function ActiveChip({
-  label,
-  value,
-  onClear,
-}: {
-  label: string;
-  value: string;
-  onClear: () => void;
-}) {
-  return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary">
-      <span className="text-primary/70">{label}:</span>
-      <span className="capitalize">{value}</span>
-      <button
-        type="button"
-        onClick={onClear}
-        aria-label={`Remover filtro ${label}: ${value}`}
-        className="ml-0.5 -mr-1 rounded-full p-0.5 hover:bg-primary/20"
-      >
-        <svg viewBox="0 0 12 12" className="size-2.5" aria-hidden>
-          <path
-            d="M3 3 L9 9 M9 3 L3 9"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        </svg>
-      </button>
-    </span>
   );
 }

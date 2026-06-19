@@ -1,46 +1,64 @@
 "use client";
 
+import { useMemo } from "react";
 import { Filter, Target } from "lucide-react";
 import { SectionHeader } from "./section-header";
 import { FunnelChart } from "@/components/charts/funnel-chart";
 import { BarChartCard } from "@/components/charts/bar-chart";
 import { KpiCard } from "@/components/charts/kpi-card";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { kpisGeral, dadosPorCanal, metaLeadsCanal } from "@/data/report";
+import { Card, CardContent } from "@/components/ui/card";
+import { dadosPorCanal, metaLeadsCanal } from "@/data/report";
 import { useFilteredData } from "@/lib/use-filtered-data";
+import { useFilters } from "@/lib/filters";
+import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
 import { formatBRL, formatNumber, formatPct } from "@/lib/format";
-import { FilterNotice } from "./filter-notice";
 
 export function GeralFunilSection() {
-  const { conversaoPorCanal } = useFilteredData();
+  const { kpisGeral, conversaoPorCanal } = useFilteredData();
+  const { filters } = useFilters();
+  const hasCanal = filters.canal !== "Todos";
 
-  // Funil comercial consolidado (Página 3 do original)
-  const totalLeads = conversaoPorCanal.reduce((s, c) => s + c.leads, 0);
-  const totalMarcados = conversaoPorCanal.reduce((s, c) => s + c.marcados, 0);
+  // Funil comercial consolidado — usa kpisGeral (já filtrado pelo hook)
+  const totalLeads = kpisGeral.totalLeads.atual;
+  const totalMarcados = useMemo(() => conversaoPorCanal.reduce((s, c) => s + c.marcados, 0), [conversaoPorCanal]);
+  const taxaConversao = totalLeads > 0 ? totalMarcados / totalLeads : 0;
 
-  const funilGeral = [
-    { label: "Leads", valor: kpisGeral.totalLeads.atual },
-    { label: "Ocupação de Agenda", valor: kpisGeral.ocupacaoAgenda.atual },
-    { label: "Comparecidos", valor: kpisGeral.comparecidos.atual },
-    { label: "Qtd Upsell", valor: kpisGeral.qtdUpsell.atual },
-  ];
+  // Funil usa kpisGeral para manter consistência — quando canal está ativo,
+  // os KPIs já vêm de dadosPorCanal (sem ocupação/comparecidos/upsell específicos),
+  // então mostramos apenas Leads e Marcados para evitar valores crescentes no funil.
+  const funilGeral = useMemo(() => {
+    if (hasCanal) {
+      // Canal ativo: só temos leads e marcados fiáveis por canal
+      return [
+        { label: "Leads", valor: totalLeads },
+        { label: "Marcados", valor: totalMarcados },
+      ];
+    }
+    return [
+      { label: "Leads", valor: totalLeads },
+      { label: "Ocupação de Agenda", valor: kpisGeral.ocupacaoAgenda.atual },
+      { label: "Comparecidos", valor: kpisGeral.comparecidos.atual },
+      { label: "Qtd Upsell", valor: kpisGeral.qtdUpsell.atual },
+    ];
+  }, [totalLeads, totalMarcados, kpisGeral, hasCanal]);
 
-  const barConversao = conversaoPorCanal
+  const barConversao = useMemo(() => conversaoPorCanal
     .filter((c) => c.leads > 0)
     .map((c) => ({
       canal: c.canal,
       leads: c.leads,
       marcados: c.marcados,
       conversao: Math.round(c.conversao * 1000) / 10, // ex.: 91,9
-    }));
+    })), [conversaoPorCanal]);
 
   return (
     <div className="space-y-6">
-      <FilterNotice ignore={["ano", "mes", "servico"]} />
       <SectionHeader
         title="Funil Comercial"
         description="Da captação de leads ao upsell, com conversão detalhada por canal de aquisição."
       />
+      <PartialMonthNotice />
+      <Month2025Notice />
 
       {/* Resumo */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -56,7 +74,7 @@ export function GeralFunilSection() {
         />
         <KpiCard
           label="Taxa de Conversão Geral"
-          value={formatPct(kpisGeral.taxaConversaoTotal.atual)}
+          value={formatPct(taxaConversao)}
           icon={Target}
           hint={`${formatNumber(totalMarcados)} de ${formatNumber(totalLeads)} leads`}
         />

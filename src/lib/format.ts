@@ -9,13 +9,6 @@ const BRL = new Intl.NumberFormat("pt-BR", {
   maximumFractionDigits: 0,
 });
 
-const BRL_PRECISE = new Intl.NumberFormat("pt-BR", {
-  style: "currency",
-  currency: "BRL",
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2,
-});
-
 const NUM = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 0 });
 const NUM1 = new Intl.NumberFormat("pt-BR", {
   minimumFractionDigits: 1,
@@ -26,12 +19,6 @@ const NUM1 = new Intl.NumberFormat("pt-BR", {
 export function formatBRL(value: number): string {
   if (!Number.isFinite(value)) return "—";
   return BRL.format(value);
-}
-
-/** R$ 1.392.068,50 */
-export function formatBRLPrecise(value: number): string {
-  if (!Number.isFinite(value)) return "—";
-  return BRL_PRECISE.format(value);
 }
 
 /**
@@ -64,16 +51,6 @@ export function formatPct(value: number, digits = 2): string {
     minimumFractionDigits: digits,
     maximumFractionDigits: digits,
   })}%`;
-}
-
-/** 0.9343 -> "93,43%" sem o limite de dígitos (útil p/ inteiros) */
-export function formatPctAuto(value: number): string {
-  if (!Number.isFinite(value)) return "—";
-  const pct = value * 100;
-  const rounded = Math.round(pct);
-  // se for "quase inteiro", mostra sem casas
-  if (Math.abs(pct - rounded) < 0.05) return `${rounded}%`;
-  return formatPct(value, 1);
 }
 
 /**

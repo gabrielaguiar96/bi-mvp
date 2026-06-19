@@ -14,11 +14,11 @@ export function Sidebar({ active, onNavigate }: SidebarProps) {
       {/* Brand */}
       <div className="flex items-center gap-3 px-5 h-16 border-b border-sidebar-border">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-background ring-1 ring-border">
-          {/* Logo 463x155 — o brand mark (E azul) ocupa o terço esquerdo */}
+          {/* Logo 463x155 — o brand mark (E azul) ocupa ~155x155 à esquerda */}
           <img
             src="/evuli-logo.png"
             alt="Evuli"
-            className="h-7 w-[21px] object-cover object-left"
+            className="h-7 w-7 object-contain object-left"
           />
         </div>
         <div className="leading-tight">
@@ -70,7 +70,7 @@ export function Sidebar({ active, onNavigate }: SidebarProps) {
       {/* Footer */}
       <div className="border-t border-sidebar-border px-5 py-3">
         <p className="text-[11px] text-muted-foreground">
-          Snapshot 2026 — até o mês corrente
+          Dados acumulados — 2026
         </p>
       </div>
     </aside>

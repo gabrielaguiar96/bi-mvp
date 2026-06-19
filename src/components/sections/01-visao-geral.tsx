@@ -8,6 +8,7 @@ import {
   Users,
   Target,
   SlidersHorizontal,
+  Percent,
 } from "lucide-react";
 import { SectionHeader } from "./section-header";
 import { KpiCard } from "@/components/charts/kpi-card";
@@ -16,10 +17,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import {
-  kpisGeral,
-} from "@/data/report";
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useFilteredData } from "@/lib/use-filtered-data";
-import { FilterNotice } from "./filter-notice";
+import { useFilters } from "@/lib/filters";
+import { conversaoEtapas, dadosPorServico, conversaoPorCanalProfissional } from "@/data/report";
+import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
 import {
   formatBRL,
   formatBRLCompact,
@@ -28,20 +35,50 @@ import {
 } from "@/lib/format";
 
 export function VisaoGeralSection() {
-  const { conversaoPorCanal, faturamentoPorServico } = useFilteredData();
+  const { kpisGeral, conversaoPorCanal, faturamentoPorServico } = useFilteredData();
+  const { filters } = useFilters();
+  const hasMes = filters.mes !== "Todos";
 
-  // Simulator state — replicates the Power BI simulator:
-  // base = 100 leads -> 5 marcados (taxa 5%) -> R$ 6.404,23 faturamento
+  // Simulator — enhanced with Marcados slider and service selector
   const [leads, setLeads] = useState(100);
+  const [marcadosInput, setMarcadosInput] = useState(20);
+  const [servicoSim, setServicoSim] = useState("Todos");
 
-  const { marcados, faturamento } = useMemo(() => {
-    // taxa de conversão leads->marcados = 5% (5 / 100)
-    const marcados = Math.round(leads * 0.05);
-    // ticket proporcional ao simulado original (6404.23 p/ 5 marcados)
-    const ticket = 6404.2253 / 5;
-    const faturamento = marcados * ticket;
-    return { marcados, faturamento };
-  }, [leads]);
+  // Per-service metrics for the simulator
+  const servicoMetrics = useMemo(() => {
+    if (servicoSim === "Todos") {
+      const taxa = kpisGeral.taxaConversaoTotal.atual;
+      const ticket = kpisGeral.ocupacaoAgenda.atual > 0
+        ? kpisGeral.faturamento.atual / kpisGeral.ocupacaoAgenda.atual
+        : 0;
+      return { taxa, ticket, isFallback: false };
+    }
+    const ds = dadosPorServico[servicoSim as keyof typeof dadosPorServico];
+    const ticket = ds
+      ? (ds.ticketMedioServico > 0 ? ds.ticketMedioServico : ds.ticketMedioConsultas ?? 0)
+      : 0;
+    // Calculate conversion from per-professional canal data
+    const profKey = servicoSim === "Nutrologia" ? "Dr Fernando"
+      : servicoSim === "Pediatria" ? "Dra Isa" : "Dra Thaís";
+    const canais = conversaoPorCanalProfissional[profKey as keyof typeof conversaoPorCanalProfissional] || [];
+    const totalLeads = canais.reduce((s, c) => s + c.leads, 0);
+    const totalMarcados = canais.reduce((s, c) => s + c.marcados, 0);
+    // Se não há dados de leads por canal (ex: Dermatologia), usa taxa global como fallback
+    const isFallback = totalLeads === 0;
+    const taxa = totalLeads > 0 ? totalMarcados / totalLeads : kpisGeral.taxaConversaoTotal.atual;
+    return { taxa, ticket, isFallback };
+  }, [servicoSim, kpisGeral]);
+
+  const ticketMedio = servicoMetrics.ticket;
+
+  const { taxaCalc } = useMemo(() => {
+    const taxaCalc = leads > 0 ? marcadosInput / leads : 0;
+    return { taxaCalc };
+  }, [leads, marcadosInput]);
+
+  const faturamentoSimulado = useMemo(() => {
+    return marcadosInput * ticketMedio;
+  }, [marcadosInput, ticketMedio]);
 
   const totalLeadsCanal = conversaoPorCanal.reduce((s, c) => s + c.leads, 0);
 
@@ -51,8 +88,8 @@ export function VisaoGeralSection() {
         title="Visão Geral"
         description="Simule o funil comercial e acompanhe os principais indicadores da Evuli."
       />
-      <FilterNotice ignore={["ano", "mes"]} />
-
+      <PartialMonthNotice />
+      <Month2025Notice />
       {/* Top KPIs */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <KpiCard
@@ -89,7 +126,7 @@ export function VisaoGeralSection() {
       <Card className="glass">
         <CardContent className="p-5">
           <MetaProgress
-            label="Faturamento do Dia vs Meta"
+            label={hasMes ? "Faturamento Mensal vs Meta" : "Faturamento Acumulado vs Meta"}
             realizado={kpisGeral.faturamento.atual}
             meta={kpisGeral.faturamento.metaMes}
             format={formatBRL}
@@ -99,7 +136,7 @@ export function VisaoGeralSection() {
 
       {/* Simulator + distribution */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-        {/* Simulator */}
+        {/* Simulator — enhanced */}
         <Card className="glass lg:col-span-2">
           <CardContent className="p-6">
             <div className="flex items-center gap-2">
@@ -110,7 +147,22 @@ export function VisaoGeralSection() {
               </Badge>
             </div>
 
-            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {/* Service selector */}
+            <div className="mt-4">
+              <Select value={servicoSim} onValueChange={setServicoSim}>
+                <SelectTrigger className="w-48">
+                  <SelectValue placeholder="Serviço" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Todos">Todos os serviços</SelectItem>
+                  <SelectItem value="Nutrologia">Nutrologia</SelectItem>
+                  <SelectItem value="Pediatria">Pediatria</SelectItem>
+                  <SelectItem value="Dermatologia">Dermatologia</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4">
               <SimColumn
                 label="Leads"
                 value={leads}
@@ -119,37 +171,83 @@ export function VisaoGeralSection() {
               />
               <SimColumn
                 label="Marcados"
-                value={marcados}
+                value={marcadosInput}
                 format={formatNumber}
                 accent="var(--chart-2)"
-                hint={`${formatPct(0.05)} taxa`}
+                hint={`${formatPct(taxaCalc)} taxa`}
               />
               <SimColumn
                 label="Faturamento"
-                value={faturamento}
+                value={faturamentoSimulado}
                 format={formatBRLCompact}
                 accent="var(--chart-3)"
               />
+              <SimColumn
+                label="Taxa Conversão"
+                value={taxaCalc * 100}
+                format={(n) => `${n.toFixed(1)}%`}
+                accent="var(--chart-4)"
+                icon={<Percent className="size-3" />}
+              />
             </div>
 
-            {/* Slider */}
-            <div className="mt-8">
-              <div className="mb-2 flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">Simule a quantidade de Leads</span>
-                <span className="font-semibold tabular">{leads}</span>
+            {/* Sliders */}
+            <div className="mt-8 space-y-6">
+              <div>
+                <div className="mb-2 flex items-center justify-between text-sm">
+                  <span className="text-muted-foreground">Simule a quantidade de Leads</span>
+                  <span className="font-semibold tabular">{leads}</span>
+                </div>
+                <Slider
+                  value={[leads]}
+                  onValueChange={(v) => setLeads(v[0])}
+                  min={0}
+                  max={300}
+                  step={1}
+                  aria-label="Quantidade de leads"
+                />
+                <div className="mt-1 flex justify-between text-[10px] text-muted-foreground">
+                  <span>0</span>
+                  <span>150</span>
+                  <span>300</span>
+                </div>
               </div>
-              <Slider
-                value={[leads]}
-                onValueChange={(v) => setLeads(v[0])}
-                min={0}
-                max={300}
-                step={1}
-                aria-label="Quantidade de leads"
-              />
-              <div className="mt-1 flex justify-between text-[10px] text-muted-foreground">
-                <span>0</span>
-                <span>150</span>
-                <span>300</span>
+              <div>
+                <div className="mb-2 flex items-center justify-between text-sm">
+                  <span className="text-muted-foreground">Simule a quantidade de Marcados</span>
+                  <span className="font-semibold tabular">{marcadosInput}</span>
+                </div>
+                <Slider
+                  value={[marcadosInput]}
+                  onValueChange={(v) => setMarcadosInput(v[0])}
+                  min={0}
+                  max={Math.max(leads, 100)}
+                  step={1}
+                  aria-label="Quantidade de marcados"
+                />
+                <div className="mt-1 flex justify-between text-[10px] text-muted-foreground">
+                  <span>0</span>
+                  <span>{Math.round(Math.max(leads, 100) / 2)}</span>
+                  <span>{Math.max(leads, 100)}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Conversion steps from Power BI */}
+            <div className="mt-6 rounded-lg border border-border/40 bg-muted/20 p-4">
+              <h4 className="text-xs font-medium text-muted-foreground mb-3">
+                Taxas de Conversão Reais (Power BI)
+              </h4>
+              {servicoMetrics.isFallback && (
+                <p className="mb-2 text-[10px] text-muted-foreground/70">
+                  * Taxa de conversão global (sem dados de leads por canal para {servicoSim})
+                </p>
+              )}
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <ConvStep label="Leads → Agenda" taxa={conversaoEtapas.etapa1} />
+                <ConvStep label="Agenda → Comp." taxa={conversaoEtapas.etapa2} />
+                <ConvStep label="Comp. → Upsell" taxa={conversaoEtapas.etapa3} />
+                <ConvStep label="Upsell → Fat." taxa={conversaoEtapas.etapa4} />
               </div>
             </div>
           </CardContent>
@@ -237,12 +335,14 @@ function SimColumn({
   format,
   accent,
   hint,
+  icon,
 }: {
   label: string;
   value: number;
   format: (n: number) => string;
   accent: string;
   hint?: string;
+  icon?: React.ReactNode;
 }) {
   return (
     <div className="relative overflow-hidden rounded-xl border border-border/60 bg-muted/20 p-4">
@@ -251,9 +351,12 @@ function SimColumn({
         style={{ backgroundColor: accent }}
         aria-hidden
       />
-      <p className="text-xs uppercase tracking-wide text-muted-foreground">
-        {label}
-      </p>
+      <div className="flex items-center gap-1.5">
+        {icon}
+        <p className="text-xs uppercase tracking-wide text-muted-foreground">
+          {label}
+        </p>
+      </div>
       <motion.p
         key={value}
         initial={{ opacity: 0.4, y: 4 }}
@@ -266,6 +369,17 @@ function SimColumn({
       {hint && (
         <p className="mt-1 text-[11px] text-muted-foreground">{hint}</p>
       )}
+    </div>
+  );
+}
+
+function ConvStep({ label, taxa }: { label: string; taxa: number }) {
+  return (
+    <div className="rounded-md border border-border/40 bg-muted/30 p-2 text-center">
+      <p className="text-[10px] text-muted-foreground leading-tight">{label}</p>
+      <p className="mt-1 text-sm font-semibold tabular text-primary">
+        {formatPct(taxa)}
+      </p>
     </div>
   );
 }

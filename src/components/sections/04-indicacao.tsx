@@ -27,7 +27,7 @@ export function IndicacaoSection() {
         title="Indicação de Pacientes"
         description="Funil de indicação: de pacientes ativos até agendamentos gerados por indicação."
       />
-      <FilterNotice ignore={["ano", "mes", "canal", "servico"]} />
+      <FilterNotice ignore={["canal", "servico", "mes", "ano"]} />
 
       {/* KPIs topo */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">

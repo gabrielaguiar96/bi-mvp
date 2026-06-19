@@ -12,10 +12,28 @@ type Row = {
   pctMeta: number;
 };
 
+/** Indicadores que devem ser formatados como moeda (BRL) */
+const CURRENCY_PREFIXES = [
+  "Faturamento do dia",
+  "Faturamento Mensal",
+  "Fat.",
+  "Ticket Médio",
+];
+
+function isCurrencyIndicator(indicador: string): boolean {
+  return CURRENCY_PREFIXES.some(
+    (prefix) => indicador.startsWith(prefix) || indicador.includes(prefix)
+  );
+}
+
 type MetaTableProps = {
   title: string;
   rows: Row[];
-  /** quando true, valores são formatados como BRL; senão, inteiros */
+  /**
+   * Quando true, todos os valores são formatados como BRL.
+   * Quando false ou omitido, detecta automaticamente pelo nome do indicador:
+   * indicadores com prefixo de faturamento/ticket usam BRL, demais usam inteiro.
+   */
   valueIsCurrency?: boolean;
   className?: string;
   /** limita a altura (com scroll) */
@@ -25,11 +43,15 @@ type MetaTableProps = {
 export function MetaTable({
   title,
   rows,
-  valueIsCurrency = false,
+  valueIsCurrency,
   className,
   maxHeight = "24rem",
 }: MetaTableProps) {
-  const fmt = valueIsCurrency ? formatBRL : formatNumber;
+  /** Formata valor de acordo com o tipo do indicador */
+  const fmt = (value: number, indicador: string) => {
+    const isCurrency = valueIsCurrency ?? isCurrencyIndicator(indicador);
+    return isCurrency ? formatBRL(value) : formatNumber(value);
+  };
 
   return (
     <Card className={cn("glass", className)}>
@@ -62,20 +84,20 @@ export function MetaTable({
                     >
                       <td className="py-2 pr-3 font-medium">{r.indicador}</td>
                       <td className="py-2 pr-3 text-right tabular text-muted-foreground">
-                        {semMeta ? "—" : fmt(r.meta)}
+                        {semMeta ? "—" : fmt(r.meta, r.indicador)}
                       </td>
-                      <td className="py-2 pr-3 text-right tabular">{fmt(r.realizado)}</td>
+                      <td className="py-2 pr-3 text-right tabular">{fmt(r.realizado, r.indicador)}</td>
                       <td
                         className={cn(
                           "py-2 pr-3 text-right tabular font-medium",
                           semMeta
-                            ? "text-muted-foreground"
+                            ? "text-muted-foreground/60"
                             : atingiu
                               ? "text-positive"
                               : "text-negative"
                         )}
                       >
-                        {semMeta ? "—" : formatPct(r.pctMeta)}
+                        {semMeta ? "s/ meta" : formatPct(r.pctMeta)}
                       </td>
                       <td className="py-2">
                         <div className="flex items-center gap-2">

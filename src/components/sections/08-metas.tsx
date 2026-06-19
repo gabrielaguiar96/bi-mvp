@@ -13,15 +13,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  metasPorIndicador,
-  kpisGeral,
-} from "@/data/report";
+import { metasPorIndicador } from "@/data/report";
 import { useFilteredData } from "@/lib/use-filtered-data";
+import { useFilters } from "@/lib/filters";
 import { formatBRL, formatNumber, formatPct } from "@/lib/format";
-import { FilterNotice } from "./filter-notice";
+import { FilterNotice, PartialMonthNotice } from "./filter-notice";
 
 type ProfKey = keyof typeof metasPorIndicador.detalhePorProfissional;
 
@@ -31,30 +28,46 @@ const PROFS: { key: ProfKey; label: string }[] = [
   { key: "Dra Thaís", label: "Dra Thaís" },
 ];
 
+/** Indicadores de faturamento que devem ser formatados como moeda */
+const CURRENCY_INDICATORS = [
+  "Faturamento do dia",
+  "Faturamento Mensal",
+  "Fat.",
+  "Ticket Médio",
+];
+
+function indicatorFormat(indicador: string) {
+  return CURRENCY_INDICATORS.some((k) => indicador.startsWith(k) || indicador.includes(k))
+    ? formatBRL
+    : formatNumber;
+}
+
 export function MetasSection() {
-  const { faturamentoMensal } = useFilteredData();
+  const { kpisGeral, faturamentoMensal } = useFilteredData();
+  const { filters } = useFilters();
   const [activeTab, setActiveTab] = useState<ProfKey>("Dr Fernando");
 
+  const hasMes = filters.mes !== "Todos";
+
+  // faturamentoMensal tem labels corrigidos e meta incluída
   const lineData = faturamentoMensal.map((m) => ({
     mes: m.mes,
     realizado: Math.round(m.realizado),
     meta: m.meta,
   }));
 
+  const acumulado = faturamentoMensal.reduce((s, m) => s + m.realizado, 0);
   const mesesNoAlvo = faturamentoMensal.filter(
     (m) => m.realizado >= m.meta
   ).length;
 
-  // Computar indicadores que bateram a meta (pctMeta >= 1 e meta > 0)
-  const { bateram, todosIndicadores } = useMemo(() => {
-    const all = Object.entries(metasPorIndicador.detalhePorProfissional).flatMap(
+  const bateram = useMemo(() => {
+    return Object.entries(metasPorIndicador.detalhePorProfissional).flatMap(
       ([prof, indicadores]) =>
-        indicadores.map((ind) => ({ ...ind, profissional: prof }))
+        indicadores
+          .filter((ind) => ind.meta > 0 && ind.pctMeta >= 1)
+          .map((ind) => `${ind.indicador} (${prof})`)
     );
-    const hit = all
-      .filter((ind) => ind.meta > 0 && ind.pctMeta >= 1)
-      .map((ind) => `${ind.indicador} (${ind.profissional})`);
-    return { bateram: hit, todosIndicadores: all };
   }, []);
 
   return (
@@ -64,14 +77,15 @@ export function MetasSection() {
         description="Faturamento realizado vs meta ao longo dos meses e indicadores que bateram a meta."
       />
       <FilterNotice ignore={["canal", "servico"]} />
+      <PartialMonthNotice />
 
       {/* KPIs resumo */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <KpiCard
-          label="% Meta do Mês"
+          label={hasMes ? "% Meta do Mês" : "% Meta Acumulada"}
           value={formatPct(kpisGeral.faturamento.pctMeta)}
           icon={Target}
-          hint={`Meta: ${formatBRL(kpisGeral.faturamento.metaMes)}`}
+          hint={`${hasMes ? "Meta mensal" : "Meta acumulada"}: ${formatBRL(kpisGeral.faturamento.metaMes)}`}
         />
         <KpiCard
           label="Meses no alvo"
@@ -86,14 +100,13 @@ export function MetasSection() {
         />
         <KpiCard
           label="Acumulado realizado"
-          value={formatBRL(
-            faturamentoMensal.reduce((s, m) => s + m.realizado, 0)
-          )}
+          value={formatBRL(acumulado)}
           icon={Target}
+          hint={`${faturamentoMensal.length} meses`}
         />
       </div>
 
-      {/* Série histórica */}
+      {/* Série histórica — Realizado vs Meta */}
       <LineChartCard
         title="Faturamento Realizado vs Meta por Mês"
         data={lineData}
@@ -117,7 +130,6 @@ export function MetasSection() {
 
       {/* Indicadores */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {/* Bateram */}
         <Card className="glass">
           <CardHeader className="flex flex-row items-center gap-2">
             <CheckCircle2 className="size-4 text-positive" />
@@ -142,7 +154,6 @@ export function MetasSection() {
           </CardContent>
         </Card>
 
-        {/* Detalhe numérico por indicador — abas por profissional */}
         <Card className="glass">
           <CardHeader className="flex flex-row items-center gap-2">
             <Target className="size-4 text-muted-foreground" />
@@ -173,7 +184,7 @@ export function MetasSection() {
                             label={d.indicador}
                             realizado={d.realizado}
                             meta={d.meta}
-                            format={formatNumber}
+                            format={indicatorFormat(d.indicador)}
                           />
                         )
                       )}
@@ -197,7 +208,7 @@ export function MetasSection() {
           </span>
           <span className="ml-auto flex items-center gap-1.5">
             <XCircle className="size-3" />
-            Snapshot de {faturamentoMensal.length} meses — acumulado até o mês corrente
+            Acumulado {faturamentoMensal.length} meses
           </span>
         </CardContent>
       </Card>

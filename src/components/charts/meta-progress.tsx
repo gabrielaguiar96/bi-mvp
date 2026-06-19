@@ -22,9 +22,10 @@ export function MetaProgress({
   invert = false,
   className,
 }: MetaProgressProps) {
-  const ratio = meta > 0 ? Math.min(realizado / meta, 1.5) : 0;
-  const pctOfMeta = meta > 0 ? (realizado / meta) * 100 : 0;
-  const atingiu = invert ? realizado <= meta : realizado >= meta;
+  const semMeta = meta === 0;
+  const ratio = semMeta ? 0 : Math.min(realizado / meta, 1.5);
+  const pctOfMeta = semMeta ? 0 : (realizado / meta) * 100;
+  const atingiu = semMeta ? false : invert ? realizado <= meta : realizado >= meta;
   const displayPct = Math.min(ratio * 100, 100);
 
   return (
@@ -37,27 +38,33 @@ export function MetaProgress({
       </div>
       <div className="relative h-2.5 w-full overflow-hidden rounded-full bg-muted/60">
         {/* marca de 100% */}
-        <div
-          className="absolute inset-y-0 left-1/2 w-px bg-border"
-          aria-hidden
-          style={{ left: `${Math.min((meta / Math.max(meta, realizado)) * 100, 100)}%` }}
-        />
+        {!semMeta && (
+          <div
+            className="absolute inset-y-0 left-1/2 w-px bg-border"
+            aria-hidden
+            style={{ left: `${Math.min((meta / Math.max(meta, realizado)) * 100, 100)}%` }}
+          />
+        )}
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${displayPct}%` }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           className={cn(
             "h-full rounded-full",
-            atingiu ? "bg-positive" : "bg-negative"
+            semMeta
+              ? "bg-muted-foreground/30"
+              : atingiu
+                ? "bg-positive"
+                : "bg-negative"
           )}
         />
       </div>
       <div className="flex items-center justify-between text-[11px]">
-        <span className={cn("font-medium tabular", atingiu ? "text-positive" : "text-negative")}>
-          {pctOfMeta.toLocaleString("pt-BR", { maximumFractionDigits: 0 })}%
+        <span className={cn("font-medium tabular", semMeta ? "text-muted-foreground/60" : atingiu ? "text-positive" : "text-negative")}>
+          {semMeta ? "s/ meta" : `${pctOfMeta.toLocaleString("pt-BR", { maximumFractionDigits: 0 })}%`}
         </span>
         <span className="text-muted-foreground">
-          {atingiu ? "Meta atingida" : "Abaixo da meta"}
+          {semMeta ? "Sem meta definida" : atingiu ? "Meta atingida" : "Abaixo da meta"}
         </span>
       </div>
     </div>
