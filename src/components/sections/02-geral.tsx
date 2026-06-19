@@ -19,7 +19,7 @@ import {
   dadosPorServico,
 } from "@/data/report";
 import { useFilteredData, isKpiUnavailable } from "@/lib/use-filtered-data";
-import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
+import { PartialMonthNotice, Month2025Notice, ComboPartialNotice } from "./filter-notice";
 import { formatBRL, formatNumber, formatPct } from "@/lib/format";
 
 export function GeralSection() {
@@ -50,6 +50,7 @@ export function GeralSection() {
       />
       <PartialMonthNotice />
       <Month2025Notice />
+      <ComboPartialNotice />
 
       {/* KPIs com comparativo */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">

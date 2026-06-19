@@ -117,3 +117,32 @@ export function Month2025Notice() {
     </div>
   );
 }
+
+/**
+ * Aviso quando a combinação Mês+Canal ou Mês+Serviço está ativa.
+ * Nessa combinação, apenas o faturamento tem dado real por canal/serviço
+ * no mês selecionado. Demais KPIs (leads, ocupação, comparecidos, upsell)
+ * mostram "N/D" pois não há breakdown mensal por canal/serviço.
+ */
+export function ComboPartialNotice() {
+  const { filters } = useFilters();
+
+  const hasMes = filters.mes !== "Todos";
+  const hasCanal = filters.canal !== "Todos";
+  const hasServico = filters.servico !== "Todos";
+  const isCombo = hasMes && (hasCanal || hasServico);
+
+  if (!isCombo) return null;
+
+  const tipo = hasCanal ? "canal" : "serviço";
+
+  return (
+    <div className="flex items-center gap-2 rounded-lg border border-chart-3/30 bg-chart-3/5 px-3 py-2 text-xs text-chart-3">
+      <AlertTriangle className="size-3.5 shrink-0" />
+      <span>
+        Dados parciais — apenas faturamento disponível por {tipo} no mês
+        selecionado. Demais indicadores mostram dados gerais.
+      </span>
+    </div>
+  );
+}

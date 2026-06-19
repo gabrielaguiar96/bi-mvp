@@ -10,7 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { dadosPorCanal, metaLeadsCanal } from "@/data/report";
 import { useFilteredData, isKpiUnavailable } from "@/lib/use-filtered-data";
 import { useFilters } from "@/lib/filters";
-import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
+import { PartialMonthNotice, Month2025Notice, ComboPartialNotice } from "./filter-notice";
 import { formatBRL, formatNumber, formatPct } from "@/lib/format";
 
 export function GeralFunilSection() {
@@ -62,6 +62,7 @@ export function GeralFunilSection() {
       />
       <PartialMonthNotice />
       <Month2025Notice />
+      <ComboPartialNotice />
 
       {/* Resumo */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">

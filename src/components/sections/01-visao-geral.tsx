@@ -26,7 +26,7 @@ import {
 import { useFilteredData, isKpiUnavailable } from "@/lib/use-filtered-data";
 import { useFilters } from "@/lib/filters";
 import { conversaoEtapasPorServico, dadosPorServico, conversaoPorCanalProfissional } from "@/data/report";
-import { PartialMonthNotice, Month2025Notice } from "./filter-notice";
+import { PartialMonthNotice, Month2025Notice, ComboPartialNotice } from "./filter-notice";
 import {
   formatBRL,
   formatBRLCompact,
@@ -98,6 +98,7 @@ export function VisaoGeralSection() {
       />
       <PartialMonthNotice />
       <Month2025Notice />
+      <ComboPartialNotice />
       {/* Top KPIs */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <KpiCard
