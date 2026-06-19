@@ -217,4 +217,69 @@ describe("useFilteredData", () => {
     expect(kpis.ocupacaoAgenda.atual).toBe(228);
     expect(kpis.comparecidos.atual).toBe(209);
   });
+
+  // --- Mes+Canal combo tests (VAL-COMBO-003, VAL-COMBO-004) ---
+
+  it("Mes+Canal combo: faturamento from kpisMensal faturamentoPorCanal", () => {
+    const { result } = renderHook(() => useTestHarness(), { wrapper });
+
+    act(() => {
+      result.current.setFilters({ mes: "maio", canal: "Retenção" });
+    });
+
+    const kpis = result.current.data.kpisGeral;
+    // kpisMensal["maio-2026"].faturamentoPorCanal["Retenção"] = 557344
+    expect(kpis.faturamento.atual).toBe(557344);
+  });
+
+  it("Mes+Canal combo: other KPIs marked as N/D via filterMeta", () => {
+    const { result } = renderHook(() => useTestHarness(), { wrapper });
+
+    act(() => {
+      result.current.setFilters({ mes: "maio", canal: "Retenção" });
+    });
+
+    const meta = result.current.data.filterMeta;
+    expect(meta.activeFilters.hasMes).toBe(true);
+    expect(meta.activeFilters.hasCanal).toBe(true);
+    // Only faturamento has per-canal monthly data
+    expect(meta.availableKpis.has("faturamento")).toBe(true);
+    expect(meta.availableKpis.size).toBe(1);
+    // Other KPIs are not available
+    expect(meta.availableKpis.has("totalLeads")).toBe(false);
+    expect(meta.availableKpis.has("ocupacaoAgenda")).toBe(false);
+    expect(meta.availableKpis.has("comparecidos")).toBe(false);
+    expect(meta.availableKpis.has("qtdUpsell")).toBe(false);
+  });
+
+  it("Canal-only: faturamento from dadosPorCanal", () => {
+    const { result } = renderHook(() => useTestHarness(), { wrapper });
+
+    act(() => {
+      result.current.setFilters({ mes: "Todos", canal: "Retenção" });
+    });
+
+    const kpis = result.current.data.kpisGeral;
+    // dadosPorCanal["Retenção"].faturamento = 557344
+    expect(kpis.faturamento.atual).toBe(557344);
+    const meta = result.current.data.filterMeta;
+    expect(meta.availableKpis.has("faturamento")).toBe(true);
+    expect(meta.availableKpis.has("totalLeads")).toBe(true);
+    expect(meta.availableKpis.has("taxaConversaoTotal")).toBe(true);
+  });
+
+  it("Servico-only: faturamento from dadosPorServico", () => {
+    const { result } = renderHook(() => useTestHarness(), { wrapper });
+
+    act(() => {
+      result.current.setFilters({ mes: "Todos", servico: "Nutrologia" });
+    });
+
+    const kpis = result.current.data.kpisGeral;
+    // dadosPorServico["Nutrologia"].faturamento = 1020706
+    expect(kpis.faturamento.atual).toBe(1020706);
+    const meta = result.current.data.filterMeta;
+    expect(meta.availableKpis.has("faturamento")).toBe(true);
+    expect(meta.availableKpis.has("totalLeads")).toBe(true);
+  });
 });
