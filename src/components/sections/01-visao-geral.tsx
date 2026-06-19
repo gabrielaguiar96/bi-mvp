@@ -108,6 +108,8 @@ export function VisaoGeralSection() {
           comparisonLabel={comparisonLabel}
           icon={DollarSign}
           hint={`Meta: ${formatPct(kpisGeral.faturamento.pctMeta ?? 0)}`}
+          unavailable={isUnavailable("faturamento")}
+          unavailableMessage="Não disponível para filtro selecionado"
         />
         <KpiCard
           label="Total de Leads"

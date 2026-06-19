@@ -215,7 +215,29 @@ export function useFilteredData() {
     };
     let kpis = kpisGeral as unknown as KpisFiltered;
 
-    if (hasMes && mesData) {
+    if (hasMes && hasServico && mesData) {
+      // Combinação Mês + Serviço: apenas faturamento disponível por serviço no mês
+      const servicoFat = mesData.faturamentoPorServico[servico] ?? 0;
+      kpis = {
+        ...kpisGeral,
+        faturamento: {
+          atual: servicoFat,
+          mesAnterior: undefined as number | undefined,
+          metaMes: metaMesReal,
+          pctMeta: 0,
+        },
+        totalLeads: { atual: kpisGeral.totalLeads.atual },
+        ocupacaoAgenda: { atual: kpisGeral.ocupacaoAgenda.atual },
+        comparecidos: { atual: kpisGeral.comparecidos.atual },
+        qtdUpsell: { atual: kpisGeral.qtdUpsell.atual },
+        ticketMedioConsultas: {
+          atual: kpisGeral.ticketMedioConsultas.atual,
+          mesAnterior: undefined as number | undefined,
+          anoAnterior: undefined as number | undefined,
+        },
+        taxaConversaoTotal: { atual: kpisGeral.taxaConversaoTotal.atual },
+      };
+    } else if (hasMes && mesData) {
       // Prioridade: mês selecionado — comparativos dinâmicos com mês anterior real
       kpis = {
         ...kpisGeral,
@@ -380,7 +402,10 @@ export function useFilteredData() {
 
     let availableKpis: Set<KpiKey>;
 
-    if (hasMes && mesData) {
+    if (hasMes && hasServico && mesData) {
+      // Mês + Serviço: apenas faturamento tem dado per-service no mês
+      availableKpis = new Set<KpiKey>(["faturamento"]);
+    } else if (hasMes && mesData) {
       // Mês has data for all KPIs
       availableKpis = new Set(allKpiKeys);
     } else if (hasAno && anoData) {

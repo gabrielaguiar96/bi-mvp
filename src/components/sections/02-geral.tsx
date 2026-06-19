@@ -60,6 +60,8 @@ export function GeralSection() {
           previous={kpisGeral.faturamento.mesAnterior}
           comparisonLabel={comparisonLabel}
           icon={DollarSign}
+          unavailable={isUnavailable("faturamento")}
+          unavailableMessage="Não disponível para filtro selecionado"
         />
         <KpiCard
           label="Ticket Médio (Consultas)"
@@ -68,6 +70,8 @@ export function GeralSection() {
           previous={kpisGeral.ticketMedioConsultas.mesAnterior}
           comparisonLabel={comparisonLabel}
           icon={Receipt}
+          unavailable={isUnavailable("ticketMedioConsultas")}
+          unavailableMessage="Não disponível para filtro selecionado"
         />
         <KpiCard
           label="Ocupação de Agenda"
