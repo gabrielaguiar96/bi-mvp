@@ -890,7 +890,7 @@ export const conversaoEtapasPorServico: Record<
   },
   Todos: {
     etapas: [
-      { label: "Leads → Agenda", taxa: (58 + 98 + 43) / (112 + 114 + 70) },   // 0.661
+      { label: "Leads → Agenda", taxa: (58 + 98 + 43) / (112 + 114 + 70) },   // 0.672
       { label: "Agenda → Comp.", taxa: (58 + 98 + 36) / (58 + 98 + 43) },      // 0.965
       { label: "Comp. → Upsell", taxa: (50 + 9) / (58 + 98 + 36) },            // 0.307
     ],
