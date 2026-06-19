@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Evuli BI Dashboard
+
+Dashboard BI para a Evuli (clinica de saude) que replica a logica de um relatorio do Power BI. Todos os dados sao estaticos, extraidos via Playwright + API replay.
+
+## Stack
+
+- **Next.js 16.2.9** (App Router, SSG)
+- **React 19.2.4** + **TypeScript 5**
+- **shadcn/ui** (Radix primitives) + **Tailwind CSS 4**
+- **Recharts 3.8.0** (graficos)
+- **Framer Motion 12.40.0** (animacoes)
+- **vitest 4.1.9** (testes)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra http://localhost:3000 no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Secoes do Dashboard
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Secao | Descricao |
+|-------|-----------|
+| Visao Geral | KPIs principais + simulador de funil interativo |
+| Geral | Indicadores consolidados com comparativos |
+| Funil Comercial | Conversao por canal de aquisicao |
+| Indicacao | Pipeline de indicacao de pacientes |
+| Nutrologia | Dr. Fernando — funil, faturamento, metas |
+| Pediatria | Dra. Isa — funil, vacinas, metas |
+| Dermatologia | Dra. Thais — funil, protocolos, metas |
+| Metas | Faturamento realizado vs meta, indicadores no alvo |
+| Resumo Anual | Comparativo 2025 vs 2026 |
 
-## Learn More
+## Filtros Globais
 
-To learn more about Next.js, take a look at the following resources:
+4 filtros no topo da pagina (Canal, Servico, Ano, Mes) que afetam KPIs e graficos. Quando um filtro nao tem dados para um KPI especifico, o card mostra "N/D" com visual muted.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Dados
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Todos os dados estao em `src/data/report.ts`, gerado pelo pipeline de extracao em `scripts/`. Nao editar manualmente — usar os scripts para re-extrair.
 
-## Deploy on Vercel
+## Comandos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run dev          # servidor de desenvolvimento
+npm run build        # build de producao
+npm run test         # testes (vitest)
+npm run typecheck    # verificacao de tipos
+npm run lint         # linting (eslint)
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Estrutura
+
+```
+src/
+├── app/              # paginas Next.js
+├── components/
+│   ├── charts/       # KpiCard, FunnelChart, BarChart, LineChart, DonutChart
+│   ├── layout/       # Sidebar, Topbar, FilterStatus
+│   ├── sections/     # 9 secoes do dashboard
+│   └── ui/           # componentes shadcn/ui
+├── data/
+│   └── report.ts     # todos os dados (gerado por extracao)
+└── lib/
+    ├── filters.tsx   # contexto de filtros
+    ├── use-filtered-data.ts  # hook de dados filtrados
+    ├── format.ts     # formatadores BRL/numero/percentual
+    └── nav.ts        # configuracao de navegacao
+```
