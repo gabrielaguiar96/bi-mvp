@@ -146,3 +146,29 @@ export function ComboPartialNotice() {
     </div>
   );
 }
+
+/**
+ * Aviso quando Canal e Serviço estão ambos ativos (sem Mês).
+ * Canal e Serviço são dimensões independentes no modelo de dados do Power BI.
+ * Não existe interseção canal×serviço. KPIs refletem dados do canal,
+ * gráficos filtram por serviço independentemente.
+ */
+export function CanalServicoNotice() {
+  const { filters } = useFilters();
+
+  const hasCanal = filters.canal !== "Todos";
+  const hasServico = filters.servico !== "Todos";
+  const hasMes = filters.mes !== "Todos";
+
+  if (!hasCanal || !hasServico || hasMes) return null;
+
+  return (
+    <div className="flex items-center gap-2 rounded-lg border border-border/60 bg-muted/30 px-3 py-2 text-xs text-muted-foreground">
+      <Info className="size-3.5 shrink-0" />
+      <span>
+        Canal e Serviço são dimensões independentes — não há dados de
+        interseção. Indicadores refletem dados do canal selecionado.
+      </span>
+    </div>
+  );
+}

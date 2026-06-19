@@ -5,6 +5,7 @@ import { useFilters } from "./filters";
 import {
   conversaoPorCanal,
   faturamentoPorCanal,
+  faturamentoPorCanalAno,
   faturamentoPorServico,
   faturamentoMensal,
   funis,
@@ -156,6 +157,19 @@ export function useFilteredData() {
           ticketMedio: 0, // não temos ticket médio por canal por mês
         }))
         .filter((c) => c.faturamento > 0);
+    } else if (hasCanal && hasAno && !hasMes) {
+      // Canal + Ano (sem mês): usar dados anuais por canal
+      const anoCanalData = faturamentoPorCanalAno[ano as keyof typeof faturamentoPorCanalAno];
+      if (anoCanalData) {
+        const canais = hasCanal ? [canal] : ["Retenção", "Ativo", "Orgânico", "Indicação", "Crossell", "Pago"];
+        fatCanalFiltrado = canais
+          .map((c) => ({
+            canal: c,
+            faturamento: (anoCanalData as Record<string, number>)[c] ?? 0,
+            ticketMedio: 0,
+          }))
+          .filter((c) => c.faturamento > 0);
+      }
     }
 
     // ---------- Faturamento por serviço ----------
