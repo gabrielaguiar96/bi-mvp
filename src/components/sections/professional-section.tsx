@@ -19,6 +19,9 @@ type KpiConfig = {
   comparisonKey?: string;
   icon: LucideIcon;
   format?: (n: number) => string;
+  /** when true, this KPI shows N/D when canal filter is active */
+  canalUnavailable?: boolean;
+  unavailableMessage?: string;
 };
 
 type ProfessionalSectionProps = {
@@ -39,7 +42,7 @@ export function ProfessionalSection({
   extra,
   notice,
 }: ProfessionalSectionProps) {
-  const { funis: funisFiltrados } = useFilteredData();
+  const { funis: funisFiltrados, filterMeta } = useFilteredData();
   const { filters, setFilters } = useFilters();
 
   const filterExclui = filters.servico !== "Todos" && !funisFiltrados[profKey as keyof typeof funisFiltrados];
@@ -86,6 +89,7 @@ export function ProfessionalSection({
           const previous = kpi.comparisonKey
             ? (record[kpi.comparisonKey] as number)
             : undefined;
+          const isCanalUnavailable = kpi.canalUnavailable && filterMeta.activeFilters.hasCanal;
           return (
             <KpiCard
               key={kpi.label}
@@ -95,6 +99,8 @@ export function ProfessionalSection({
               previous={previous}
               comparisonLabel={previous !== undefined ? "vs mês anterior" : undefined}
               icon={kpi.icon}
+              unavailable={isCanalUnavailable}
+              unavailableMessage={isCanalUnavailable ? (kpi.unavailableMessage ?? "Não disponível por canal") : undefined}
             />
           );
         })}

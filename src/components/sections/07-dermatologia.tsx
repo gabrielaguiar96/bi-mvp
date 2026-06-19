@@ -28,10 +28,10 @@ export function DermatologiaSection() {
       description="Dra. Thaís — funil comercial, ticket médio e faturamento por protocolo."
       notice={<FilterNotice ignore={["mes", "ano"]} />}
       kpis={[
-        { label: "Faturamento Mensal", valueKey: "faturamentoDia", comparisonKey: "faturamentoDiaLM", icon: DollarSign },
+        { label: "Faturamento Mensal", valueKey: "faturamentoDia", comparisonKey: "faturamentoDiaLM", icon: DollarSign, canalUnavailable: true },
         { label: "Ticket Médio Consulta", valueKey: "ticketMedioConsulta", comparisonKey: "ticketMedioConsultaLM", icon: Stethoscope },
-        { label: "Quantidade Consultas", valueKey: "quantidadeConsultas", comparisonKey: "quantidadeConsultasLM", icon: Users, format: formatNumber },
-        { label: "Marcações", valueKey: "marcacoes", comparisonKey: "marcacoesLM", icon: CalendarCheck, format: formatNumber },
+        { label: "Quantidade Consultas", valueKey: "quantidadeConsultas", comparisonKey: "quantidadeConsultasLM", icon: Users, format: formatNumber, canalUnavailable: true },
+        { label: "Marcações", valueKey: "marcacoes", comparisonKey: "marcacoesLM", icon: CalendarCheck, format: formatNumber, canalUnavailable: true },
       ]}
       extra={
         fatPorProtocolo.length > 0 ? (

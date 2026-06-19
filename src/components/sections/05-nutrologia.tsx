@@ -25,8 +25,8 @@ export function NutrologiaSection() {
       description="Dr. Fernando — funil comercial, faturamento e indicadores do serviço."
       notice={<FilterNotice ignore={["mes", "ano"]} />}
       kpis={[
-        { label: "Faturamento Mensal", valueKey: "faturamentoDia", comparisonKey: "faturamentoDiaLM", icon: DollarSign },
-        { label: "Faturamento Protocolo", valueKey: "faturamentoProtocolo", icon: DollarSign },
+        { label: "Faturamento Mensal", valueKey: "faturamentoDia", comparisonKey: "faturamentoDiaLM", icon: DollarSign, canalUnavailable: true },
+        { label: "Faturamento Protocolo", valueKey: "faturamentoProtocolo", icon: DollarSign, canalUnavailable: true },
         { label: "Ticket Médio Upsell", valueKey: "ticketMedioUpsell", comparisonKey: "ticketMedioUpsellLM", icon: Ticket },
         { label: "Total de Leads", valueKey: "totalLeads", comparisonKey: "totalLeadsLM", icon: Users, format: formatNumber },
       ]}

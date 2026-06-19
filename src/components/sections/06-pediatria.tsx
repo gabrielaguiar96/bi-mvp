@@ -29,8 +29,8 @@ export function PediatriaSection() {
       description="Dra. Isa — funil comercial e indicadores do serviço."
       notice={<FilterNotice ignore={["mes", "ano"]} />}
       kpis={[
-        { label: "Faturamento Mensal", valueKey: "faturamentoDia", comparisonKey: "faturamentoDiaLM", icon: DollarSign },
-        { label: "Faturamento Vacina", valueKey: "faturamentoVacina", comparisonKey: "faturamentoVacinaLM", icon: Syringe },
+        { label: "Faturamento Mensal", valueKey: "faturamentoDia", comparisonKey: "faturamentoDiaLM", icon: DollarSign, canalUnavailable: true },
+        { label: "Faturamento Vacina", valueKey: "faturamentoVacina", comparisonKey: "faturamentoVacinaLM", icon: Syringe, canalUnavailable: true },
         { label: "Ticket Médio Geral", valueKey: "ticketMedioGeral", comparisonKey: "ticketMedioGeralLM", icon: Ticket },
         { label: "Total de Leads", valueKey: "totalLeads", comparisonKey: "totalLeadsLM", icon: Users, format: formatNumber },
       ]}
