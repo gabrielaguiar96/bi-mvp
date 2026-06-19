@@ -81,8 +81,9 @@ export function useFilteredData() {
 
     // ---------- Mês selecionado (year-aware) ----------
     // Keys: "janeiro" = 2025, "janeiro-2026" = 2026
+    // Default year is 2026 (current year); only use 2025 when explicitly selected.
     const mesKey = hasMes
-      ? (hasAno && ano === "2026" ? `${mes}-${ano}` : mes)
+      ? (ano === "2025" ? mes : `${mes}-2026`)
       : undefined;
     const mesData: KpisMes | undefined = hasMes
       ? kpisMensal[mesKey as keyof typeof kpisMensal]
@@ -94,7 +95,7 @@ export function useFilteredData() {
       const idx = filtros.meses.indexOf(mes);
       if (idx <= 0) return undefined;
       const prevMes = filtros.meses[idx - 1];
-      const prevKey = hasAno && ano === "2026" ? `${prevMes}-${ano}` : prevMes;
+      const prevKey = ano === "2025" ? prevMes : `${prevMes}-2026`;
       return kpisMensal[prevKey as keyof typeof kpisMensal];
     })();
 
@@ -102,7 +103,7 @@ export function useFilteredData() {
     const metaMesReal = (() => {
       if (hasMes) {
         const mesLabel = mes.charAt(0).toUpperCase() + mes.slice(1, 3);
-        const yearLabel = hasAno ? ano : "2025";
+        const yearLabel = ano === "2025" ? "2025" : "2026";
         const entry = faturamentoMensal.find(
           (m) => m.mes.toLowerCase().startsWith(mesLabel.toLowerCase()) && m.mes.includes(yearLabel)
         );
@@ -126,7 +127,7 @@ export function useFilteredData() {
       ? faturamentoMensal.filter((m) => {
           const mesLower = mes.toLowerCase();
           const mesAbrev = mesLower.charAt(0).toUpperCase() + mesLower.slice(1, 3);
-          const yearLabel = hasAno ? ano : (m.mes.includes("2025") ? "2025" : "2026");
+          const yearLabel = ano === "2025" ? "2025" : "2026";
           return m.mes.toLowerCase().startsWith(mesAbrev.toLowerCase()) && m.mes.includes(yearLabel);
         })
       : faturamentoMensal;
@@ -332,6 +333,38 @@ export function useFilteredData() {
           },
         };
       }
+    } else {
+      // Todos view (no filters active): use accumulated 2026 data
+      const todosAno = anual["2026"];
+      const prevAno = anual["2025"];
+      kpis = {
+        ...kpisGeral,
+        faturamento: {
+          atual: todosAno.faturamento,
+          mesAnterior: prevAno.faturamento as number | undefined,
+          metaMes: metaMesReal,
+          pctMeta: Math.round(todosAno.pctMeta * 100) / 100,
+        },
+        totalLeads: {
+          atual: todosAno.leads,
+          mesAnterior: prevAno.leads as number | undefined,
+        },
+        ocupacaoAgenda: {
+          atual: todosAno.ocupacaoAgenda,
+          mesAnterior: prevAno.ocupacaoAgenda as number | undefined,
+          anoAnterior: prevAno.ocupacaoAgenda as number | undefined,
+        },
+        comparecidos: {
+          atual: todosAno.comparecidos,
+          mesAnterior: prevAno.comparecidos as number | undefined,
+          anoAnterior: prevAno.comparecidos as number | undefined,
+        },
+        ticketMedioConsultas: {
+          atual: kpisGeral.ticketMedioConsultas.atual,
+          mesAnterior: undefined as number | undefined,
+          anoAnterior: undefined as number | undefined,
+        },
+      };
     }
 
     // ---------- filterMeta: which KPIs have real data ----------
@@ -396,8 +429,8 @@ export function useFilteredData() {
       if (hasAno) return "vs ano anterior";
       // Canal/Servico without Mes/Ano → suppress comparison
       if (hasCanal || hasServico) return undefined;
-      // No filter → default
-      return "vs mês anterior";
+      // No filter (Todos view) → compare with 2025 annual data
+      return "vs 2025";
     })();
 
     return {

@@ -13,7 +13,7 @@ export type FilterState = {
 const DEFAULT_FILTERS: FilterState = {
   canal: "Todos",
   servico: "Todos",
-  mes: "Todos",
+  mes: "maio",
   ano: "Todos",
 };
 

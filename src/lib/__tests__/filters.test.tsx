@@ -7,9 +7,9 @@ function wrapper({ children }: { children: React.ReactNode }) {
 }
 
 describe("FilterProvider", () => {
-  it("starts with default filters (Todos/Todos)", () => {
+  it("starts with default filters (mes=maio)", () => {
     const { result } = renderHook(() => useFilters(), { wrapper });
-    expect(result.current.filters).toEqual({ canal: "Todos", servico: "Todos", mes: "Todos", ano: "Todos" });
+    expect(result.current.filters).toEqual({ canal: "Todos", servico: "Todos", mes: "maio", ano: "Todos" });
   });
 
   it("setFilters merges with current state", () => {
@@ -19,7 +19,7 @@ describe("FilterProvider", () => {
       result.current.setFilters({ canal: "Retenção" });
     });
 
-    expect(result.current.filters).toEqual({ canal: "Retenção", servico: "Todos", mes: "Todos", ano: "Todos" });
+    expect(result.current.filters).toEqual({ canal: "Retenção", servico: "Todos", mes: "maio", ano: "Todos" });
   });
 
   it("setFilters only updates specified keys", () => {
@@ -32,7 +32,7 @@ describe("FilterProvider", () => {
       result.current.setFilters({ servico: "Nutrologia" });
     });
 
-    expect(result.current.filters).toEqual({ canal: "Retenção", servico: "Nutrologia", mes: "Todos", ano: "Todos" });
+    expect(result.current.filters).toEqual({ canal: "Retenção", servico: "Nutrologia", mes: "maio", ano: "Todos" });
   });
 
   it("resetFilters restores defaults", () => {
@@ -45,7 +45,7 @@ describe("FilterProvider", () => {
       result.current.resetFilters();
     });
 
-    expect(result.current.filters).toEqual({ canal: "Todos", servico: "Todos", mes: "Todos", ano: "Todos" });
+    expect(result.current.filters).toEqual({ canal: "Todos", servico: "Todos", mes: "maio", ano: "Todos" });
   });
 
   it("provides options from filtros", () => {

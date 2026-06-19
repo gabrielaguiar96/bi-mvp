@@ -18,8 +18,12 @@ function wrapper({ children }: { children: React.ReactNode }) {
 }
 
 describe("useFilteredData", () => {
-  it("returns full data with no filter", () => {
+  it("returns full data with no filter (Todos view)", () => {
     const { result } = renderHook(() => useTestHarness(), { wrapper });
+
+    act(() => {
+      result.current.setFilters({ mes: "Todos" });
+    });
 
     expect(result.current.data.conversaoPorCanal.length).toBe(6);
     expect(Object.keys(result.current.data.funis)).toHaveLength(3);
@@ -30,7 +34,7 @@ describe("useFilteredData", () => {
     const { result } = renderHook(() => useTestHarness(), { wrapper });
 
     act(() => {
-      result.current.setFilters({ canal: "Retenção" });
+      result.current.setFilters({ mes: "Todos", canal: "Retenção" });
     });
 
     expect(result.current.data.conversaoPorCanal).toHaveLength(1);
@@ -42,7 +46,7 @@ describe("useFilteredData", () => {
     const { result } = renderHook(() => useTestHarness(), { wrapper });
 
     act(() => {
-      result.current.setFilters({ canal: "Retenção" });
+      result.current.setFilters({ mes: "Todos", canal: "Retenção" });
     });
 
     const kpis = result.current.data.kpisGeral;
@@ -54,7 +58,7 @@ describe("useFilteredData", () => {
     const { result } = renderHook(() => useTestHarness(), { wrapper });
 
     act(() => {
-      result.current.setFilters({ servico: "Nutrologia" });
+      result.current.setFilters({ mes: "Todos", servico: "Nutrologia" });
     });
 
     expect(Object.keys(result.current.data.funis)).toEqual(["Dr Fernando"]);
@@ -67,7 +71,7 @@ describe("useFilteredData", () => {
     const { result } = renderHook(() => useTestHarness(), { wrapper });
 
     act(() => {
-      result.current.setFilters({ servico: "Nutrologia" });
+      result.current.setFilters({ mes: "Todos", servico: "Nutrologia" });
     });
 
     const kpis = result.current.data.kpisGeral;
@@ -78,7 +82,7 @@ describe("useFilteredData", () => {
     const { result } = renderHook(() => useTestHarness(), { wrapper });
 
     act(() => {
-      result.current.setFilters({ canal: "Retenção", servico: "Nutrologia" });
+      result.current.setFilters({ mes: "Todos", canal: "Retenção", servico: "Nutrologia" });
     });
 
     const kpis = result.current.data.kpisGeral;
@@ -103,6 +107,10 @@ describe("useFilteredData", () => {
   it("filterMeta: all KPIs available with no filter", () => {
     const { result } = renderHook(() => useTestHarness(), { wrapper });
 
+    act(() => {
+      result.current.setFilters({ mes: "Todos" });
+    });
+
     const meta = result.current.data.filterMeta;
     expect(meta.activeFilters.hasCanal).toBe(false);
     expect(meta.activeFilters.hasServico).toBe(false);
@@ -118,7 +126,7 @@ describe("useFilteredData", () => {
     const { result } = renderHook(() => useTestHarness(), { wrapper });
 
     act(() => {
-      result.current.setFilters({ canal: "Retenção" });
+      result.current.setFilters({ mes: "Todos", canal: "Retenção" });
     });
 
     const meta = result.current.data.filterMeta;
@@ -138,7 +146,7 @@ describe("useFilteredData", () => {
     const { result } = renderHook(() => useTestHarness(), { wrapper });
 
     act(() => {
-      result.current.setFilters({ servico: "Nutrologia" });
+      result.current.setFilters({ mes: "Todos", servico: "Nutrologia" });
     });
 
     const meta = result.current.data.filterMeta;
@@ -164,5 +172,49 @@ describe("useFilteredData", () => {
     const meta = result.current.data.filterMeta;
     expect(meta.activeFilters.hasMes).toBe(true);
     expect(meta.availableKpis.size).toBe(7);
+  });
+
+  // --- Todos view tests (all filters = "Todos") ---
+
+  it("Todos view uses anual 2026 accumulated data for KPIs", () => {
+    const { result } = renderHook(() => useTestHarness(), { wrapper });
+
+    act(() => {
+      result.current.setFilters({ mes: "Todos" });
+    });
+
+    const kpis = result.current.data.kpisGeral;
+    expect(kpis.faturamento.atual).toBe(6_315_993.99);
+    expect(kpis.totalLeads.atual).toBe(2331);
+    expect(kpis.ocupacaoAgenda.atual).toBe(1269);
+    expect(kpis.comparecidos.atual).toBe(1142);
+  });
+
+  it("Todos view comparison label is 'vs 2025'", () => {
+    const { result } = renderHook(() => useTestHarness(), { wrapper });
+
+    act(() => {
+      result.current.setFilters({ mes: "Todos" });
+    });
+
+    expect(result.current.data.comparisonLabel).toBe("vs 2025");
+  });
+
+  it("default view (mes=maio) comparison label is 'vs mês anterior'", () => {
+    const { result } = renderHook(() => useTestHarness(), { wrapper });
+
+    // Default is mes="maio"
+    expect(result.current.data.comparisonLabel).toBe("vs mês anterior");
+  });
+
+  it("default view KPIs match kpisMensal maio-2026", () => {
+    const { result } = renderHook(() => useTestHarness(), { wrapper });
+
+    // Default is mes="maio"
+    const kpis = result.current.data.kpisGeral;
+    expect(kpis.faturamento.atual).toBe(1_392_068.50);
+    expect(kpis.totalLeads.atual).toBe(489);
+    expect(kpis.ocupacaoAgenda.atual).toBe(228);
+    expect(kpis.comparecidos.atual).toBe(209);
   });
 });

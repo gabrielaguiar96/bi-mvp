@@ -102,8 +102,8 @@ export function PartialMonthNotice() {
 export function Month2025Notice() {
   const { filters } = useFilters();
 
-  const is2025Month = filters.mes !== "Todos"
-    && (filters.ano === "Todos" || filters.ano === "2025");
+  // Only show when year is explicitly 2025 (not when ano="Todos", which defaults to 2026)
+  const is2025Month = filters.mes !== "Todos" && filters.ano === "2025";
 
   if (!is2025Month) return null;
 
